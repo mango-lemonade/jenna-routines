@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Hair Care">
+<title>Hair Care</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #FAF8F5;
+    --white: #FFFFFF;
+    --border: #E8E2D9;
+    --border-mid: #D5CFC7;
+    --border-dark: #C9BFB3;
+    --text-dark: #2C2820;
+    --text-mid: #7A6E63;
+    --text-muted: #A89E90;
+    --text-ghost: #D5CFC7;
+    --clay: #C4654A;
+    --clay-light: #FDF1EC;
+    --clay-border: #EAC4B5;
+    --clay-hover: #F9E8E1;
+  }
+
+  html, body {
+    height: 100%;
+    background: #F0EDE8;
+    font-family: 'Source Sans 3', sans-serif;
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .app {
+    max-width: 430px;
+    min-height: 100dvh;
+    margin: 0 auto;
+    background: var(--cream);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  /* HEADER */
+  .header {
+    padding: 3rem 1.5rem 1.25rem;
+    background: var(--cream);
+    border-bottom: 0.5px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.3rem;
+    font-weight: 400;
+  }
+
+  .week-title {
+    font-family: 'Source Serif 4', serif;
+    font-size: 25px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--text-dark);
+    line-height: 1.2;
+  }
+
+  .week-title em {
+    font-style: normal;
+    color: var(--text-muted);
+    font-size: 19px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 300;
+  }
+
+  .pip-row { display: flex; gap: 5px; margin-top: 0.9rem; }
+  .pip { height: 3px; flex: 1; border-radius: 2px; background: var(--border); transition: background 0.3s; }
+  .pip.done { background: var(--border-dark); }
+  .pip.active { background: var(--clay); }
+
+  /* BODY */
+  .body {
+    padding: 1.25rem 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    padding-bottom: 6rem;
+  }
+
+  /* DAY SELECTOR */
+  .day-question {
+    background: var(--white);
+    border: 0.5px solid var(--border);
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+  }
+
+  .day-q-label {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.7rem;
+    font-weight: 400;
+  }
+
+  .day-opts { display: flex; gap: 8px; }
+
+  .day-opt {
+    flex: 1;
+    padding: 0.6rem 0;
+    border: 0.5px solid var(--border);
+    border-radius: 10px;
+    background: var(--cream);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--text-mid);
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+    -webkit-appearance: none;
+  }
+  .day-opt:hover { border-color: var(--border-dark); color: var(--text-dark); }
+  .day-opt.selected { border-color: var(--clay); background: var(--clay-light); color: var(--clay); font-weight: 500; }
+
+  /* SECTION LABEL */
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  /* ASSIGNMENT CARD */
+  .assignment-card {
+    background: var(--white);
+    border: 0.5px solid var(--border);
+    border-radius: 14px;
+    padding: 1.1rem 1.25rem;
+  }
+
+  .assign-title {
+    font-family: 'Source Serif 4', serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .steps { display: flex; flex-direction: column; gap: 11px; }
+
+  .step { display: flex; gap: 10px; align-items: flex-start; }
+
+  .step-n {
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    border: 0.5px solid var(--border-mid);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9px; color: var(--text-muted);
+    flex-shrink: 0; margin-top: 2px; font-weight: 500;
+  }
+
+  .step-body { line-height: 1; }
+
+  .step-prod {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-dark);
+    display: block;
+    margin-bottom: 2px;
+    line-height: 1.3;
+  }
+
+  .step-note {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 300;
+    display: block;
+    line-height: 1.35;
+  }
+
+  /* TOGGLE ROW */
+  .toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white);
+    border: 0.5px solid var(--border);
+    border-radius: 14px;
+    padding: 0.9rem 1.25rem;
+    gap: 12px;
+  }
+
+  .toggle-info strong {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 2px;
+    line-height: 1.2;
+  }
+
+  .toggle-info span {
+    font-size: 11.5px;
+    color: var(--text-muted);
+    font-weight: 300;
+    line-height: 1.3;
+    display: block;
+  }
+
+  .tog { position: relative; width: 42px; height: 24px; flex-shrink: 0; }
+  .tog input { opacity: 0; width: 0; height: 0; }
+  .tog-track {
+    position: absolute; inset: 0;
+    border-radius: 12px;
+    background: var(--border);
+    cursor: pointer;
+    transition: background 0.25s;
+  }
+  .tog-track::after {
+    content: ''; position: absolute;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: #fff; top: 4px; left: 4px;
+    transition: transform 0.25s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  .tog input:checked + .tog-track { background: var(--clay); }
+  .tog input:checked + .tog-track::after { transform: translateX(18px); }
+
+  .steam-note {
+    font-size: 12px;
+    color: var(--clay);
+    line-height: 1.45;
+    padding: 0 0.25rem;
+    display: none;
+    font-weight: 300;
+  }
+
+  /* BLOWDRY ROW */
+  .blowdry-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white);
+    border: 0.5px solid var(--border);
+    border-radius: 14px;
+    padding: 0.9rem 1.25rem;
+    gap: 12px;
+  }
+
+  .blowdry-opts { display: flex; gap: 7px; }
+
+  .bd-opt {
+    padding: 0.45rem 0.9rem;
+    border: 0.5px solid var(--border);
+    border-radius: 20px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: var(--text-mid);
+    cursor: pointer;
+    background: var(--cream);
+    transition: all 0.18s;
+    font-weight: 400;
+    -webkit-appearance: none;
+  }
+  .bd-opt:hover { border-color: var(--border-dark); }
+  .bd-opt.sel { border-color: var(--clay); background: var(--clay-light); color: var(--clay); font-weight: 500; }
+
+  /* ACTION BUTTONS */
+  .actions { display: flex; flex-direction: column; gap: 8px; padding-top: 1.5rem; }
+
+  .btn-primary {
+    width: 100%; padding: 0.95rem;
+    background: var(--clay);
+    color: #FDF8F5;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px; font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: opacity 0.2s;
+    -webkit-appearance: none;
+  }
+  .btn-primary:active { opacity: 0.85; }
+
+  .btn-secondary {
+    width: 100%; padding: 0.95rem;
+    background: var(--clay-light);
+    color: var(--clay);
+    border: 1px solid var(--clay-border);
+    border-radius: 12px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px; font-weight: 400;
+    cursor: pointer;
+    transition: background 0.2s;
+    letter-spacing: 0.01em;
+    -webkit-appearance: none;
+  }
+  .btn-secondary:active { background: var(--clay-hover); }
+
+  /* DEVIATION PANEL */
+  .dev-panel { display: none; flex-direction: column; gap: 7px; }
+  .dev-panel.open { display: flex; }
+
+  .dev-opt {
+    display: flex; align-items: center; gap: 10px;
+    padding: 0.75rem 1rem;
+    border: 0.5px solid var(--border);
+    border-radius: 10px;
+    background: var(--white);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px; color: var(--text-mid);
+    cursor: pointer;
+    transition: all 0.18s;
+    text-align: left; width: 100%; font-weight: 400;
+    -webkit-appearance: none;
+  }
+  .dev-opt:active { border-color: var(--border-dark); }
+  .dev-opt.sel { border-color: var(--clay); color: var(--text-dark); }
+
+  .dev-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    border: 1.5px solid var(--border-mid); flex-shrink: 0;
+    transition: all 0.18s;
+  }
+  .dev-opt.sel .dev-dot { background: var(--clay); border-color: var(--clay); }
+
+  .write-in {
+    width: 100%; padding: 0.75rem 1rem;
+    border: 0.5px solid var(--border); border-radius: 10px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px; color: var(--text-dark);
+    background: var(--white);
+    resize: none; height: 72px;
+    outline: none;
+    transition: border-color 0.2s; font-weight: 300;
+    -webkit-appearance: none;
+  }
+  .write-in:focus { border-color: var(--clay); }
+  .write-in::placeholder { color: var(--border-dark); }
+
+  /* REST VIEW */
+  .rest-card {
+    background: var(--white);
+    border: 0.5px solid var(--border);
+    border-radius: 14px;
+    padding: 1.1rem 1.25rem;
+  }
+
+  .rest-title {
+    font-family: 'Source Serif 4', serif;
+    font-size: 18px; font-weight: 300;
+    font-style: italic; color: var(--text-dark); margin-bottom: 0.5rem;
+  }
+
+  .rest-sub {
+    font-size: 13px; color: var(--text-mid);
+    line-height: 1.5; margin-bottom: 0.85rem; font-weight: 300;
+  }
+
+  .pill-row { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pill {
+    font-size: 11.5px; padding: 4px 10px;
+    border-radius: 20px; border: 0.5px solid var(--border-mid);
+    color: var(--text-mid); background: var(--cream); font-weight: 300;
+  }
+
+  /* SUCCESS VIEW */
+  .success-view {
+    display: none; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 2rem 1.5rem; text-align: center;
+    min-height: 420px;
+  }
+  .success-view.show { display: flex; }
+
+  .success-ring {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: var(--clay-light); border: 0.5px solid var(--clay-border);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.1rem;
+  }
+
+  .success-title {
+    font-family: 'Source Serif 4', serif;
+    font-size: 26px; font-weight: 300;
+    font-style: italic; color: var(--text-dark); margin-bottom: 0.4rem;
+  }
+
+  .success-sub {
+    font-size: 13px; color: var(--text-mid);
+    line-height: 1.6; max-width: 270px;
+    margin-bottom: 1.5rem; font-weight: 300;
+  }
+
+  .next-card {
+    width: 100%; background: var(--white);
+    border: 0.5px solid var(--border);
+    border-radius: 14px; padding: 1rem 1.25rem;
+    text-align: left;
+  }
+
+  .next-eyebrow {
+    font-size: 10px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--text-muted);
+    margin-bottom: 0.5rem; font-weight: 400;
+  }
+
+  .next-title {
+    font-family: 'Source Serif 4', serif;
+    font-size: 15px; font-weight: 400;
+    font-style: italic; color: var(--text-dark); margin-bottom: 0.25rem;
+  }
+
+  .next-sub {
+    font-size: 12px; color: var(--text-muted);
+    line-height: 1.4; font-weight: 300;
+  }
+
+  .recalib {
+    font-size: 11.5px; color: var(--clay);
+    margin-top: 0.5rem; display: none; font-weight: 300;
+  }
+
+  /* FOOTER */
+  .footer {
+    position: fixed;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 100%; max-width: 430px;
+    padding: 0.75rem 1.5rem calc(0.75rem + env(safe-area-inset-bottom));
+    border-top: 0.5px solid var(--border);
+    display: flex; justify-content: center; gap: 1.75rem;
+    background: var(--cream);
+  }
+
+  .foot-btn {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10.5px; color: var(--text-ghost);
+    background: none; border: none; cursor: pointer;
+    padding: 0.2rem 0;
+    font-weight: 300; line-height: 1.35; text-align: center;
+    transition: color 0.2s;
+    -webkit-appearance: none;
+  }
+  .foot-btn:active { color: var(--text-muted); }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <div class="header">
+    <div class="eyebrow">Hair care</div>
+    <div class="week-title" id="week-title">Week 2 of 4 <em>· Light Protein</em></div>
+    <div class="pip-row">
+      <div class="pip done"></div>
+      <div class="pip active"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <div class="day-question" id="day-q">
+      <div class="day-q-label">Today is</div>
+      <div class="day-opts">
+        <button class="day-opt selected" id="opt-wash" onclick="setDay('wash')">Wash day</button>
+        <button class="day-opt" id="opt-rest" onclick="setDay('rest')">Rest day</button>
+      </div>
+    </div>
+
+    <div id="wash-view">
+      <div class="section-label" id="wash-num" style="margin-bottom:0.5rem;">Wash 1 of 2 this week</div>
+
+      <div class="assignment-card">
+        <div class="assign-title" id="assign-title"></div>
+        <div class="steps" id="step-list"></div>
+      </div>
+
+      <div class="toggle-row">
+        <div class="toggle-info">
+          <strong>Steam room today?</strong>
+          <span>Changes your prep sequence</span>
+        </div>
+        <label class="tog">
+          <input type="checkbox" id="steam-tog" onchange="handleSteam(this)">
+          <div class="tog-track"></div>
+        </label>
+      </div>
+      <div class="steam-note" id="steam-note"></div>
+
+      <div class="blowdry-row">
+        <div class="toggle-info">
+          <strong>Drying method</strong>
+          <span>Affects your leave-in sequence</span>
+        </div>
+        <div class="blowdry-opts">
+          <button class="bd-opt sel" id="bd-blow" onclick="setBlow('blow')">Blow dry</button>
+          <button class="bd-opt" id="bd-air" onclick="setBlow('air')">Air dry</button>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn-primary" onclick="markDone()">Done as assigned</button>
+        <button class="btn-secondary" onclick="toggleDev()">Something different</button>
+        <div class="dev-panel" id="dev-panel">
+          <button class="dev-opt" onclick="selDev(this,'skipped')"><span class="dev-dot"></span>Skipped wash entirely</button>
+          <button class="dev-opt" onclick="selDev(this,'diff')"><span class="dev-dot"></span>Washed, different products</button>
+          <button class="dev-opt" onclick="selDev(this,'nopoo')"><span class="dev-dot"></span>No-poo rinse only</button>
+          <button class="dev-opt" onclick="selDev(this,'travel')"><span class="dev-dot"></span>Traveled / limited products</button>
+          <button class="dev-opt" onclick="selDev(this,'steam-nw')"><span class="dev-dot"></span>Steamed but didn't wash</button>
+          <textarea class="write-in" id="write-in" placeholder="Anything else..."></textarea>
+          <button class="btn-primary" onclick="submitDev()">Save + recalibrate</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="rest-view" style="display:none;">
+      <div class="rest-card">
+        <div class="rest-title">Rest day</div>
+        <div class="rest-sub">Next wash day in 2–3 days. A few things that help today:</div>
+        <div class="pill-row">
+          <span class="pill">Dry shampoo at roots tonight</span>
+          <span class="pill">Rosemary oil scalp massage</span>
+          <span class="pill">1–2 drops oil on ends if dry</span>
+        </div>
+      </div>
+      <div class="toggle-row" style="margin-top:0.85rem;">
+        <div class="toggle-info">
+          <strong>Steam room today?</strong>
+          <span>No wash — oil ends + water rinse only</span>
+        </div>
+        <label class="tog">
+          <input type="checkbox" id="steam-tog-rest" onchange="handleSteamRest(this)">
+          <div class="tog-track"></div>
+        </label>
+      </div>
+      <div class="steam-note" id="steam-note-rest" style="display:none;">
+        Non-wash steam: apply Cécred oil to ends only before going in. Rinse with water only after — no cycle impact.
+      </div>
+    </div>
+
+    <div class="success-view" id="success-view">
+      <div class="success-ring">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <path d="M4 11.5L9 16.5L18 6" stroke="#C4654A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="success-title" id="s-title">Logged.</div>
+      <div class="success-sub" id="s-sub">Your routine is on track.</div>
+      <div class="next-card">
+        <div class="next-eyebrow">Next wash</div>
+        <div class="next-title" id="s-next-title"></div>
+        <div class="next-sub" id="s-next-sub"></div>
+        <div class="recalib" id="s-recalib"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <button class="foot-btn" onclick="resetDay()">New<br>Day</button>
+    <button class="foot-btn" onclick="resetAll()">Reset<br>Cycle</button>
+  </div>
+
+</div>
+
+<script>
+const WEEKS = [
+  {name:"Reset week", sub:"Clarify & Moisture", washes:[
+    {title:"Clarify + moisture reset", steps:[
+      {p:"Kristin Ess clarifying shampoo", n:"scalp focus, let rinse through ends"},
+      {p:"Arvazallia argan mask", n:"5–10 min, ends only — no protein this wash"},
+      {p:"Anti-Snap + Living Proof heat spray", n:"if blow drying", airAlt:"Anti-Snap + Marc Anthony Grow Long", airNote:"skip heat spray on air dry days"}
+    ], steam:"Apply Arvazallia to dry or damp hair before going in. Steam amplifies absorption — then shampoo and condition as normal."},
+    {title:"Hydrating wash", steps:[
+      {p:"Cécred hydrating shampoo", n:"scalp only"},
+      {p:"Wave Babe conditioner", n:"mid-lengths to ends, cool rinse"},
+      {p:"Marc Anthony Grow Long spray", n:"lighter leave-in, saving Anti-Snap for treatment weeks", airAlt:"Marc Anthony Grow Long spray", airNote:"same either way this wash"}
+    ], steam:"Apply Wave Babe as a pre-steam mask, then rinse and proceed with shampoo as normal."}
+  ]},
+  {name:"Light protein week", sub:"Light Protein", washes:[
+    {title:"Briogeo treatment wash", steps:[
+      {p:"L'Oréal Elvive shampoo", n:"hyaluronic base, moisture anchor"},
+      {p:"Briogeo MegaStrength", n:"5–10 min, ends only — protein + moisture balanced"},
+      {p:"Anti-Snap + Living Proof heat spray", n:"if blow drying", airAlt:"Marc Anthony Grow Long spray", airNote:"skip heat spray on air dry days"}
+    ], steam:"Apply Briogeo MegaStrength to dry or damp hair before going in. Steam drives the proteins deeper — then wash as normal."},
+    {title:"Gentle recovery wash", steps:[
+      {p:"Cécred hydrating shampoo", n:"scalp only"},
+      {p:"Cécred hydrating conditioner", n:"let Briogeo work — no additional treatment today"},
+      {p:"Marc Anthony + Acidic Bonding serum", n:"serum as optional finisher after leave-in", airAlt:"Marc Anthony + Acidic Bonding serum", airNote:"same either way"}
+    ], steam:"Apply Cécred conditioner as pre-steam mask, then wash as normal."}
+  ]},
+  {name:"Deep moisture week", sub:"Deep Moisture", washes:[
+    {title:"Deep conditioning wash", steps:[
+      {p:"L'Oréal Elvive shampoo", n:"moisture base"},
+      {p:"Arvazallia argan mask", n:"15–20 min this time — real deep conditioning"},
+      {p:"Anti-Snap + Living Proof heat spray", n:"if blow drying", airAlt:"Marc Anthony Grow Long spray", airNote:"skip heat spray on air dry days"}
+    ], steam:"Apply Arvazallia before going in — longer steam means deeper moisture penetration this week."},
+    {title:"Oil + wave wash", steps:[
+      {p:"Cécred hydrating shampoo", n:"scalp only"},
+      {p:"Wave Babe conditioner", n:"mid-lengths to ends"},
+      {p:"Cécred hair oil (1–2 drops) + Marc Anthony", n:"oil on ends first, then leave-in on top", airAlt:"Cécred oil + Marc Anthony", airNote:"same either way — oil first, leave-in second"}
+    ], steam:"Apply Wave Babe as pre-steam mask, then wash as normal. Oil goes on after, not before steam."}
+  ]},
+  {name:"Bond + repair week", sub:"Bond & Repair", washes:[
+    {title:"Cécred reconstructing wash", steps:[
+      {p:"Maui Moisture clarifying shampoo", n:"gentler mid-cycle refresh"},
+      {p:"Cécred Reconstructing Treatment Mask", n:"10 min — heavier protein moment, once a month"},
+      {p:"Anti-Snap + Living Proof heat spray", n:"if blow drying", airAlt:"Marc Anthony Grow Long spray", airNote:"skip heat spray on air dry days"}
+    ], steam:"Apply Cécred Reconstructing Mask before steam — heat drives bond-building deeper. Then wash as normal."},
+    {title:"Sealing + finishing wash", steps:[
+      {p:"Cécred hydrating shampoo", n:"scalp only"},
+      {p:"Cécred hydrating conditioner", n:"mid-lengths to ends"},
+      {p:"Anti-Snap + Acidic Bonding serum", n:"serum applied after leave-in as finisher", airAlt:"Marc Anthony + Acidic Bonding serum", airNote:"swap Anti-Snap for Marc Anthony on air dry days"}
+    ], steam:"Apply Cécred conditioner as pre-steam mask, then wash as normal. Serum goes on after."}
+  ]}
+];
+
+const KEY = 'haircare_v1';
+let S = { weekIdx: 1, washIdx: 0 };
+let blowDry = true, devSel = null;
+
+function load() {
+  try {
+    const d = localStorage.getItem(KEY);
+    if (d) { const p = JSON.parse(d); S.weekIdx = p.weekIdx ?? 1; S.washIdx = p.washIdx ?? 0; }
+  } catch(e) {}
+}
+
+function save() {
+  try { localStorage.setItem(KEY, JSON.stringify({ weekIdx: S.weekIdx, washIdx: S.washIdx })); } catch(e) {}
+}
+
+function render() {
+  const w = WEEKS[S.weekIdx], wash = w.washes[S.washIdx];
+  document.getElementById('week-title').innerHTML = `Week ${S.weekIdx + 1} of 4 <em>· ${w.sub}</em>`;
+  const pips = document.querySelectorAll('.pip');
+  pips.forEach((p, i) => { p.className = 'pip'; if (i < S.weekIdx) p.classList.add('done'); else if (i === S.weekIdx) p.classList.add('active'); });
+  document.getElementById('wash-num').textContent = `Wash ${S.washIdx + 1} of 2 this week`;
+  document.getElementById('assign-title').textContent = wash.title;
+  document.getElementById('steam-note').textContent = wash.steam;
+  renderSteps();
+}
+
+function renderSteps() {
+  const wash = WEEKS[S.weekIdx].washes[S.washIdx];
+  document.getElementById('step-list').innerHTML = wash.steps.map((s, i) => {
+    const prod = blowDry ? s.p : (s.airAlt || s.p);
+    const note = blowDry ? s.n : (s.airNote || s.n);
+    return `<div class="step"><div class="step-n">${i + 1}</div><div class="step-body"><span class="step-prod">${prod}</span><span class="step-note">${note}</span></div></div>`;
+  }).join('');
+}
+
+function setDay(d) {
+  document.getElementById('opt-wash').className = 'day-opt' + (d === 'wash' ? ' selected' : '');
+  document.getElementById('opt-rest').className = 'day-opt' + (d === 'rest' ? ' selected' : '');
+  document.getElementById('wash-view').style.display = d === 'wash' ? 'block' : 'none';
+  document.getElementById('rest-view').style.display = d === 'rest' ? 'block' : 'none';
+}
+
+function setBlow(v) {
+  blowDry = v === 'blow';
+  document.getElementById('bd-blow').className = 'bd-opt' + (blowDry ? ' sel' : '');
+  document.getElementById('bd-air').className = 'bd-opt' + (!blowDry ? ' sel' : '');
+  renderSteps();
+}
+
+function handleSteam(el) { document.getElementById('steam-note').style.display = el.checked ? 'block' : 'none'; }
+function handleSteamRest(el) { document.getElementById('steam-note-rest').style.display = el.checked ? 'block' : 'none'; }
+function toggleDev() { document.getElementById('dev-panel').classList.toggle('open'); }
+
+function selDev(el, k) {
+  document.querySelectorAll('.dev-opt').forEach(o => o.classList.remove('sel'));
+  el.classList.add('sel'); devSel = k;
+}
+
+function nextWashInfo(dev) {
+  let wi = S.washIdx, wk = S.weekIdx;
+  if (dev === 'skipped' || dev === 'travel') {
+    const wash = WEEKS[wk].washes[wi];
+    return { title: wash.title, sub: `Week ${wk + 1}, Wash ${wi + 1} — resuming from here next time.`, recalib: 'Routine recalibrated around the gap.' };
+  }
+  let nwi = wi + 1, nwk = wk;
+  if (nwi >= 2) { nwi = 0; nwk = (wk + 1) % 4; }
+  const nw = WEEKS[nwk].washes[nwi];
+  return { title: nw.title, sub: `Week ${nwk + 1}, Wash ${nwi + 1}`, recalib: '' };
+}
+
+function advance() {
+  if (S.washIdx === 0) { S.washIdx = 1; } else { S.washIdx = 0; S.weekIdx = (S.weekIdx + 1) % 4; }
+  save();
+}
+
+function showSuccess(title, sub, nextObj) {
+  document.getElementById('s-title').textContent = title;
+  document.getElementById('s-sub').textContent = sub;
+  document.getElementById('s-next-title').textContent = nextObj.title;
+  document.getElementById('s-next-sub').textContent = nextObj.sub;
+  const rc = document.getElementById('s-recalib');
+  rc.textContent = nextObj.recalib; rc.style.display = nextObj.recalib ? 'block' : 'none';
+  document.getElementById('wash-view').style.display = 'none';
+  document.getElementById('rest-view').style.display = 'none';
+  document.getElementById('day-q').style.display = 'none';
+  document.getElementById('success-view').classList.add('show');
+}
+
+function markDone() {
+  const n = nextWashInfo(null); advance();
+  showSuccess('Logged.', 'Your routine is on track. See you next wash day.', n);
+}
+
+function submitDev() {
+  const wi = document.getElementById('write-in').value.trim();
+  const msgs = {
+    skipped: 'Skipped days happen. Pick up from the same point next time.',
+    diff: 'Noted. Continuing from this position in the cycle.',
+    nopoo: 'Recorded as a light rinse — not counting as a full wash.',
+    travel: "Adjusted for travel. Resuming from the same wash when you're home.",
+    'steam-nw': 'Steam without wash noted — no cycle impact.'
+  };
+  const sub = msgs[devSel] || (wi ? `Noted: "${wi.substring(0, 70)}${wi.length > 70 ? '…' : ''}"` : 'Logged and recalibrated.');
+  const n = nextWashInfo(devSel);
+  if (devSel !== 'skipped' && devSel !== 'travel') advance();
+  showSuccess('Recalibrated.', sub, n);
+}
+
+function resetDay() {
+  devSel = null; blowDry = true;
+  document.getElementById('bd-blow').className = 'bd-opt sel';
+  document.getElementById('bd-air').className = 'bd-opt';
+  document.getElementById('steam-tog').checked = false;
+  document.getElementById('steam-note').style.display = 'none';
+  document.getElementById('dev-panel').classList.remove('open');
+  document.getElementById('write-in').value = '';
+  document.querySelectorAll('.dev-opt').forEach(o => o.classList.remove('sel'));
+  document.getElementById('success-view').classList.remove('show');
+  document.getElementById('day-q').style.display = 'block';
+  setDay('wash'); render();
+}
+
+function resetAll() { S = { weekIdx: 0, washIdx: 0 }; save(); resetDay(); }
+
+load(); render();
+</script>
+</body>
+</html>
