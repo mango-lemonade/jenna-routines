@@ -5,479 +5,138 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Hair Care">
-<title>Hair Care</title>
+<meta name="apple-mobile-web-app-title" content="my Hair">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>my Hair</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-    --cream: #FAF8F5;
-    --white: #FFFFFF;
-    --border: #E8E2D9;
-    --border-mid: #D5CFC7;
-    --border-dark: #C9BFB3;
-    --text-dark: #2C2820;
-    --text-mid: #7A6E63;
-    --text-muted: #A89E90;
-    --text-ghost: #D5CFC7;
-    --clay: #C4654A;
-    --clay-light: #FDF1EC;
-    --clay-border: #EAC4B5;
-    --clay-hover: #F9E8E1;
+    --cream: #FAF8F5; --white: #FFFFFF; --border: #E8E2D9; --border-mid: #D5CFC7;
+    --border-dark: #C9BFB3; --text-dark: #2C2820; --text-mid: #7A6E63;
+    --text-muted: #A89E90; --text-ghost: #D5CFC7; --clay: #C4654A;
+    --clay-light: #FDF1EC; --clay-border: #EAC4B5; --clay-hover: #F9E8E1;
   }
-
-  html, body {
-    height: 100%;
-    background: #F0EDE8;
-    font-family: 'Source Sans 3', sans-serif;
-    color: var(--text-dark);
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .app {
-    max-width: 430px;
-    min-height: 100dvh;
-    margin: 0 auto;
-    background: var(--cream);
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
-  /* HEADER */
-  .header {
-    padding: 3rem 1.5rem 1.25rem;
-    background: var(--cream);
-    border-bottom: 0.5px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-
-  .eyebrow {
-    font-size: 10px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 0.3rem;
-    font-weight: 400;
-  }
-
-  .week-title {
-    font-family: 'Source Serif 4', serif;
-    font-size: 25px;
-    font-weight: 300;
-    font-style: italic;
-    color: var(--text-dark);
-    line-height: 1.2;
-  }
-
-  .week-title em {
-    font-style: normal;
-    color: var(--text-muted);
-    font-size: 19px;
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 300;
-  }
-
+  html, body { height: 100%; background: #F0EDE8; font-family: 'Source Sans 3', sans-serif; color: var(--text-dark); -webkit-font-smoothing: antialiased; }
+  .app { max-width: 430px; min-height: 100dvh; margin: 0 auto; background: var(--cream); display: flex; flex-direction: column; }
+  .header { padding: 3rem 1.5rem 1.25rem; background: var(--cream); border-bottom: 0.5px solid var(--border); position: sticky; top: 0; z-index: 10; }
+  .eyebrow { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.3rem; font-weight: 400; }
+  .week-title { font-family: 'Source Serif 4', serif; font-size: 25px; font-weight: 300; font-style: italic; color: var(--text-dark); line-height: 1.2; }
+  .week-title em { font-style: normal; color: var(--text-muted); font-size: 19px; font-family: 'Source Sans 3', sans-serif; font-weight: 300; }
   .pip-row { display: flex; gap: 5px; margin-top: 0.9rem; }
   .pip { height: 3px; flex: 1; border-radius: 2px; background: var(--border); transition: background 0.3s; }
   .pip.done { background: var(--border-dark); }
   .pip.active { background: var(--clay); }
-
-  /* BODY */
-  .body {
-    padding: 1.25rem 1.5rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.85rem;
-    padding-bottom: 6rem;
-  }
-
-  /* DAY SELECTOR */
-  .day-question {
-    background: var(--white);
-    border: 0.5px solid var(--border);
-    border-radius: 14px;
-    padding: 1rem 1.25rem;
-  }
-
-  .day-q-label {
-    font-size: 10px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 0.7rem;
-    font-weight: 400;
-  }
-
+  .body { padding: 1.25rem 1.5rem; flex: 1; display: flex; flex-direction: column; gap: 0.85rem; padding-bottom: 6rem; }
+  .day-question { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1rem 1.25rem; }
+  .day-q-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; font-weight: 400; }
   .day-opts { display: flex; gap: 8px; }
-
-  .day-opt {
-    flex: 1;
-    padding: 0.6rem 0;
-    border: 0.5px solid var(--border);
-    border-radius: 10px;
-    background: var(--cream);
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    color: var(--text-mid);
-    cursor: pointer;
-    transition: all 0.2s;
-    text-align: center;
-    -webkit-appearance: none;
-  }
-  .day-opt:hover { border-color: var(--border-dark); color: var(--text-dark); }
+  .day-opt { flex: 1; padding: 0.6rem 0; border: 0.5px solid var(--border); border-radius: 10px; background: var(--cream); font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 400; color: var(--text-mid); cursor: pointer; transition: all 0.2s; text-align: center; -webkit-appearance: none; }
+  .day-opt:active { border-color: var(--border-dark); }
   .day-opt.selected { border-color: var(--clay); background: var(--clay-light); color: var(--clay); font-weight: 500; }
-
-  /* SECTION LABEL */
-  .section-label {
-    font-size: 10px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    font-weight: 400;
-  }
-
-  /* ASSIGNMENT CARD */
-  .assignment-card {
-    background: var(--white);
-    border: 0.5px solid var(--border);
-    border-radius: 14px;
-    padding: 1.1rem 1.25rem;
-  }
-
-  .assign-title {
-    font-family: 'Source Serif 4', serif;
-    font-size: 18px;
-    font-weight: 400;
-    font-style: italic;
-    color: var(--text-dark);
-    margin-bottom: 1rem;
-    line-height: 1.3;
-  }
-
+  .section-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); font-weight: 400; }
+  .assignment-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.1rem 1.25rem; }
+  .assign-title { font-family: 'Source Serif 4', serif; font-size: 18px; font-weight: 400; font-style: italic; color: var(--text-dark); margin-bottom: 1rem; line-height: 1.3; }
   .steps { display: flex; flex-direction: column; gap: 11px; }
-
   .step { display: flex; gap: 10px; align-items: flex-start; }
-
-  .step-n {
-    width: 18px; height: 18px;
-    border-radius: 50%;
-    border: 0.5px solid var(--border-mid);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 9px; color: var(--text-muted);
-    flex-shrink: 0; margin-top: 2px; font-weight: 500;
-  }
-
+  .step-n { width: 18px; height: 18px; border-radius: 50%; border: 0.5px solid var(--border-mid); display: flex; align-items: center; justify-content: center; font-size: 9px; color: var(--text-muted); flex-shrink: 0; margin-top: 2px; font-weight: 500; }
   .step-body { line-height: 1; }
-
-  .step-prod {
-    font-size: 13.5px;
-    font-weight: 500;
-    color: var(--text-dark);
-    display: block;
-    margin-bottom: 2px;
-    line-height: 1.3;
-  }
-
-  .step-note {
-    font-size: 12px;
-    color: var(--text-muted);
-    font-weight: 300;
-    display: block;
-    line-height: 1.35;
-  }
-
-  /* TOGGLE ROW */
-  .toggle-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: var(--white);
-    border: 0.5px solid var(--border);
-    border-radius: 14px;
-    padding: 0.9rem 1.25rem;
-    gap: 12px;
-  }
-
-  .toggle-info strong {
-    display: block;
-    font-size: 13.5px;
-    font-weight: 500;
-    color: var(--text-dark);
-    margin-bottom: 2px;
-    line-height: 1.2;
-  }
-
-  .toggle-info span {
-    font-size: 11.5px;
-    color: var(--text-muted);
-    font-weight: 300;
-    line-height: 1.3;
-    display: block;
-  }
-
+  .step-prod { font-size: 13.5px; font-weight: 500; color: var(--text-dark); display: block; margin-bottom: 2px; line-height: 1.3; }
+  .step-note { font-size: 12px; color: var(--text-muted); font-weight: 300; display: block; line-height: 1.35; }
+  .toggle-row { display: flex; align-items: center; justify-content: space-between; background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 0.9rem 1.25rem; gap: 12px; }
+  .toggle-info strong { display: block; font-size: 13.5px; font-weight: 500; color: var(--text-dark); margin-bottom: 2px; line-height: 1.2; }
+  .toggle-info span { font-size: 11.5px; color: var(--text-muted); font-weight: 300; line-height: 1.3; display: block; }
   .tog { position: relative; width: 42px; height: 24px; flex-shrink: 0; }
   .tog input { opacity: 0; width: 0; height: 0; }
-  .tog-track {
-    position: absolute; inset: 0;
-    border-radius: 12px;
-    background: var(--border);
-    cursor: pointer;
-    transition: background 0.25s;
-  }
-  .tog-track::after {
-    content: ''; position: absolute;
-    width: 16px; height: 16px; border-radius: 50%;
-    background: #fff; top: 4px; left: 4px;
-    transition: transform 0.25s;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  }
+  .tog-track { position: absolute; inset: 0; border-radius: 12px; background: var(--border); cursor: pointer; transition: background 0.25s; }
+  .tog-track::after { content: ''; position: absolute; width: 16px; height: 16px; border-radius: 50%; background: #fff; top: 4px; left: 4px; transition: transform 0.25s; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
   .tog input:checked + .tog-track { background: var(--clay); }
   .tog input:checked + .tog-track::after { transform: translateX(18px); }
-
-  .steam-note {
-    font-size: 12px;
-    color: var(--clay);
-    line-height: 1.45;
-    padding: 0 0.25rem;
-    display: none;
-    font-weight: 300;
-  }
-
-  /* BLOWDRY ROW */
-  .blowdry-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: var(--white);
-    border: 0.5px solid var(--border);
-    border-radius: 14px;
-    padding: 0.9rem 1.25rem;
-    gap: 12px;
-  }
-
+  .steam-note { font-size: 12px; color: var(--clay); line-height: 1.45; padding: 0 0.25rem; display: none; font-weight: 300; }
+  .blowdry-row { display: flex; align-items: center; justify-content: space-between; background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 0.9rem 1.25rem; gap: 12px; }
   .blowdry-opts { display: flex; gap: 7px; }
-
-  .bd-opt {
-    padding: 0.45rem 0.9rem;
-    border: 0.5px solid var(--border);
-    border-radius: 20px;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 12px;
-    color: var(--text-mid);
-    cursor: pointer;
-    background: var(--cream);
-    transition: all 0.18s;
-    font-weight: 400;
-    -webkit-appearance: none;
-  }
-  .bd-opt:hover { border-color: var(--border-dark); }
+  .bd-opt { padding: 0.45rem 0.9rem; border: 0.5px solid var(--border); border-radius: 20px; font-family: 'Source Sans 3', sans-serif; font-size: 12px; color: var(--text-mid); cursor: pointer; background: var(--cream); transition: all 0.18s; font-weight: 400; -webkit-appearance: none; }
   .bd-opt.sel { border-color: var(--clay); background: var(--clay-light); color: var(--clay); font-weight: 500; }
-
-  /* ACTION BUTTONS */
   .actions { display: flex; flex-direction: column; gap: 8px; padding-top: 1.5rem; }
-
-  .btn-primary {
-    width: 100%; padding: 0.95rem;
-    background: var(--clay);
-    color: #FDF8F5;
-    border: none;
-    border-radius: 12px;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 14px; font-weight: 500;
-    cursor: pointer;
-    letter-spacing: 0.02em;
-    transition: opacity 0.2s;
-    -webkit-appearance: none;
-  }
+  .btn-primary { width: 100%; padding: 0.95rem; background: var(--clay); color: #FDF8F5; border: none; border-radius: 12px; font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; letter-spacing: 0.02em; transition: opacity 0.2s; -webkit-appearance: none; }
   .btn-primary:active { opacity: 0.85; }
-
-  .btn-secondary {
-    width: 100%; padding: 0.95rem;
-    background: var(--clay-light);
-    color: var(--clay);
-    border: 1px solid var(--clay-border);
-    border-radius: 12px;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 14px; font-weight: 400;
-    cursor: pointer;
-    transition: background 0.2s;
-    letter-spacing: 0.01em;
-    -webkit-appearance: none;
-  }
+  .btn-secondary { width: 100%; padding: 0.95rem; background: var(--clay-light); color: var(--clay); border: 1px solid var(--clay-border); border-radius: 12px; font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 400; cursor: pointer; transition: background 0.2s; -webkit-appearance: none; }
   .btn-secondary:active { background: var(--clay-hover); }
-
-  /* DEVIATION PANEL */
   .dev-panel { display: none; flex-direction: column; gap: 7px; }
   .dev-panel.open { display: flex; }
-
-  .dev-opt {
-    display: flex; align-items: center; gap: 10px;
-    padding: 0.75rem 1rem;
-    border: 0.5px solid var(--border);
-    border-radius: 10px;
-    background: var(--white);
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 13px; color: var(--text-mid);
-    cursor: pointer;
-    transition: all 0.18s;
-    text-align: left; width: 100%; font-weight: 400;
-    -webkit-appearance: none;
-  }
-  .dev-opt:active { border-color: var(--border-dark); }
+  .dev-opt { display: flex; align-items: center; gap: 10px; padding: 0.75rem 1rem; border: 0.5px solid var(--border); border-radius: 10px; background: var(--white); font-family: 'Source Sans 3', sans-serif; font-size: 13px; color: var(--text-mid); cursor: pointer; transition: all 0.18s; text-align: left; width: 100%; font-weight: 400; -webkit-appearance: none; }
   .dev-opt.sel { border-color: var(--clay); color: var(--text-dark); }
-
-  .dev-dot {
-    width: 7px; height: 7px; border-radius: 50%;
-    border: 1.5px solid var(--border-mid); flex-shrink: 0;
-    transition: all 0.18s;
-  }
+  .dev-dot { width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid var(--border-mid); flex-shrink: 0; transition: all 0.18s; }
   .dev-opt.sel .dev-dot { background: var(--clay); border-color: var(--clay); }
-
-  .write-in {
-    width: 100%; padding: 0.75rem 1rem;
-    border: 0.5px solid var(--border); border-radius: 10px;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 13px; color: var(--text-dark);
-    background: var(--white);
-    resize: none; height: 72px;
-    outline: none;
-    transition: border-color 0.2s; font-weight: 300;
-    -webkit-appearance: none;
-  }
+  .write-in { width: 100%; padding: 0.75rem 1rem; border: 0.5px solid var(--border); border-radius: 10px; font-family: 'Source Sans 3', sans-serif; font-size: 13px; color: var(--text-dark); background: var(--white); resize: none; height: 72px; outline: none; transition: border-color 0.2s; font-weight: 300; -webkit-appearance: none; }
   .write-in:focus { border-color: var(--clay); }
   .write-in::placeholder { color: var(--border-dark); }
-
-  /* REST VIEW */
-  .rest-card {
-    background: var(--white);
-    border: 0.5px solid var(--border);
-    border-radius: 14px;
-    padding: 1.1rem 1.25rem;
-  }
-
-  .rest-title {
-    font-family: 'Source Serif 4', serif;
-    font-size: 18px; font-weight: 300;
-    font-style: italic; color: var(--text-dark); margin-bottom: 0.5rem;
-  }
-
-  .rest-sub {
-    font-size: 13px; color: var(--text-mid);
-    line-height: 1.5; margin-bottom: 0.85rem; font-weight: 300;
-  }
-
+  .rest-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.1rem 1.25rem; }
+  .rest-title { font-family: 'Source Serif 4', serif; font-size: 18px; font-weight: 300; font-style: italic; color: var(--text-dark); margin-bottom: 0.5rem; }
+  .rest-sub { font-size: 13px; color: var(--text-mid); line-height: 1.5; margin-bottom: 0.85rem; font-weight: 300; }
   .pill-row { display: flex; flex-wrap: wrap; gap: 6px; }
-  .pill {
-    font-size: 11.5px; padding: 4px 10px;
-    border-radius: 20px; border: 0.5px solid var(--border-mid);
-    color: var(--text-mid); background: var(--cream); font-weight: 300;
-  }
-
-  /* SUCCESS VIEW */
-  .success-view {
-    display: none; flex-direction: column;
-    align-items: center; justify-content: center;
-    padding: 2rem 1.5rem; text-align: center;
-    min-height: 420px;
-  }
+  .pill { font-size: 11.5px; padding: 4px 10px; border-radius: 20px; border: 0.5px solid var(--border-mid); color: var(--text-mid); background: var(--cream); font-weight: 300; }
+  .success-view { display: none; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; text-align: center; min-height: 420px; }
   .success-view.show { display: flex; }
-
-  .success-ring {
-    width: 52px; height: 52px; border-radius: 50%;
-    background: var(--clay-light); border: 0.5px solid var(--clay-border);
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 1.1rem;
-  }
-
-  .success-title {
-    font-family: 'Source Serif 4', serif;
-    font-size: 26px; font-weight: 300;
-    font-style: italic; color: var(--text-dark); margin-bottom: 0.4rem;
-  }
-
-  .success-sub {
-    font-size: 13px; color: var(--text-mid);
-    line-height: 1.6; max-width: 270px;
-    margin-bottom: 1.5rem; font-weight: 300;
-  }
-
-  .next-card {
-    width: 100%; background: var(--white);
-    border: 0.5px solid var(--border);
-    border-radius: 14px; padding: 1rem 1.25rem;
-    text-align: left;
-  }
-
-  .next-eyebrow {
-    font-size: 10px; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--text-muted);
-    margin-bottom: 0.5rem; font-weight: 400;
-  }
-
-  .next-title {
-    font-family: 'Source Serif 4', serif;
-    font-size: 15px; font-weight: 400;
-    font-style: italic; color: var(--text-dark); margin-bottom: 0.25rem;
-  }
-
-  .next-sub {
-    font-size: 12px; color: var(--text-muted);
-    line-height: 1.4; font-weight: 300;
-  }
-
-  .recalib {
-    font-size: 11.5px; color: var(--clay);
-    margin-top: 0.5rem; display: none; font-weight: 300;
-  }
-
-  /* FOOTER */
-  .footer {
-    position: fixed;
-    bottom: 0; left: 50%;
-    transform: translateX(-50%);
-    width: 100%; max-width: 430px;
-    padding: 0.75rem 1.5rem calc(0.75rem + env(safe-area-inset-bottom));
-    border-top: 0.5px solid var(--border);
-    display: flex; justify-content: center; gap: 1.75rem;
-    background: var(--cream);
-  }
-
-  .foot-btn {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 10.5px; color: var(--text-ghost);
-    background: none; border: none; cursor: pointer;
-    padding: 0.2rem 0;
-    font-weight: 300; line-height: 1.35; text-align: center;
-    transition: color 0.2s;
-    -webkit-appearance: none;
-  }
+  .success-ring { width: 52px; height: 52px; border-radius: 50%; background: var(--clay-light); border: 0.5px solid var(--clay-border); display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; }
+  .success-title { font-family: 'Source Serif 4', serif; font-size: 26px; font-weight: 300; font-style: italic; color: var(--text-dark); margin-bottom: 0.4rem; }
+  .success-sub { font-size: 13px; color: var(--text-mid); line-height: 1.6; max-width: 270px; margin-bottom: 1.5rem; font-weight: 300; }
+  .next-card { width: 100%; background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1rem 1.25rem; text-align: left; }
+  .next-eyebrow { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; font-weight: 400; }
+  .next-title { font-family: 'Source Serif 4', serif; font-size: 15px; font-weight: 400; font-style: italic; color: var(--text-dark); margin-bottom: 0.25rem; }
+  .next-sub { font-size: 12px; color: var(--text-muted); line-height: 1.4; font-weight: 300; }
+  .recalib { font-size: 11.5px; color: var(--clay); margin-top: 0.5rem; display: none; font-weight: 300; }
+  .footer { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 430px; padding: 0.75rem 1.5rem calc(0.75rem + env(safe-area-inset-bottom)); border-top: 0.5px solid var(--border); display: flex; justify-content: center; gap: 1.75rem; background: var(--cream); }
+  .foot-btn { font-family: 'Source Sans 3', sans-serif; font-size: 10.5px; color: var(--text-ghost); background: none; border: none; cursor: pointer; padding: 0.2rem 0; font-weight: 300; line-height: 1.35; text-align: center; -webkit-appearance: none; }
   .foot-btn:active { color: var(--text-muted); }
+  /* Onboarding overlay */
+  .onboard { position: fixed; inset: 0; background: var(--cream); z-index: 100; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; max-width: 430px; margin: 0 auto; }
+  .onboard.hidden { display: none; }
+  .onboard-title { font-family: 'Source Serif 4', serif; font-size: 24px; font-weight: 300; font-style: italic; color: var(--text-dark); margin-bottom: 0.4rem; text-align: center; }
+  .onboard-sub { font-size: 13px; color: var(--text-mid); font-weight: 300; margin-bottom: 2rem; text-align: center; line-height: 1.5; }
+  .onboard-section { width: 100%; margin-bottom: 1.25rem; }
+  .onboard-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); font-weight: 400; margin-bottom: 0.6rem; }
+  .onboard-opts { display: flex; gap: 8px; flex-wrap: wrap; }
+  .onboard-opt { flex: 1; min-width: 80px; padding: 0.65rem 0.5rem; border: 0.5px solid var(--border); border-radius: 10px; background: var(--white); font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 400; color: var(--text-mid); cursor: pointer; text-align: center; -webkit-appearance: none; transition: all 0.2s; }
+  .onboard-opt.selected { border-color: var(--clay); background: var(--clay-light); color: var(--clay); font-weight: 500; }
 </style>
 </head>
 <body>
-<div class="app">
 
+<div class="onboard" id="onboard">
+  <div class="onboard-title">Where are you?</div>
+  <div class="onboard-sub">Set your position in the cycle to get started.</div>
+  <div class="onboard-section">
+    <div class="onboard-label">Which week</div>
+    <div class="onboard-opts">
+      <button class="onboard-opt" onclick="setOW(this,0)">Week 1<br><small style="font-size:10px;color:var(--text-muted);font-weight:300;">Clarify</small></button>
+      <button class="onboard-opt selected" onclick="setOW(this,1)">Week 2<br><small style="font-size:10px;color:var(--text-muted);font-weight:300;">Protein</small></button>
+      <button class="onboard-opt" onclick="setOW(this,2)">Week 3<br><small style="font-size:10px;color:var(--text-muted);font-weight:300;">Moisture</small></button>
+      <button class="onboard-opt" onclick="setOW(this,3)">Week 4<br><small style="font-size:10px;color:var(--text-muted);font-weight:300;">Bond</small></button>
+    </div>
+  </div>
+  <div class="onboard-section">
+    <div class="onboard-label">Which wash</div>
+    <div class="onboard-opts">
+      <button class="onboard-opt selected" onclick="setOD(this,0)">Wash 1</button>
+      <button class="onboard-opt" onclick="setOD(this,1)">Wash 2</button>
+    </div>
+  </div>
+  <button class="btn-primary" style="width:100%;margin-top:0.5rem;" onclick="confirmOnboard()">Start here</button>
+</div>
+
+<div class="app">
   <div class="header">
     <div class="eyebrow">Hair care</div>
     <div class="week-title" id="week-title">Week 2 of 4 <em>· Light Protein</em></div>
     <div class="pip-row">
-      <div class="pip done"></div>
-      <div class="pip active"></div>
-      <div class="pip"></div>
-      <div class="pip"></div>
+      <div class="pip done"></div><div class="pip active"></div><div class="pip"></div><div class="pip"></div>
     </div>
   </div>
 
   <div class="body">
-
     <div class="day-question" id="day-q">
       <div class="day-q-label">Today is</div>
       <div class="day-opts">
@@ -488,35 +147,22 @@
 
     <div id="wash-view">
       <div class="section-label" id="wash-num" style="margin-bottom:0.5rem;">Wash 1 of 2 this week</div>
-
       <div class="assignment-card">
         <div class="assign-title" id="assign-title"></div>
         <div class="steps" id="step-list"></div>
       </div>
-
       <div class="toggle-row">
-        <div class="toggle-info">
-          <strong>Steam room today?</strong>
-          <span>Changes your prep sequence</span>
-        </div>
-        <label class="tog">
-          <input type="checkbox" id="steam-tog" onchange="handleSteam(this)">
-          <div class="tog-track"></div>
-        </label>
+        <div class="toggle-info"><strong>Steam room today?</strong><span>Changes your prep sequence</span></div>
+        <label class="tog"><input type="checkbox" id="steam-tog" onchange="handleSteam(this)"><div class="tog-track"></div></label>
       </div>
       <div class="steam-note" id="steam-note"></div>
-
       <div class="blowdry-row">
-        <div class="toggle-info">
-          <strong>Drying method</strong>
-          <span>Affects your leave-in sequence</span>
-        </div>
+        <div class="toggle-info"><strong>Drying method</strong><span>Affects your leave-in sequence</span></div>
         <div class="blowdry-opts">
           <button class="bd-opt sel" id="bd-blow" onclick="setBlow('blow')">Blow dry</button>
           <button class="bd-opt" id="bd-air" onclick="setBlow('air')">Air dry</button>
         </div>
       </div>
-
       <div class="actions">
         <button class="btn-primary" onclick="markDone()">Done as assigned</button>
         <button class="btn-secondary" onclick="toggleDev()">Something different</button>
@@ -543,28 +189,18 @@
         </div>
       </div>
       <div class="toggle-row" style="margin-top:0.85rem;">
-        <div class="toggle-info">
-          <strong>Steam room today?</strong>
-          <span>No wash — oil ends + water rinse only</span>
-        </div>
-        <label class="tog">
-          <input type="checkbox" id="steam-tog-rest" onchange="handleSteamRest(this)">
-          <div class="tog-track"></div>
-        </label>
+        <div class="toggle-info"><strong>Steam room today?</strong><span>No wash — oil ends + water rinse only</span></div>
+        <label class="tog"><input type="checkbox" id="steam-tog-rest" onchange="handleSteamRest(this)"><div class="tog-track"></div></label>
       </div>
-      <div class="steam-note" id="steam-note-rest" style="display:none;">
-        Non-wash steam: apply Cécred oil to ends only before going in. Rinse with water only after — no cycle impact.
-      </div>
+      <div class="steam-note" id="steam-note-rest" style="display:none;">Non-wash steam: apply Cécred oil to ends only before going in. Rinse with water only after — no cycle impact.</div>
     </div>
 
     <div class="success-view" id="success-view">
       <div class="success-ring">
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-          <path d="M4 11.5L9 16.5L18 6" stroke="#C4654A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11.5L9 16.5L18 6" stroke="#C4654A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
       <div class="success-title" id="s-title">Logged.</div>
-      <div class="success-sub" id="s-sub">Your routine is on track.</div>
+      <div class="success-sub" id="s-sub"></div>
       <div class="next-card">
         <div class="next-eyebrow">Next wash</div>
         <div class="next-title" id="s-next-title"></div>
@@ -572,193 +208,200 @@
         <div class="recalib" id="s-recalib"></div>
       </div>
     </div>
-
   </div>
 
   <div class="footer">
+    <button class="foot-btn" onclick="showOnboard()">Set<br>Position</button>
     <button class="foot-btn" onclick="resetDay()">New<br>Day</button>
     <button class="foot-btn" onclick="resetAll()">Reset<br>Cycle</button>
   </div>
-
 </div>
 
 <script>
-const WEEKS = [
-  {name:"Reset week", sub:"Clarify & Moisture", washes:[
-    {title:"Clarify + moisture reset", steps:[
-      {p:"Kristin Ess clarifying shampoo", n:"scalp focus, let rinse through ends"},
-      {p:"Arvazallia argan mask", n:"5–10 min, ends only — no protein this wash"},
-      {p:"Anti-Snap + Living Proof heat spray", n:"if blow drying", airAlt:"Anti-Snap + Marc Anthony Grow Long", airNote:"skip heat spray on air dry days"}
-    ], steam:"Apply Arvazallia to dry or damp hair before going in. Steam amplifies absorption — then shampoo and condition as normal."},
-    {title:"Hydrating wash", steps:[
-      {p:"Cécred hydrating shampoo", n:"scalp only"},
-      {p:"Wave Babe conditioner", n:"mid-lengths to ends, cool rinse"},
-      {p:"Marc Anthony Grow Long spray", n:"lighter leave-in, saving Anti-Snap for treatment weeks", airAlt:"Marc Anthony Grow Long spray", airNote:"same either way this wash"}
-    ], steam:"Apply Wave Babe as a pre-steam mask, then rinse and proceed with shampoo as normal."}
+const WEEKS=[
+  {name:"Reset week",sub:"Clarify & Moisture",washes:[
+    {title:"Clarify + moisture reset",steps:[
+      {p:"Kristin Ess clarifying shampoo",n:"scalp focus, let rinse through ends"},
+      {p:"Arvazallia argan mask",n:"5–10 min, ends only — no protein this wash"},
+      {p:"Anti-Snap + Living Proof heat spray",n:"if blow drying",airAlt:"Anti-Snap + Marc Anthony Grow Long",airNote:"skip heat spray on air dry days"}
+    ],steam:"Apply Arvazallia to dry or damp hair before going in. Steam amplifies absorption — then shampoo and condition as normal."},
+    {title:"Hydrating wash",steps:[
+      {p:"Cécred hydrating shampoo",n:"scalp only"},
+      {p:"Wave Babe conditioner",n:"mid-lengths to ends, cool rinse"},
+      {p:"Marc Anthony Grow Long spray",n:"lighter leave-in, saving Anti-Snap for treatment weeks",airAlt:"Marc Anthony Grow Long spray",airNote:"same either way this wash"}
+    ],steam:"Apply Wave Babe as a pre-steam mask, then rinse and proceed with shampoo as normal."}
   ]},
-  {name:"Light protein week", sub:"Light Protein", washes:[
-    {title:"Briogeo treatment wash", steps:[
-      {p:"L'Oréal Elvive shampoo", n:"hyaluronic base, moisture anchor"},
-      {p:"Briogeo MegaStrength", n:"5–10 min, ends only — protein + moisture balanced"},
-      {p:"Anti-Snap + Living Proof heat spray", n:"if blow drying", airAlt:"Marc Anthony Grow Long spray", airNote:"skip heat spray on air dry days"}
-    ], steam:"Apply Briogeo MegaStrength to dry or damp hair before going in. Steam drives the proteins deeper — then wash as normal."},
-    {title:"Gentle recovery wash", steps:[
-      {p:"Cécred hydrating shampoo", n:"scalp only"},
-      {p:"Cécred hydrating conditioner", n:"let Briogeo work — no additional treatment today"},
-      {p:"Marc Anthony + Acidic Bonding serum", n:"serum as optional finisher after leave-in", airAlt:"Marc Anthony + Acidic Bonding serum", airNote:"same either way"}
-    ], steam:"Apply Cécred conditioner as pre-steam mask, then wash as normal."}
+  {name:"Light protein week",sub:"Light Protein",washes:[
+    {title:"Briogeo treatment wash",steps:[
+      {p:"L'Oréal Elvive shampoo",n:"hyaluronic base, moisture anchor"},
+      {p:"Briogeo MegaStrength",n:"5–10 min, ends only — protein + moisture balanced"},
+      {p:"Anti-Snap + Living Proof heat spray",n:"if blow drying",airAlt:"Marc Anthony Grow Long spray",airNote:"skip heat spray on air dry days"}
+    ],steam:"Apply Briogeo MegaStrength to dry or damp hair before going in. Steam drives the proteins deeper — then wash as normal."},
+    {title:"Gentle recovery wash",steps:[
+      {p:"Cécred hydrating shampoo",n:"scalp only"},
+      {p:"Cécred hydrating conditioner",n:"let Briogeo work — no additional treatment today"},
+      {p:"Marc Anthony + Acidic Bonding serum",n:"serum as optional finisher after leave-in",airAlt:"Marc Anthony + Acidic Bonding serum",airNote:"same either way"}
+    ],steam:"Apply Cécred conditioner as pre-steam mask, then wash as normal."}
   ]},
-  {name:"Deep moisture week", sub:"Deep Moisture", washes:[
-    {title:"Deep conditioning wash", steps:[
-      {p:"L'Oréal Elvive shampoo", n:"moisture base"},
-      {p:"Arvazallia argan mask", n:"15–20 min this time — real deep conditioning"},
-      {p:"Anti-Snap + Living Proof heat spray", n:"if blow drying", airAlt:"Marc Anthony Grow Long spray", airNote:"skip heat spray on air dry days"}
-    ], steam:"Apply Arvazallia before going in — longer steam means deeper moisture penetration this week."},
-    {title:"Oil + wave wash", steps:[
-      {p:"Cécred hydrating shampoo", n:"scalp only"},
-      {p:"Wave Babe conditioner", n:"mid-lengths to ends"},
-      {p:"Cécred hair oil (1–2 drops) + Marc Anthony", n:"oil on ends first, then leave-in on top", airAlt:"Cécred oil + Marc Anthony", airNote:"same either way — oil first, leave-in second"}
-    ], steam:"Apply Wave Babe as pre-steam mask, then wash as normal. Oil goes on after, not before steam."}
+  {name:"Deep moisture week",sub:"Deep Moisture",washes:[
+    {title:"Deep conditioning wash",steps:[
+      {p:"L'Oréal Elvive shampoo",n:"moisture base"},
+      {p:"Arvazallia argan mask",n:"15–20 min this time — real deep conditioning"},
+      {p:"Anti-Snap + Living Proof heat spray",n:"if blow drying",airAlt:"Marc Anthony Grow Long spray",airNote:"skip heat spray on air dry days"}
+    ],steam:"Apply Arvazallia before going in — longer steam means deeper moisture penetration this week."},
+    {title:"Oil + wave wash",steps:[
+      {p:"Cécred hydrating shampoo",n:"scalp only"},
+      {p:"Wave Babe conditioner",n:"mid-lengths to ends"},
+      {p:"Cécred hair oil (1–2 drops) + Marc Anthony",n:"oil on ends first, then leave-in on top",airAlt:"Cécred oil + Marc Anthony",airNote:"same either way — oil first, leave-in second"}
+    ],steam:"Apply Wave Babe as pre-steam mask, then wash as normal. Oil goes on after, not before steam."}
   ]},
-  {name:"Bond + repair week", sub:"Bond & Repair", washes:[
-    {title:"Cécred reconstructing wash", steps:[
-      {p:"Maui Moisture clarifying shampoo", n:"gentler mid-cycle refresh"},
-      {p:"Cécred Reconstructing Treatment Mask", n:"10 min — heavier protein moment, once a month"},
-      {p:"Anti-Snap + Living Proof heat spray", n:"if blow drying", airAlt:"Marc Anthony Grow Long spray", airNote:"skip heat spray on air dry days"}
-    ], steam:"Apply Cécred Reconstructing Mask before steam — heat drives bond-building deeper. Then wash as normal."},
-    {title:"Sealing + finishing wash", steps:[
-      {p:"Cécred hydrating shampoo", n:"scalp only"},
-      {p:"Cécred hydrating conditioner", n:"mid-lengths to ends"},
-      {p:"Anti-Snap + Acidic Bonding serum", n:"serum applied after leave-in as finisher", airAlt:"Marc Anthony + Acidic Bonding serum", airNote:"swap Anti-Snap for Marc Anthony on air dry days"}
-    ], steam:"Apply Cécred conditioner as pre-steam mask, then wash as normal. Serum goes on after."}
+  {name:"Bond + repair week",sub:"Bond & Repair",washes:[
+    {title:"Cécred reconstructing wash",steps:[
+      {p:"Maui Moisture clarifying shampoo",n:"gentler mid-cycle refresh"},
+      {p:"Cécred Reconstructing Treatment Mask",n:"10 min — heavier protein moment, once a month"},
+      {p:"Anti-Snap + Living Proof heat spray",n:"if blow drying",airAlt:"Marc Anthony Grow Long spray",airNote:"skip heat spray on air dry days"}
+    ],steam:"Apply Cécred Reconstructing Mask before steam — heat drives bond-building deeper. Then wash as normal."},
+    {title:"Sealing + finishing wash",steps:[
+      {p:"Cécred hydrating shampoo",n:"scalp only"},
+      {p:"Cécred hydrating conditioner",n:"mid-lengths to ends"},
+      {p:"Anti-Snap + Acidic Bonding serum",n:"serum applied after leave-in as finisher",airAlt:"Marc Anthony + Acidic Bonding serum",airNote:"swap Anti-Snap for Marc Anthony on air dry days"}
+    ],steam:"Apply Cécred conditioner as pre-steam mask, then wash as normal. Serum goes on after."}
   ]}
 ];
 
-const KEY = 'haircare_v1';
-let S = { weekIdx: 1, washIdx: 0 };
-let blowDry = true, devSel = null;
+const KEY='haircare_v1';
+let S={weekIdx:1,washIdx:0};
+let blowDry=true,devSel=null;
+let obWeek=1,obWash=0;
 
-function load() {
-  try {
-    const d = localStorage.getItem(KEY);
-    if (d) { const p = JSON.parse(d); S.weekIdx = p.weekIdx ?? 1; S.washIdx = p.washIdx ?? 0; }
-  } catch(e) {}
-}
+function load(){try{const d=localStorage.getItem(KEY);if(d){const p=JSON.parse(d);S.weekIdx=p.weekIdx??1;S.washIdx=p.washIdx??0;if(p.setup)document.getElementById('onboard').classList.add('hidden');}}catch(e){}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify({weekIdx:S.weekIdx,washIdx:S.washIdx,setup:true}));}catch(e){}}
 
-function save() {
-  try { localStorage.setItem(KEY, JSON.stringify({ weekIdx: S.weekIdx, washIdx: S.washIdx })); } catch(e) {}
-}
-
-function render() {
-  const w = WEEKS[S.weekIdx], wash = w.washes[S.washIdx];
-  document.getElementById('week-title').innerHTML = `Week ${S.weekIdx + 1} of 4 <em>· ${w.sub}</em>`;
-  const pips = document.querySelectorAll('.pip');
-  pips.forEach((p, i) => { p.className = 'pip'; if (i < S.weekIdx) p.classList.add('done'); else if (i === S.weekIdx) p.classList.add('active'); });
-  document.getElementById('wash-num').textContent = `Wash ${S.washIdx + 1} of 2 this week`;
-  document.getElementById('assign-title').textContent = wash.title;
-  document.getElementById('steam-note').textContent = wash.steam;
+function render(){
+  const w=WEEKS[S.weekIdx],wash=w.washes[S.washIdx];
+  document.getElementById('week-title').innerHTML='Week '+(S.weekIdx+1)+' of 4 <em>· '+w.sub+'</em>';
+  const pips=document.querySelectorAll('.pip');
+  pips.forEach((p,i)=>{p.className='pip';if(i<S.weekIdx)p.classList.add('done');else if(i===S.weekIdx)p.classList.add('active');});
+  document.getElementById('wash-num').textContent='Wash '+(S.washIdx+1)+' of 2 this week';
+  document.getElementById('assign-title').textContent=wash.title;
+  document.getElementById('steam-note').textContent=wash.steam;
   renderSteps();
 }
 
-function renderSteps() {
-  const wash = WEEKS[S.weekIdx].washes[S.washIdx];
-  document.getElementById('step-list').innerHTML = wash.steps.map((s, i) => {
-    const prod = blowDry ? s.p : (s.airAlt || s.p);
-    const note = blowDry ? s.n : (s.airNote || s.n);
-    return `<div class="step"><div class="step-n">${i + 1}</div><div class="step-body"><span class="step-prod">${prod}</span><span class="step-note">${note}</span></div></div>`;
+function renderSteps(){
+  const wash=WEEKS[S.weekIdx].washes[S.washIdx];
+  document.getElementById('step-list').innerHTML=wash.steps.map((s,i)=>{
+    const prod=blowDry?s.p:(s.airAlt||s.p);
+    const note=blowDry?s.n:(s.airNote||s.n);
+    return'<div class="step"><div class="step-n">'+(i+1)+'</div><div class="step-body"><span class="step-prod">'+prod+'</span><span class="step-note">'+note+'</span></div></div>';
   }).join('');
 }
 
-function setDay(d) {
-  document.getElementById('opt-wash').className = 'day-opt' + (d === 'wash' ? ' selected' : '');
-  document.getElementById('opt-rest').className = 'day-opt' + (d === 'rest' ? ' selected' : '');
-  document.getElementById('wash-view').style.display = d === 'wash' ? 'block' : 'none';
-  document.getElementById('rest-view').style.display = d === 'rest' ? 'block' : 'none';
+function setDay(d){
+  document.getElementById('opt-wash').className='day-opt'+(d==='wash'?' selected':'');
+  document.getElementById('opt-rest').className='day-opt'+(d==='rest'?' selected':'');
+  document.getElementById('wash-view').style.display=d==='wash'?'block':'none';
+  document.getElementById('rest-view').style.display=d==='rest'?'block':'none';
 }
 
-function setBlow(v) {
-  blowDry = v === 'blow';
-  document.getElementById('bd-blow').className = 'bd-opt' + (blowDry ? ' sel' : '');
-  document.getElementById('bd-air').className = 'bd-opt' + (!blowDry ? ' sel' : '');
+function setBlow(v){
+  blowDry=v==='blow';
+  document.getElementById('bd-blow').className='bd-opt'+(blowDry?' sel':'');
+  document.getElementById('bd-air').className='bd-opt'+(!blowDry?' sel':'');
   renderSteps();
 }
 
-function handleSteam(el) { document.getElementById('steam-note').style.display = el.checked ? 'block' : 'none'; }
-function handleSteamRest(el) { document.getElementById('steam-note-rest').style.display = el.checked ? 'block' : 'none'; }
-function toggleDev() { document.getElementById('dev-panel').classList.toggle('open'); }
+function handleSteam(el){document.getElementById('steam-note').style.display=el.checked?'block':'none';}
+function handleSteamRest(el){document.getElementById('steam-note-rest').style.display=el.checked?'block':'none';}
+function toggleDev(){document.getElementById('dev-panel').classList.toggle('open');}
 
-function selDev(el, k) {
-  document.querySelectorAll('.dev-opt').forEach(o => o.classList.remove('sel'));
-  el.classList.add('sel'); devSel = k;
+function selDev(el,k){
+  document.querySelectorAll('.dev-opt').forEach(o=>o.classList.remove('sel'));
+  el.classList.add('sel');devSel=k;
 }
 
-function nextWashInfo(dev) {
-  let wi = S.washIdx, wk = S.weekIdx;
-  if (dev === 'skipped' || dev === 'travel') {
-    const wash = WEEKS[wk].washes[wi];
-    return { title: wash.title, sub: `Week ${wk + 1}, Wash ${wi + 1} — resuming from here next time.`, recalib: 'Routine recalibrated around the gap.' };
+function nextWashInfo(dev){
+  let wi=S.washIdx,wk=S.weekIdx;
+  if(dev==='skipped'||dev==='travel'){
+    return{title:WEEKS[wk].washes[wi].title,sub:'Week '+(wk+1)+', Wash '+(wi+1)+' — resuming from here next time.',recalib:'Routine recalibrated around the gap.'};
   }
-  let nwi = wi + 1, nwk = wk;
-  if (nwi >= 2) { nwi = 0; nwk = (wk + 1) % 4; }
-  const nw = WEEKS[nwk].washes[nwi];
-  return { title: nw.title, sub: `Week ${nwk + 1}, Wash ${nwi + 1}`, recalib: '' };
+  let nwi=wi+1,nwk=wk;
+  if(nwi>=2){nwi=0;nwk=(wk+1)%4;}
+  return{title:WEEKS[nwk].washes[nwi].title,sub:'Week '+(nwk+1)+', Wash '+(nwi+1),recalib:''};
 }
 
-function advance() {
-  if (S.washIdx === 0) { S.washIdx = 1; } else { S.washIdx = 0; S.weekIdx = (S.weekIdx + 1) % 4; }
+function advance(){
+  if(S.washIdx===0){S.washIdx=1;}else{S.washIdx=0;S.weekIdx=(S.weekIdx+1)%4;}
   save();
 }
 
-function showSuccess(title, sub, nextObj) {
-  document.getElementById('s-title').textContent = title;
-  document.getElementById('s-sub').textContent = sub;
-  document.getElementById('s-next-title').textContent = nextObj.title;
-  document.getElementById('s-next-sub').textContent = nextObj.sub;
-  const rc = document.getElementById('s-recalib');
-  rc.textContent = nextObj.recalib; rc.style.display = nextObj.recalib ? 'block' : 'none';
-  document.getElementById('wash-view').style.display = 'none';
-  document.getElementById('rest-view').style.display = 'none';
-  document.getElementById('day-q').style.display = 'none';
+function showSuccess(title,sub,nextObj){
+  document.getElementById('s-title').textContent=title;
+  document.getElementById('s-sub').textContent=sub;
+  document.getElementById('s-next-title').textContent=nextObj.title;
+  document.getElementById('s-next-sub').textContent=nextObj.sub;
+  const rc=document.getElementById('s-recalib');
+  rc.textContent=nextObj.recalib;rc.style.display=nextObj.recalib?'block':'none';
+  document.getElementById('wash-view').style.display='none';
+  document.getElementById('rest-view').style.display='none';
+  document.getElementById('day-q').style.display='none';
   document.getElementById('success-view').classList.add('show');
 }
 
-function markDone() {
-  const n = nextWashInfo(null); advance();
-  showSuccess('Logged.', 'Your routine is on track. See you next wash day.', n);
+function markDone(){
+  const n=nextWashInfo(null);advance();
+  showSuccess('Logged.','Your routine is on track. See you next wash day.',n);
 }
 
-function submitDev() {
-  const wi = document.getElementById('write-in').value.trim();
-  const msgs = {
-    skipped: 'Skipped days happen. Pick up from the same point next time.',
-    diff: 'Noted. Continuing from this position in the cycle.',
-    nopoo: 'Recorded as a light rinse — not counting as a full wash.',
-    travel: "Adjusted for travel. Resuming from the same wash when you're home.",
-    'steam-nw': 'Steam without wash noted — no cycle impact.'
-  };
-  const sub = msgs[devSel] || (wi ? `Noted: "${wi.substring(0, 70)}${wi.length > 70 ? '…' : ''}"` : 'Logged and recalibrated.');
-  const n = nextWashInfo(devSel);
-  if (devSel !== 'skipped' && devSel !== 'travel') advance();
-  showSuccess('Recalibrated.', sub, n);
+function submitDev(){
+  const wi=document.getElementById('write-in').value.trim();
+  const msgs={skipped:'Skipped days happen. Pick up from the same point next time.',diff:'Noted. Continuing from this position in the cycle.',nopoo:'Recorded as a light rinse — not counting as a full wash.',travel:"Adjusted for travel. Resuming from the same wash when you're home.",'steam-nw':'Steam without wash noted — no cycle impact.'};
+  const sub=msgs[devSel]||(wi?'Noted: "'+wi.substring(0,70)+(wi.length>70?'…':'')+'"':'Logged and recalibrated.');
+  const n=nextWashInfo(devSel);
+  if(devSel!=='skipped'&&devSel!=='travel')advance();
+  showSuccess('Recalibrated.',sub,n);
 }
 
-function resetDay() {
-  devSel = null; blowDry = true;
-  document.getElementById('bd-blow').className = 'bd-opt sel';
-  document.getElementById('bd-air').className = 'bd-opt';
-  document.getElementById('steam-tog').checked = false;
-  document.getElementById('steam-note').style.display = 'none';
+function resetDay(){
+  devSel=null;blowDry=true;
+  document.getElementById('bd-blow').className='bd-opt sel';
+  document.getElementById('bd-air').className='bd-opt';
+  document.getElementById('steam-tog').checked=false;
+  document.getElementById('steam-note').style.display='none';
   document.getElementById('dev-panel').classList.remove('open');
-  document.getElementById('write-in').value = '';
-  document.querySelectorAll('.dev-opt').forEach(o => o.classList.remove('sel'));
+  document.getElementById('write-in').value='';
+  document.querySelectorAll('.dev-opt').forEach(o=>o.classList.remove('sel'));
   document.getElementById('success-view').classList.remove('show');
-  document.getElementById('day-q').style.display = 'block';
-  setDay('wash'); render();
+  document.getElementById('day-q').style.display='block';
+  setDay('wash');render();
 }
 
-function resetAll() { S = { weekIdx: 0, washIdx: 0 }; save(); resetDay(); }
+function resetAll(){S={weekIdx:0,washIdx:0};save();resetDay();}
 
-load(); render();
+function setOW(el,idx){
+  document.querySelectorAll('.onboard-section:first-of-type .onboard-opt').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected');obWeek=idx;
+}
+
+function setOD(el,idx){
+  document.querySelectorAll('.onboard-section:last-of-type .onboard-opt').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected');obWash=idx;
+}
+
+function confirmOnboard(){
+  S.weekIdx=obWeek;S.washIdx=obWash;save();
+  document.getElementById('onboard').classList.add('hidden');
+  render();
+}
+
+function showOnboard(){
+  obWeek=S.weekIdx;obWash=S.washIdx;
+  document.querySelectorAll('.onboard-section:first-of-type .onboard-opt').forEach((o,i)=>{o.classList.toggle('selected',i===obWeek);});
+  document.querySelectorAll('.onboard-section:last-of-type .onboard-opt').forEach((o,i)=>{o.classList.toggle('selected',i===obWash);});
+  document.getElementById('onboard').classList.remove('hidden');
+}
+
+load();render();
 </script>
 </body>
 </html>
