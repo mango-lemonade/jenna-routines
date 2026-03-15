@@ -22,7 +22,6 @@
   --plum: #A4428F; --plum-light: #F9EDF7; --plum-border: #DDB5D8;
   --blue: #94B0DA; --blue-light: #EEF3FA; --blue-border: #C4D5ED;
   --olive: #605918; --olive-light: #F5F2E8; --olive-border: #C8BF8A;
-  --pale: #DDE17E; --pale-light: #FAFCE8; --pale-border: #CBCF5A;
   --mahogany: #4A090A; --mahogany-light: #F5EAEA; --mahogany-border: #C49090;
 }
 html, body { height: 100%; background: #F0EDE8; font-family: 'Source Sans 3', sans-serif; color: var(--text-dark); -webkit-font-smoothing: antialiased; }
@@ -50,6 +49,13 @@ html, body { height: 100%; background: #F0EDE8; font-family: 'Source Sans 3', sa
 .sess-btn { flex: 1; padding: 0.6rem; border: 0.5px solid var(–border); border-radius: 10px; background: var(–cream); font-family: ‘Source Sans 3’, sans-serif; font-size: 13px; font-weight: 400; color: var(–text-mid); cursor: pointer; text-align: center; -webkit-appearance: none; transition: all 0.2s; }
 .sess-btn.active { border-color: var(–clay); background: var(–clay-light); color: var(–clay); font-weight: 500; }
 
+/* ALREADY LOGGED BANNER */
+.logged-banner { background: var(–white); border: 0.5px solid var(–border); border-radius: 14px; padding: 1rem 1.25rem; }
+.lb-eyebrow { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(–text-muted); margin-bottom: 0.3rem; font-weight: 400; }
+.lb-title { font-family: ‘Source Serif 4’, serif; font-size: 17px; font-weight: 400; font-style: italic; color: var(–text-dark); margin-bottom: 0.2rem; }
+.lb-ts { font-size: 12px; color: var(–text-muted); font-weight: 300; margin-bottom: 0.6rem; }
+.lb-undo { font-size: 12px; color: var(–clay); background: none; border: none; cursor: pointer; font-family: ‘Source Sans 3’, sans-serif; font-weight: 400; text-decoration: underline; padding: 0; -webkit-appearance: none; }
+
 /* SKIN STATE */
 .skin-state-wrap { padding-top: 0.4rem; }
 .skin-state-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(–text-muted); font-weight: 400; }
@@ -66,8 +72,6 @@ html, body { height: 100%; background: #F0EDE8; font-family: 'Source Sans 3', sa
 
 /* ROUTINE CARD */
 .routine-card { background: var(–white); border: 0.5px solid var(–border); border-radius: 14px; padding: 1.1rem 1.25rem; }
-
-/* Prominent badge */
 .routine-badge { display: flex; align-items: center; gap: 8px; padding: 0.55rem 0.9rem; border-radius: 10px; margin-bottom: 1rem; font-size: 12px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; border: 0.5px solid; }
 .badge-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 .badge-bha      { background: var(–blue-light);  color: #2a5280;      border-color: var(–blue-border); }
@@ -83,24 +87,18 @@ html, body { height: 100%; background: #F0EDE8; font-family: 'Source Sans 3', sa
 .steps { display: flex; flex-direction: column; gap: 9px; }
 .step { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; user-select: none; transition: opacity 0.2s; }
 .step.unchecked { opacity: 0.32; }
-.step-n {
-width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
-display: flex; align-items: center; justify-content: center;
-font-size: 9px; font-weight: 600; margin-top: 1px;
-}
+.step-n { width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 600; margin-top: 1px; }
 .sn-base     { background: var(–cream); color: var(–text-muted); border: 0.5px solid var(–border-mid); }
 .sn-bha      { background: var(–blue);  color: #fff; }
 .sn-retinoid { background: var(–plum);  color: #fff; }
 .sn-mask     { background: var(–olive); color: #fff; }
 .sn-spf      { background: var(–cream); color: var(–text-muted); border: 0.5px solid var(–border-mid); }
 .sn-bonus    { background: var(–clay-light); color: var(–clay); border: 0.5px solid var(–clay-border); }
-
 .step-right { display: flex; align-items: flex-start; justify-content: space-between; flex: 1; gap: 6px; }
 .step-body { flex: 1; }
 .step-prod { font-size: 13.5px; font-weight: 500; color: var(–text-dark); display: block; margin-bottom: 2px; line-height: 1.3; }
 .step-note { font-size: 12px; color: var(–text-muted); font-weight: 300; display: block; line-height: 1.35; }
-.swap-btn { background: none; border: 0.5px solid var(–border); border-radius: 6px; padding: 3px 7px; font-size: 10px; color: var(–text-muted); cursor: pointer; font-family: ‘Source Sans 3’, sans-serif; white-space: nowrap; flex-shrink: 0; margin-top: 2px; -webkit-appearance: none; transition: all 0.15s; }
-.swap-btn:active { background: var(–cream); }
+.swap-btn { background: none; border: 0.5px solid var(–border); border-radius: 6px; padding: 3px 7px; font-size: 10px; color: var(–text-muted); cursor: pointer; font-family: ‘Source Sans 3’, sans-serif; white-space: nowrap; flex-shrink: 0; margin-top: 2px; -webkit-appearance: none; }
 .swap-expanded { margin-top: 6px; padding: 0.5rem 0.75rem; background: var(–cream); border-radius: 8px; border: 0.5px solid var(–border); font-size: 11.5px; color: var(–text-mid); line-height: 1.45; font-weight: 300; display: none; }
 .swap-expanded.open { display: block; }
 
@@ -119,9 +117,7 @@ font-size: 9px; font-weight: 600; margin-top: 1px;
 .actions { display: flex; flex-direction: column; gap: 8px; }
 .btn-primary { width: 100%; padding: 0.95rem; background: var(–clay); color: #FDF8F5; border: none; border-radius: 12px; font-family: ‘Source Sans 3’, sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; letter-spacing: 0.02em; transition: opacity 0.2s; -webkit-appearance: none; }
 .btn-primary:active { opacity: 0.85; }
-.btn-primary:disabled { opacity: 0.45; cursor: default; }
-.btn-secondary { width: 100%; padding: 0.95rem; background: var(–clay-light); color: var(–clay); border: 1px solid var(–clay-border); border-radius: 12px; font-family: ‘Source Sans 3’, sans-serif; font-size: 14px; font-weight: 400; cursor: pointer; transition: background 0.2s; -webkit-appearance: none; }
-.btn-secondary:active { background: var(–clay-hover); }
+.btn-secondary { width: 100%; padding: 0.95rem; background: var(–clay-light); color: var(–clay); border: 1px solid var(–clay-border); border-radius: 12px; font-family: ‘Source Sans 3’, sans-serif; font-size: 14px; font-weight: 400; cursor: pointer; -webkit-appearance: none; }
 
 /* SOMETHING DIFFERENT */
 .dev-panel { display: none; flex-direction: column; gap: 7px; }
@@ -145,13 +141,6 @@ font-size: 9px; font-weight: 600; margin-top: 1px;
 .stat-card { width: 100%; background: var(–white); border: 0.5px solid var(–border); border-radius: 14px; padding: 1rem 1.25rem; text-align: left; margin-bottom: 0.5rem; }
 .stat-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(–text-muted); margin-bottom: 0.4rem; font-weight: 400; }
 .stat-val { font-family: ‘Source Serif 4’, serif; font-size: 22px; font-weight: 300; font-style: italic; color: var(–text-dark); }
-
-/* ALREADY LOGGED BANNER */
-.logged-banner { background: var(–white); border: 0.5px solid var(–border); border-radius: 14px; padding: 1.1rem 1.25rem; }
-.lb-eyebrow { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(–text-muted); margin-bottom: 0.35rem; font-weight: 400; }
-.lb-title { font-family: ‘Source Serif 4’, serif; font-size: 18px; font-weight: 400; font-style: italic; color: var(–text-dark); margin-bottom: 0.2rem; }
-.lb-ts { font-size: 12px; color: var(–text-muted); font-weight: 300; margin-bottom: 0.75rem; }
-.lb-undo { font-size: 12px; color: var(–clay); background: none; border: none; cursor: pointer; font-family: ‘Source Sans 3’, sans-serif; font-weight: 400; text-decoration: underline; padding: 0; -webkit-appearance: none; }
 
 /* WEEKLY VIEW */
 .week-day-card { background: var(–white); border: 0.5px solid var(–border); border-radius: 14px; padding: 1rem 1.25rem; margin-bottom: 0.6rem; }
@@ -185,7 +174,7 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px;
 .survey-done-title { font-family: ‘Source Serif 4’, serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(–text-dark); margin-bottom: 0.4rem; }
 .survey-done-sub { font-size: 12.5px; color: var(–text-muted); font-weight: 300; line-height: 1.5; }
 
-/* STATIC / GUIDE */
+/* GUIDE */
 .static-tabs { display: flex; border-bottom: 0.5px solid var(–border); margin-bottom: 1rem; }
 .static-tab { flex: 1; padding: 0.6rem; font-size: 12px; color: var(–text-muted); background: none; border: none; cursor: pointer; font-family: ‘Source Sans 3’, sans-serif; border-bottom: 2px solid transparent; margin-bottom: -0.5px; transition: all 0.2s; font-weight: 400; }
 .static-tab.active { color: var(–clay); border-bottom-color: var(–clay); font-weight: 500; }
@@ -224,8 +213,6 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px;
 </head>
 <body>
 
-<!-- ONBOARDING -->
-
 <div class="onboard" id="onboard">
   <div class="onboard-title">What day is it again?</div>
   <div class="onboard-sub">The look on your face right now, we can fix that!</div>
@@ -246,26 +233,19 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px;
 ```
 <!-- TODAY VIEW -->
 <div id="today-view">
-
-  <!-- ALREADY LOGGED BANNER -->
-  <div id="already-logged" style="display:none;">
-    <div class="logged-banner" id="logged-banner-am" style="display:none;">
-      <div class="lb-eyebrow">AM routine logged</div>
-      <div class="lb-title" id="lb-am-title">Morning routine</div>
-      <div class="lb-ts" id="lb-am-ts"></div>
-      <button class="lb-undo" onclick="undoFromBanner('am')">undo &amp; resubmit</button>
-    </div>
-    <div class="logged-banner" id="logged-banner-pm" style="display:none; margin-top:0.6rem;">
-      <div class="lb-eyebrow">PM routine logged</div>
-      <div class="lb-title" id="lb-pm-title">Evening routine</div>
-      <div class="lb-ts" id="lb-pm-ts"></div>
-      <button class="lb-undo" onclick="undoFromBanner('pm')">undo &amp; resubmit</button>
-    </div>
-  </div>
-
   <div class="session-toggle">
     <button class="sess-btn active" id="btn-am" onclick="setSession('am')">AM routine</button>
     <button class="sess-btn" id="btn-pm" onclick="setSession('pm')">PM routine</button>
+  </div>
+
+  <!-- other-session logged banner -->
+  <div id="other-session-banner" style="display:none">
+    <div class="logged-banner">
+      <div class="lb-eyebrow" id="osb-eyebrow">AM routine logged</div>
+      <div class="lb-title" id="osb-title"></div>
+      <div class="lb-ts" id="osb-ts"></div>
+      <button class="lb-undo" onclick="undoOtherSession()">undo &amp; resubmit</button>
+    </div>
   </div>
 
   <div class="skin-state-wrap">
@@ -282,14 +262,12 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px;
     <strong>Breaking out —</strong> apply a pimple patch directly on the spot before any other steps. Skip retinoid tonight. If this happens more than once a month, flag for your June derm visit.
   </div>
 
-  <!-- Routine steps render here -->
   <div id="routine-area"></div>
 
-  <!-- Sheet mask toggle — between steps and Done, PM only -->
   <div class="toggle-row" id="sheet-mask-row" style="display:none">
     <div class="toggle-info">
       <strong>Sheet mask tonight?</strong>
-      <span>Adds a step after toner — 15 min, any sheet mask</span>
+      <span>Adds a step after toner — 15 min</span>
     </div>
     <label class="tog">
       <input type="checkbox" id="sheet-tog" onchange="renderRoutine()">
@@ -297,7 +275,6 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px;
     </label>
   </div>
 
-  <!-- Actions -->
   <div class="actions" id="action-area" style="display:none">
     <button class="btn-primary" id="done-btn" onclick="markDone()">Done</button>
     <button class="btn-secondary" onclick="toggleDev()">Something different</button>
@@ -310,7 +287,6 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px;
     </div>
   </div>
 
-  <!-- Success state -->
   <div class="success-view" id="success-view">
     <div class="success-ring">
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -320,18 +296,17 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px;
     <div class="success-title" id="s-title">Logged.</div>
     <div class="success-sub" id="s-sub"></div>
     <div class="success-ts" id="s-ts"></div>
-    <button class="undo-btn" onclick="undoLog()">undo</button>
+    <button class="undo-btn" onclick="undoCurrentSession()">undo</button>
     <div class="stat-card">
       <div class="stat-label">Streak</div>
       <div class="stat-val" id="s-streak"></div>
     </div>
     <div class="stat-card" id="s-usage-card" style="display:none">
-      <div class="stat-label" id="s-usage-label">Active uses this week</div>
+      <div class="stat-label">Active uses this week</div>
       <div class="stat-val" id="s-usage-val"></div>
     </div>
   </div>
-
-</div><!-- end today-view -->
+</div>
 
 <!-- WEEKLY VIEW -->
 <div id="week-view" style="display:none">
@@ -351,52 +326,52 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px;
   </div>
   <div id="rules-content" class="static-content active">
     <div class="rule-card rule-warn"><strong>BHA + retinoid — never same night.</strong> BHA mornings Mon/Wed/Fri, retinoid nights Tue/Thu/Sun. If you use tret on a given night, skip BHA the next morning if skin is irritated.</div>
-    <div class="rule-card rule-warn"><strong>Tatcha Deep Cleanse — Sunday mask night only.</strong> Not on retinoid nights, not on BHA mornings. Too much exfoliation stacked.</div>
+    <div class="rule-card rule-warn"><strong>Tatcha Deep Cleanse — Sunday mask night only.</strong> Not on retinoid nights, not on BHA mornings.</div>
     <div class="rule-card rule-warn"><strong>Vitamin C23% — on hold until routine is stable 6+ weeks.</strong> When you integrate: AM only, 3x/week max, not on BHA mornings.</div>
-    <div class="rule-card rule-info"><strong>Niacinamide plays well with everything.</strong> No conflicts with BHA, retinoid, or any other step. Fine AM or PM.</div>
-    <div class="rule-card rule-info"><strong>Snail 96 mucin is your retinoid buffer.</strong> Applying before moisturizer on retinoid nights reduces irritation without blocking the active.</div>
-    <div class="rule-card rule-info"><strong>SPF is non-negotiable after BHA mornings.</strong> BHA increases photosensitivity — Skin Aqua every single day.</div>
-    <div class="rule-card rule-action"><strong>Derm visit in June.</strong> Get 0.025–0.05% tretinoin. Correct frequency (3–4x/week) will outperform 0.1% once a week across every goal.</div>
+    <div class="rule-card rule-info"><strong>Niacinamide plays well with everything.</strong> No conflicts with BHA, retinoid, or any other step.</div>
+    <div class="rule-card rule-info"><strong>Snail 96 mucin is your retinoid buffer.</strong> Apply before moisturizer on retinoid nights to reduce irritation.</div>
+    <div class="rule-card rule-info"><strong>SPF is non-negotiable after BHA mornings.</strong> Skin Aqua every single day.</div>
+    <div class="rule-card rule-action"><strong>Derm visit in June.</strong> Get 0.025–0.05% tretinoin at the right frequency.</div>
     <div class="rule-card rule-action"><strong>Wash makeup brushes weekly.</strong> The jaw/cheek breakout pattern correlates directly.</div>
   </div>
   <div id="subs-content" class="static-content">
     <div class="sub-group">
       <div class="sub-group-title">Cleanser</div>
-      <div class="sub-item"><div class="sub-prod">Vanicream Gentle Cleanser</div><div class="sub-alt">Sub: CeraVe Gentle Facial Cleanser — identical function, use either</div></div>
-      <div class="sub-item"><div class="sub-prod">Belif Aqua Bomb Cleansing Balm</div><div class="sub-alt">Sub: any oil cleanser or micellar water. Sephora wipe in a pinch — avoid as a habit</div></div>
-      <div class="sub-item"><div class="sub-prod">Tatcha The Deep Cleanse</div><div class="sub-alt">Sunday mask night only — skip entirely on any other night</div></div>
+      <div class="sub-item"><div class="sub-prod">Vanicream Gentle Cleanser</div><div class="sub-alt">Sub: CeraVe Gentle Facial Cleanser — identical function</div></div>
+      <div class="sub-item"><div class="sub-prod">Belif Aqua Bomb Cleansing Balm</div><div class="sub-alt">Sub: any oil cleanser or micellar water. Sephora wipe in a pinch</div></div>
+      <div class="sub-item"><div class="sub-prod">Tatcha The Deep Cleanse</div><div class="sub-alt">Sunday mask night only — skip on any other night</div></div>
     </div>
     <div class="sub-group">
       <div class="sub-group-title">Toner / Essence</div>
-      <div class="sub-item"><div class="sub-prod">Hada Labo Alpha Toner</div><div class="sub-alt">Sub: Physiogel Essence — lighter, more calming. Use Physiogel on dry/irritated nights</div></div>
-      <div class="sub-item"><div class="sub-prod">Physiogel Daily Moisture Essence</div><div class="sub-alt">Sub: Hada Labo Alpha — more hydrating</div></div>
-      <div class="sub-item"><div class="sub-prod">Caudalie Vinoperfect Essence</div><div class="sub-alt">No direct sub — skip rather than replace if traveling light</div></div>
+      <div class="sub-item"><div class="sub-prod">Hada Labo Alpha Toner</div><div class="sub-alt">Sub: Physiogel Essence — lighter, more calming</div></div>
+      <div class="sub-item"><div class="sub-prod">Physiogel Daily Moisture Essence</div><div class="sub-alt">Sub: Hada Labo Alpha Toner — more hydrating</div></div>
+      <div class="sub-item"><div class="sub-prod">Caudalie Vinoperfect Essence</div><div class="sub-alt">No direct sub — skip rather than replace if traveling</div></div>
     </div>
     <div class="sub-group">
       <div class="sub-group-title">Retinoid</div>
-      <div class="sub-item"><div class="sub-prod">Mad Hippie Vitamin A Serum (HPR)</div><div class="sub-alt">When empty → The Ordinary Granactive Retinoid 2% Emulsion (~$14)</div></div>
-      <div class="sub-item"><div class="sub-prod">Retin-A 0.1% (tret)</div><div class="sub-alt">Max 1x/week in place of a regular retinoid night. After derm: replace with prescribed lower %</div></div>
+      <div class="sub-item"><div class="sub-prod">Mad Hippie Vitamin A Serum</div><div class="sub-alt">When empty → The Ordinary Granactive Retinoid 2% Emulsion (~$14)</div></div>
+      <div class="sub-item"><div class="sub-prod">Retin-A 0.1%</div><div class="sub-alt">Max 1x/week. After derm: replace with prescribed lower %</div></div>
     </div>
     <div class="sub-group">
       <div class="sub-group-title">Moisturizer</div>
-      <div class="sub-item"><div class="sub-prod">COSRX Snail 92 Cream</div><div class="sub-alt">Default moisturizer. Sub: CeraVe Moisturizing Cream for a lighter feel in summer</div></div>
-      <div class="sub-item"><div class="sub-prod">COSRX Ceramide Moisturizer</div><div class="sub-alt">Heavier — use on retinoid nights, dry state days, barrier support. Sub: Hada Labo Firming until it runs out</div></div>
+      <div class="sub-item"><div class="sub-prod">COSRX Snail 92 Cream</div><div class="sub-alt">Default. Sub: CeraVe Moisturizing Cream in summer</div></div>
+      <div class="sub-item"><div class="sub-prod">COSRX Ceramide Moisturizer</div><div class="sub-alt">Sub: Hada Labo Firming Cream until it runs out</div></div>
     </div>
     <div class="sub-group">
       <div class="sub-group-title">Actives</div>
-      <div class="sub-item"><div class="sub-prod">Paula's Choice BHA 2%</div><div class="sub-alt">No sub — skip the step entirely rather than replace when traveling</div></div>
-      <div class="sub-item"><div class="sub-prod">The Ordinary Niacinamide 10% + Zinc</div><div class="sub-alt">Sub: COSRX Niacinamide or any niacinamide 5–10%</div></div>
+      <div class="sub-item"><div class="sub-prod">Paula's Choice BHA 2%</div><div class="sub-alt">No sub — skip entirely when traveling without it</div></div>
+      <div class="sub-item"><div class="sub-prod">The Ordinary Niacinamide 10% + Zinc</div><div class="sub-alt">Sub: any niacinamide 5–10%</div></div>
     </div>
     <div class="sub-group">
-      <div class="sub-group-title">Travel minimums</div>
-      <div class="sub-item"><div class="sub-prod">Bare minimum kit</div><div class="sub-alt">Vanicream + Snail 92 + Skin Aqua. Everything else is optional when space is limited</div></div>
-      <div class="sub-item"><div class="sub-prod">Active travel kit (longer trip)</div><div class="sub-alt">Add BHA + Niacinamide + Hada Labo Alpha. Keep retinoid if you have checked luggage</div></div>
+      <div class="sub-group-title">Travel</div>
+      <div class="sub-item"><div class="sub-prod">Bare minimum</div><div class="sub-alt">Vanicream + Snail 92 + Skin Aqua</div></div>
+      <div class="sub-item"><div class="sub-prod">Active travel kit</div><div class="sub-alt">Add BHA + Niacinamide + Hada Labo Alpha. Keep retinoid if checked luggage</div></div>
     </div>
   </div>
-</div><!-- end static-view -->
+</div>
 ```
 
-  </div><!-- end body -->
+  </div>
 
   <div class="footer">
     <button class="foot-btn active" id="foot-today"  onclick="showView('today')">Today</button>
@@ -407,171 +382,49 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px;
 </div>
 
 <script>
+// ── CONSTANTS ─────────────────────────────────────────────────────────────────
 const KEY = 'skincare_v2';
-
-function fmtTime(ts){
-  if(!ts)return'';
-  const d=new Date(ts);
-  const h=d.getHours(),m=d.getMinutes();
-  const ampm=h>=12?'pm':'am';
-  const hh=h%12||12;
-  const mm=m.toString().padStart(2,'0');
-  return'Logged today at '+hh+':'+mm+' '+ampm;
-}
-
 const DAYS = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 
 const DAY_CONFIG = {
-  0: { label:'Sunday',    amType:'regular', pmType:'mask',     amBadge:'base', pmBadge:'mask',     amTitle:'Regular morning',   pmTitle:'Mask + retinoid night' },
-  1: { label:'Monday',    amType:'bha',     pmType:'base',     amBadge:'bha',  pmBadge:'base',     amTitle:'BHA morning',       pmTitle:'Base night' },
-  2: { label:'Tuesday',   amType:'regular', pmType:'retinoid', amBadge:'base', pmBadge:'retinoid', amTitle:'Regular morning',   pmTitle:'Retinoid night' },
-  3: { label:'Wednesday', amType:'bha',     pmType:'base',     amBadge:'bha',  pmBadge:'base',     amTitle:'BHA morning',       pmTitle:'Base night' },
-  4: { label:'Thursday',  amType:'regular', pmType:'retinoid', amBadge:'base', pmBadge:'retinoid', amTitle:'Regular morning',   pmTitle:'Retinoid night' },
-  5: { label:'Friday',    amType:'bha',     pmType:'base',     amBadge:'bha',  pmBadge:'base',     amTitle:'BHA morning',       pmTitle:'Light base night' },
-  6: { label:'Saturday',  amType:'regular', pmType:'light',    amBadge:'base', pmBadge:'base',     amTitle:'Regular morning',   pmTitle:'Light night' }
+  0: { label:'Sunday',    amType:'regular', pmType:'mask',     amBadge:'base', pmBadge:'mask',     amTitle:'Regular morning',  pmTitle:'Mask + retinoid night' },
+  1: { label:'Monday',    amType:'bha',     pmType:'base',     amBadge:'bha',  pmBadge:'base',     amTitle:'BHA morning',      pmTitle:'Base night' },
+  2: { label:'Tuesday',   amType:'regular', pmType:'retinoid', amBadge:'base', pmBadge:'retinoid', amTitle:'Regular morning',  pmTitle:'Retinoid night' },
+  3: { label:'Wednesday', amType:'bha',     pmType:'base',     amBadge:'bha',  pmBadge:'base',     amTitle:'BHA morning',      pmTitle:'Base night' },
+  4: { label:'Thursday',  amType:'regular', pmType:'retinoid', amBadge:'base', pmBadge:'retinoid', amTitle:'Regular morning',  pmTitle:'Retinoid night' },
+  5: { label:'Friday',    amType:'bha',     pmType:'base',     amBadge:'bha',  pmBadge:'base',     amTitle:'BHA morning',      pmTitle:'Light base night' },
+  6: { label:'Saturday',  amType:'regular', pmType:'light',    amBadge:'base', pmBadge:'base',     amTitle:'Regular morning',  pmTitle:'Light night' }
 };
 
 const SUBS = {
   'Vanicream Gentle Cleanser':           'Sub: CeraVe Gentle Facial Cleanser — identical function',
-  'Belif Aqua Bomb Cleansing Balm':      'Sub: any oil cleanser or micellar water. Sephora wipe in a pinch',
+  'Belif Aqua Bomb Cleansing Balm':      'Sub: any oil cleanser or micellar water',
   'Tatcha The Deep Cleanse':             'Sunday mask night only — skip on any other night',
   'Caudalie Vinoperfect Essence':        'No direct sub — skip rather than replace if traveling',
-  'The Ordinary Niacinamide 10% + Zinc': 'Sub: any niacinamide 5–10%. COSRX Niacinamide also works',
-  "Paula's Choice BHA 2%":              'No sub — skip the step entirely rather than replace',
+  'The Ordinary Niacinamide 10% + Zinc': 'Sub: any niacinamide 5–10%',
+  "Paula's Choice BHA 2%":              'No sub — skip the step entirely when traveling',
   'COSRX Snail 96 Mucin Essence':        'Sub: any hydrating essence as a buffer layer',
   'Mad Hippie Vitamin A Serum':          'When empty → The Ordinary Granactive Retinoid 2% Emulsion (~$14)',
   'COSRX Snail 92 Cream':               'Sub: CeraVe Moisturizing Cream. Use Ceramide on dry/retinoid nights',
   'COSRX Ceramide Moisturizer':          'Sub: Hada Labo Firming Cream until it runs out',
   'Hada Labo Alpha Toner':              'Sub: Physiogel Essence — lighter, more calming',
   'Physiogel Daily Moisture Essence':    'Sub: Hada Labo Alpha Toner — more hydrating',
-  'Skin Aqua SPF 50+':                  'No sub — non-negotiable. Reapply if outdoors midday',
-  'COSRX Snail Peptide Eye Cream':       'Apply Volumfiline under-eye first if using, then eye cream on top',
+  'Skin Aqua SPF 50+':                  'No sub — non-negotiable',
+  'COSRX Snail Peptide Eye Cream':       'Apply Volumfiline under-eye first if using',
   'Innisfree Jeju Volcanic Clay Mask':   'Sub: Aztec Secret Healing Clay + apple cider vinegar',
-  'Sheet mask':                          'Any hydrating sheet mask — keep it simple'
+  'Sheet mask':                          'Any hydrating sheet mask'
 };
 
 const CIRCLE = { base:'sn-base', bha:'sn-bha', retinoid:'sn-retinoid', mask:'sn-mask', spf:'sn-spf', bonus:'sn-bonus' };
+const CONCERNS = ['Dryness','Oiliness','Breakout(s)','Dullness','Texture / roughness','Redness / irritation','Dark spots','Fine lines','Puffiness / bags','Nothing — skin felt good'];
 
-function getSteps(type, state, sheetMask) {
-  const lazy = state === 'lazy';
-  const dry = state === 'dry';
-  const breakout = state === 'breakout';
-
-  if (type === 'bha') {
-    if (lazy) return lazyAM();
-    const steps = [
-      { prod:'Vanicream Gentle Cleanser',            note:'Rinse thoroughly',                          type:'base' },
-      { prod:'Caudalie Vinoperfect Essence',          note:"Pat in, don't rub — brightening base",     type:'base' },
-      { prod:'The Ordinary Niacinamide 10% + Zinc',  note:'Daily — let absorb a moment',              type:'base' },
-    ];
-    if (dry) {
-      steps.push({ prod:'COSRX Snail 96 Mucin Essence', note:'Skipping BHA today — skin needs gentler morning', type:'base' });
-    } else {
-      steps.push({ prod:"Paula's Choice BHA 2%", note:'Wait 2–3 min before next step', type:'bha' });
-    }
-    steps.push({ prod: dry ? 'COSRX Ceramide Moisturizer' : 'COSRX Snail 92 Cream', note: dry ? 'Extra barrier today' : 'Default moisturizer', type:'base' });
-    steps.push({ prod:'Skin Aqua SPF 50+', note:'Non-negotiable — especially after BHA', type:'spf' });
-    return steps;
-  }
-
-  if (type === 'regular') {
-    if (lazy) return lazyAM();
-    return [
-      { prod:'Vanicream Gentle Cleanser',            note:'Rinse thoroughly',                          type:'base' },
-      { prod:'Caudalie Vinoperfect Essence',          note:"Pat in, don't rub",                        type:'base' },
-      { prod:'The Ordinary Niacinamide 10% + Zinc',  note:'Daily',                                    type:'base' },
-      { prod:'COSRX Snail 96 Mucin Essence',         note: dry ? 'Extra hydration layer today' : 'Optional — use if skin feels tight', type:'base' },
-      { prod: dry ? 'COSRX Ceramide Moisturizer' : 'COSRX Snail 92 Cream', note: dry ? 'Heavier barrier today' : 'Default moisturizer', type:'base' },
-      { prod:'Skin Aqua SPF 50+',                    note:'Every morning',                            type:'spf' },
-    ];
-  }
-
-  if (type === 'retinoid') {
-    if (lazy || breakout) return lazyPM();
-    const steps = [
-      { prod:'Belif Aqua Bomb Cleansing Balm', note:'First cleanse — massage in, then rinse', type:'base' },
-      { prod:'Vanicream Gentle Cleanser',       note:'Second cleanse',                         type:'base' },
-      { prod: dry ? 'Physiogel Daily Moisture Essence' : 'Hada Labo Alpha Toner', note: dry ? 'Going gentler tonight' : 'Pat in gently', type:'base' },
-    ];
-    if (sheetMask) steps.push({ prod:'Sheet mask', note:'15 min — any hydrating sheet mask. Pat in remaining essence', type:'bonus' });
-    steps.push({ prod:'COSRX Snail 96 Mucin Essence', note:'Retinoid buffer — apply before moisturizer', type:'base' });
-    if (!dry) steps.push({ prod:'Mad Hippie Vitamin A Serum', note:"Tonight's retinoid — apply after mucin", type:'retinoid' });
-    steps.push({ prod:'COSRX Ceramide Moisturizer', note: dry ? 'Heavier barrier — skipping retinoid tonight' : 'Go a little heavier than usual', type:'base' });
-    steps.push({ prod:'COSRX Snail Peptide Eye Cream', note:'Final step always', type:'base' });
-    return steps;
-  }
-
-  if (type === 'base') {
-    if (lazy) return lazyPM();
-    const steps = [
-      { prod:'Belif Aqua Bomb Cleansing Balm',   note:'First cleanse',          type:'base' },
-      { prod:'Vanicream Gentle Cleanser',          note:'Second cleanse',         type:'base' },
-      { prod:'Physiogel Daily Moisture Essence',   note:'Gentle hydration layer', type:'base' },
-    ];
-    if (sheetMask) steps.push({ prod:'Sheet mask', note:'15 min — pat in remaining essence', type:'bonus' });
-    steps.push({ prod:'COSRX Snail 96 Mucin Essence', note:'Every night', type:'base' });
-    steps.push({ prod: dry ? 'COSRX Ceramide Moisturizer' : 'COSRX Snail 92 Cream', note: dry ? 'Extra barrier tonight' : 'Default moisturizer', type:'base' });
-    steps.push({ prod:'COSRX Snail Peptide Eye Cream', note:'Final step always', type:'base' });
-    return steps;
-  }
-
-  if (type === 'mask') {
-    if (lazy || breakout) return lazyPM();
-    const steps = [
-      { prod:'Belif Aqua Bomb Cleansing Balm',     note:'First cleanse',                          type:'base' },
-      { prod:'Tatcha The Deep Cleanse',              note:'Replaces Vanicream tonight only',        type:'base' },
-      { prod:'Innisfree Jeju Volcanic Clay Mask',   note:'Nose + T-zone, 10 min. Rinse thoroughly', type:'mask' },
-      { prod:'Hada Labo Alpha Toner',               note:'After mask — restore hydration',          type:'base' },
-    ];
-    if (sheetMask) steps.push({ prod:'Sheet mask', note:'15 min — treat yourself', type:'bonus' });
-    steps.push({ prod:'COSRX Snail 96 Mucin Essence',  note:'Retinoid buffer',                             type:'base' });
-    steps.push({ prod:'Mad Hippie Vitamin A Serum',    note:"Sunday's retinoid — mask + retinoid compatible", type:'retinoid' });
-    steps.push({ prod:'COSRX Ceramide Moisturizer',    note:'Go heavier after retinoid',                    type:'base' });
-    steps.push({ prod:'COSRX Snail Peptide Eye Cream', note:'Final step always',                            type:'base' });
-    return steps;
-  }
-
-  if (type === 'light') {
-    // Saturday — no actives
-    const steps = [
-      { prod:'Belif Aqua Bomb Cleansing Balm', note:'First cleanse', type:'base' },
-      { prod:'Vanicream Gentle Cleanser',       note:'Second cleanse', type:'base' },
-      { prod:'Physiogel Daily Moisture Essence', note:'Gentle tonight', type:'base' },
-    ];
-    if (sheetMask) steps.push({ prod:'Sheet mask', note:'15 min', type:'bonus' });
-    steps.push({ prod:'COSRX Snail 96 Mucin Essence', note:'Every night', type:'base' });
-    steps.push({ prod:'COSRX Snail 92 Cream', note:'Default moisturizer', type:'base' });
-    steps.push({ prod:'COSRX Snail Peptide Eye Cream', note:'Final step always', type:'base' });
-    return steps;
-  }
-
-  return lazyPM();
-}
-
-function lazyPM() {
-  return [
-    { prod:'Belif Aqua Bomb Cleansing Balm',   note:'First cleanse',  type:'base' },
-    { prod:'Vanicream Gentle Cleanser',          note:'Second cleanse', type:'base' },
-    { prod:'Physiogel Daily Moisture Essence',   note:'Hydration',      type:'base' },
-    { prod:'COSRX Snail 92 Cream',              note:'Moisturizer',    type:'base' },
-    { prod:'COSRX Snail Peptide Eye Cream',     note:'Final step',     type:'base' },
-  ];
-}
-
-function lazyAM() {
-  return [
-    { prod:'Vanicream Gentle Cleanser', note:'Quick cleanse', type:'base' },
-    { prod:'COSRX Snail 92 Cream',     note:'Moisturizer',   type:'base' },
-    { prod:'Skin Aqua SPF 50+',        note:'Always',        type:'spf'  },
-  ];
-}
-
-// ── APP STATE ─────────────────────────────────────────────────────────────────
+// ── STATE ─────────────────────────────────────────────────────────────────────
 let S = { setup: false };
 let session = 'am';
 let skinState = 'normal';
 let devSel = null;
 let checkedSteps = {};
+let surveyRating = 3, surveyComp = null, surveyChips = new Set();
 
 function load() { try { const d = localStorage.getItem(KEY); if (d) S = { ...S, ...JSON.parse(d) }; } catch(e) {} }
 function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e) {} }
@@ -593,8 +446,129 @@ function getWeekKey() {
   if (now.getHours() < 3) now.setDate(now.getDate() - 1);
   const day = now.getDay();
   const diff = now.getDate() - day + (day === 0 ? -6 : 1);
-  const mon = new Date(now.setDate(diff));
-  return mon.toISOString().slice(0, 10);
+  return new Date(new Date(now).setDate(diff)).toISOString().slice(0, 10);
+}
+function fmtTime(ts) {
+  if (!ts) return '';
+  const d = new Date(ts);
+  const h = d.getHours(), m = d.getMinutes();
+  const ampm = h >= 12 ? 'pm' : 'am';
+  const hh = h % 12 || 12;
+  const mm = m.toString().padStart(2, '0');
+  return 'Logged today at ' + hh + ':' + mm + ' ' + ampm;
+}
+
+// ── ROUTINES ──────────────────────────────────────────────────────────────────
+function getSteps(type, state, sheetMask) {
+  const lazy = state === 'lazy';
+  const dry = state === 'dry';
+  const breakout = state === 'breakout';
+
+  if (type === 'bha') {
+    if (lazy) return lazyAM();
+    const s = [
+      { prod:'Vanicream Gentle Cleanser',            note:'Rinse thoroughly',                      type:'base' },
+      { prod:'Caudalie Vinoperfect Essence',          note:"Pat in, don't rub — brightening base",  type:'base' },
+      { prod:'The Ordinary Niacinamide 10% + Zinc',  note:'Daily — let absorb a moment',           type:'base' },
+    ];
+    if (dry) {
+      s.push({ prod:'COSRX Snail 96 Mucin Essence', note:'Skipping BHA — skin needs gentler morning', type:'base' });
+    } else {
+      s.push({ prod:"Paula's Choice BHA 2%", note:'Wait 2–3 min before next step', type:'bha' });
+    }
+    s.push({ prod: dry ? 'COSRX Ceramide Moisturizer' : 'COSRX Snail 92 Cream', note: dry ? 'Extra barrier today' : 'Default moisturizer', type:'base' });
+    s.push({ prod:'Skin Aqua SPF 50+', note:'Non-negotiable — especially after BHA', type:'spf' });
+    return s;
+  }
+
+  if (type === 'regular') {
+    if (lazy) return lazyAM();
+    return [
+      { prod:'Vanicream Gentle Cleanser',            note:'Rinse thoroughly',           type:'base' },
+      { prod:'Caudalie Vinoperfect Essence',          note:"Pat in, don't rub",          type:'base' },
+      { prod:'The Ordinary Niacinamide 10% + Zinc',  note:'Daily',                      type:'base' },
+      { prod:'COSRX Snail 96 Mucin Essence',         note: dry ? 'Extra hydration today' : 'Optional — use if skin feels tight', type:'base' },
+      { prod: dry ? 'COSRX Ceramide Moisturizer' : 'COSRX Snail 92 Cream', note: dry ? 'Heavier barrier today' : 'Default moisturizer', type:'base' },
+      { prod:'Skin Aqua SPF 50+',                    note:'Every morning',              type:'spf' },
+    ];
+  }
+
+  if (type === 'retinoid') {
+    if (lazy || breakout) return lazyPM();
+    const s = [
+      { prod:'Belif Aqua Bomb Cleansing Balm', note:'First cleanse — massage in, then rinse', type:'base' },
+      { prod:'Vanicream Gentle Cleanser',       note:'Second cleanse',                         type:'base' },
+      { prod: dry ? 'Physiogel Daily Moisture Essence' : 'Hada Labo Alpha Toner', note: dry ? 'Going gentler tonight' : 'Pat in gently', type:'base' },
+    ];
+    if (sheetMask) s.push({ prod:'Sheet mask', note:'15 min — any hydrating sheet mask. Pat in remaining essence', type:'bonus' });
+    s.push({ prod:'COSRX Snail 96 Mucin Essence', note:'Retinoid buffer — apply before moisturizer', type:'base' });
+    if (!dry) s.push({ prod:'Mad Hippie Vitamin A Serum', note:"Tonight's retinoid", type:'retinoid' });
+    s.push({ prod:'COSRX Ceramide Moisturizer', note: dry ? 'Heavier barrier — skipping retinoid tonight' : 'Go a little heavier than usual', type:'base' });
+    s.push({ prod:'COSRX Snail Peptide Eye Cream', note:'Final step always', type:'base' });
+    return s;
+  }
+
+  if (type === 'base') {
+    if (lazy) return lazyPM();
+    const s = [
+      { prod:'Belif Aqua Bomb Cleansing Balm',  note:'First cleanse',          type:'base' },
+      { prod:'Vanicream Gentle Cleanser',         note:'Second cleanse',         type:'base' },
+      { prod:'Physiogel Daily Moisture Essence',  note:'Gentle hydration layer', type:'base' },
+    ];
+    if (sheetMask) s.push({ prod:'Sheet mask', note:'15 min — pat in remaining essence', type:'bonus' });
+    s.push({ prod:'COSRX Snail 96 Mucin Essence', note:'Every night', type:'base' });
+    s.push({ prod: dry ? 'COSRX Ceramide Moisturizer' : 'COSRX Snail 92 Cream', note: dry ? 'Extra barrier tonight' : 'Default moisturizer', type:'base' });
+    s.push({ prod:'COSRX Snail Peptide Eye Cream', note:'Final step always', type:'base' });
+    return s;
+  }
+
+  if (type === 'mask') {
+    if (lazy || breakout) return lazyPM();
+    const s = [
+      { prod:'Belif Aqua Bomb Cleansing Balm',   note:'First cleanse',                           type:'base' },
+      { prod:'Tatcha The Deep Cleanse',            note:'Replaces Vanicream tonight only',         type:'base' },
+      { prod:'Innisfree Jeju Volcanic Clay Mask',  note:'Nose + T-zone, 10 min. Rinse thoroughly', type:'mask' },
+      { prod:'Hada Labo Alpha Toner',              note:'After mask — restore hydration',          type:'base' },
+    ];
+    if (sheetMask) s.push({ prod:'Sheet mask', note:'15 min — treat yourself', type:'bonus' });
+    s.push({ prod:'COSRX Snail 96 Mucin Essence',  note:'Retinoid buffer',                              type:'base' });
+    s.push({ prod:'Mad Hippie Vitamin A Serum',    note:"Sunday's retinoid — mask + retinoid compatible", type:'retinoid' });
+    s.push({ prod:'COSRX Ceramide Moisturizer',    note:'Go heavier after retinoid',                    type:'base' });
+    s.push({ prod:'COSRX Snail Peptide Eye Cream', note:'Final step always',                            type:'base' });
+    return s;
+  }
+
+  if (type === 'light') {
+    const s = [
+      { prod:'Belif Aqua Bomb Cleansing Balm',  note:'First cleanse',  type:'base' },
+      { prod:'Vanicream Gentle Cleanser',         note:'Second cleanse', type:'base' },
+      { prod:'Physiogel Daily Moisture Essence',  note:'Gentle tonight', type:'base' },
+    ];
+    if (sheetMask) s.push({ prod:'Sheet mask', note:'15 min', type:'bonus' });
+    s.push({ prod:'COSRX Snail 96 Mucin Essence', note:'Every night',        type:'base' });
+    s.push({ prod:'COSRX Snail 92 Cream',         note:'Default moisturizer', type:'base' });
+    s.push({ prod:'COSRX Snail Peptide Eye Cream', note:'Final step always',  type:'base' });
+    return s;
+  }
+
+  return lazyPM();
+}
+
+function lazyPM() {
+  return [
+    { prod:'Belif Aqua Bomb Cleansing Balm',  note:'First cleanse',  type:'base' },
+    { prod:'Vanicream Gentle Cleanser',         note:'Second cleanse', type:'base' },
+    { prod:'Physiogel Daily Moisture Essence',  note:'Hydration',      type:'base' },
+    { prod:'COSRX Snail 92 Cream',             note:'Moisturizer',    type:'base' },
+    { prod:'COSRX Snail Peptide Eye Cream',    note:'Final step',     type:'base' },
+  ];
+}
+function lazyAM() {
+  return [
+    { prod:'Vanicream Gentle Cleanser', note:'Quick cleanse', type:'base' },
+    { prod:'COSRX Snail 92 Cream',     note:'Moisturizer',   type:'base' },
+    { prod:'Skin Aqua SPF 50+',        note:'Always',        type:'spf'  },
+  ];
 }
 
 // ── HEADER ────────────────────────────────────────────────────────────────────
@@ -603,42 +577,67 @@ function renderHeader() {
   const cfg = DAY_CONFIG[today];
   const title = session === 'am' ? cfg.amTitle : cfg.pmTitle;
   document.getElementById('page-title').innerHTML = cfg.label + ' <em>· ' + title + '</em>';
-
-  const pmTypeMap = { 0:'mask', 1:'base', 2:'retinoid', 3:'base', 4:'retinoid', 5:'base', 6:'base' };
-  const amTypeMap = { 0:'base', 1:'bha',  2:'base',     3:'bha',  4:'base',     5:'bha',  6:'base' };
+  const pmMap = { 0:'mask', 1:'base', 2:'retinoid', 3:'base', 4:'retinoid', 5:'base', 6:'base' };
+  const amMap = { 0:'base', 1:'bha',  2:'base',     3:'bha',  4:'base',     5:'bha',  6:'base' };
   const dotsEl = document.getElementById('day-dots');
   dotsEl.innerHTML = '';
   for (let i = 0; i < 7; i++) {
     const d = document.createElement('div');
-    const t = session === 'am' ? amTypeMap[i] : pmTypeMap[i];
+    const t = session === 'am' ? amMap[i] : pmMap[i];
     d.className = 'day-dot ' + t + (i === today ? '' : i < today ? ' past' : ' future');
     dotsEl.appendChild(d);
   }
 }
 
+// ── OTHER SESSION BANNER ──────────────────────────────────────────────────────
+function updateOtherSessionBanner() {
+  const otherSession = session === 'am' ? 'pm' : 'am';
+  const otherLog = S[getTodayKey() + '_' + otherSession];
+  const banner = document.getElementById('other-session-banner');
+  if (otherLog) {
+    const cfg = DAY_CONFIG[getToday()];
+    document.getElementById('osb-eyebrow').textContent = otherSession.toUpperCase() + ' routine logged';
+    document.getElementById('osb-title').textContent = otherSession === 'am' ? cfg.amTitle : cfg.pmTitle;
+    document.getElementById('osb-ts').textContent = fmtTime(otherLog.ts);
+    banner.style.display = 'block';
+  } else {
+    banner.style.display = 'none';
+  }
+}
+
+function undoOtherSession() {
+  const otherSession = session === 'am' ? 'pm' : 'am';
+  delete S[getTodayKey() + '_' + otherSession];
+  save();
+  setSession(otherSession);
+}
+
 // ── RENDER ROUTINE ────────────────────────────────────────────────────────────
 function renderRoutine() {
   const today = getToday();
-  const cfg = DAY_CONFIG[today];
-  const type   = session === 'am' ? cfg.amType   : cfg.pmType;
-  const badge  = session === 'am' ? cfg.amBadge  : cfg.pmBadge;
-  const title  = session === 'am' ? cfg.amTitle  : cfg.pmTitle;
+  const cfg   = DAY_CONFIG[today];
+  const type  = session === 'am' ? cfg.amType  : cfg.pmType;
+  const badge = session === 'am' ? cfg.amBadge : cfg.pmBadge;
+  const title = session === 'am' ? cfg.amTitle : cfg.pmTitle;
   const sheetMask = session === 'pm' && document.getElementById('sheet-tog').checked;
 
-  // Sheet mask toggle — PM non-lazy only
-  const smr = document.getElementById('sheet-mask-row');
-  smr.style.display = (session === 'pm' && skinState !== 'lazy') ? 'flex' : 'none';
+  // Sheet mask toggle
+  document.getElementById('sheet-mask-row').style.display =
+    (session === 'pm' && skinState !== 'lazy') ? 'flex' : 'none';
 
   // Patch alert
-  document.getElementById('patch-alert').style.display = skinState === 'breakout' ? 'block' : 'none';
+  document.getElementById('patch-alert').style.display =
+    skinState === 'breakout' ? 'block' : 'none';
 
-  // Already logged?
+  // Already logged this session today?
   const logKey = getTodayKey() + '_' + session;
-  if (S[logKey]) { showSuccess(S[logKey]); return; }
+  if (S[logKey]) {
+    showSuccess(S[logKey]);
+    return;
+  }
 
+  // Build steps
   const steps = getSteps(type, skinState, sheetMask);
-
-  // Init all checked
   checkedSteps = {};
   steps.forEach((_, i) => checkedSteps[i] = true);
 
@@ -667,7 +666,6 @@ function renderRoutine() {
 
   document.getElementById('action-area').style.display = 'flex';
   document.getElementById('success-view').classList.remove('show');
-  try { checkBanners(); } catch(e) { console.warn(e); }
   updateDoneBtn();
 }
 
@@ -697,21 +695,21 @@ function showSuccess(log) {
   document.getElementById('action-area').style.display = 'none';
   document.getElementById('sheet-mask-row').style.display = 'none';
   document.getElementById('success-view').classList.add('show');
+  const msgs = { skipped:'Skipped — gaps happen.', diff:'Logged with different products.', travel:'Travel night logged.' };
   document.getElementById('s-title').textContent = log.devSel === 'skipped' ? 'Skipped.' : 'Logged.';
-  const msgs = { skipped:'Skipped tonight — gaps happen.', diff:'Logged with different products.', travel:'Travel night logged.' };
   const partial = (log.stepsCompleted != null && log.stepsTotal != null && log.stepsCompleted < log.stepsTotal)
     ? ` (${log.stepsCompleted} of ${log.stepsTotal} steps)` : '';
   document.getElementById('s-sub').textContent = (msgs[log.devSel] || 'Your routine is on track.') + partial;
   document.getElementById('s-ts').textContent = fmtTime(log.ts);
   document.getElementById('s-streak').textContent = streakText();
   const ac = activeUses();
-  const usageCard = document.getElementById('s-usage-card');
+  const uc = document.getElementById('s-usage-card');
   if (ac.bha > 0 || ac.ret > 0) {
-    usageCard.style.display = 'block';
+    uc.style.display = 'block';
     document.getElementById('s-usage-val').textContent =
       [ac.bha > 0 ? `BHA ×${ac.bha}` : '', ac.ret > 0 ? `Retinoid ×${ac.ret}` : ''].filter(Boolean).join('  ·  ');
   } else {
-    usageCard.style.display = 'none';
+    uc.style.display = 'none';
   }
 }
 
@@ -730,8 +728,8 @@ function activeUses() {
   for (let i = 0; i < 7; i++) {
     const am = S[getDateKey(i) + '_am'];
     const pm = S[getDateKey(i) + '_pm'];
-    if (am?.hadBha) bha++;
-    if (pm?.hadRetinoid) ret++;
+    if (am && am.hadBha) bha++;
+    if (pm && pm.hadRetinoid) ret++;
   }
   return { bha, ret };
 }
@@ -741,20 +739,20 @@ function setSession(s) {
   session = s;
   document.getElementById('btn-am').className = 'sess-btn' + (s === 'am' ? ' active' : '');
   document.getElementById('btn-pm').className = 'sess-btn' + (s === 'pm' ? ' active' : '');
-  // Reset skin state
   skinState = 'normal';
   ['normal','dry','breakout','lazy'].forEach(id => {
     const el = document.getElementById('ss-' + id);
-    if (el) {
-      el.className = 'state-btn' + (id === 'normal' ? ' sel normal' : '');
-      el.style.display = (id === 'lazy' && s === 'am') ? 'none' : '';
-    }
+    if (!el) return;
+    el.className = 'state-btn' + (id === 'normal' ? ' sel normal' : '');
+    el.style.display = (id === 'lazy' && s === 'am') ? 'none' : '';
   });
   document.getElementById('sheet-tog').checked = false;
   devSel = null;
   document.getElementById('dev-panel').classList.remove('open');
   document.getElementById('success-view').classList.remove('show');
+  document.getElementById('s-usage-card').style.display = 'none';
   renderHeader();
+  updateOtherSessionBanner();
   renderRoutine();
 }
 
@@ -775,119 +773,72 @@ function selDev(el, k) {
 }
 
 function markDone() {
-  try {
   const today = getToday();
   const cfg   = DAY_CONFIG[today];
   const type  = session === 'am' ? cfg.amType : cfg.pmType;
   const total = Object.keys(checkedSteps).length;
   const done  = Object.values(checkedSteps).filter(Boolean).length;
+  const ts    = Date.now();
   const logKey = getTodayKey() + '_' + session;
   S[logKey] = {
     date: getTodayKey(), session, type, state: skinState,
     hadBha:      type === 'bha'      && skinState !== 'lazy' && skinState !== 'dry',
     hadRetinoid: (type === 'retinoid' || type === 'mask') && skinState !== 'lazy' && skinState !== 'breakout' && skinState !== 'dry',
     hadMask:     type === 'mask'     && skinState !== 'lazy' && skinState !== 'breakout',
-    sheetMask: document.getElementById('sheet-tog').checked,
+    sheetMask:   document.getElementById('sheet-tog').checked,
     stepsCompleted: done, stepsTotal: total,
     devSel: null, ts
   };
   save();
   showSuccess(S[logKey]);
-  } catch(e) {
-    console.error('markDone error:', e);
-    alert('Something went wrong saving. Please try again.');
-  }
 }
 
 function submitDev() {
   const wi = document.getElementById('write-in').value.trim();
+  const ts = Date.now();
   const logKey = getTodayKey() + '_' + session;
-  const devTs = Date.now();
   S[logKey] = {
     date: getTodayKey(), session, type: 'dev', state: skinState,
     hadBha: false, hadRetinoid: false, hadMask: false,
-    devSel: devSel || 'other', note: wi, ts: devTs
+    devSel: devSel || 'other', note: wi, ts
   };
   save();
   showSuccess(S[logKey]);
 }
 
-
-function checkBanners() {
-  try {
-  const todayKey = getTodayKey();
-  const amLog = S[todayKey + '_am'];
-  const pmLog = S[todayKey + '_pm'];
-  const alEl = document.getElementById('already-logged');
-  const amBanner = document.getElementById('logged-banner-am');
-  const pmBanner = document.getElementById('logged-banner-pm');
-  if (!alEl || !amBanner || !pmBanner) return;
-
-  const showAm = !!amLog && session !== 'am';
-  const showPm = !!pmLog && session !== 'pm';
-
-  amBanner.style.display = showAm ? 'block' : 'none';
-  pmBanner.style.display = showPm ? 'block' : 'none';
-  alEl.style.display = (showAm || showPm) ? 'block' : 'none';
-
-  if (amLog) {
-    const cfg = DAY_CONFIG[getToday()];
-    document.getElementById('lb-am-title').textContent = cfg.amTitle;
-    document.getElementById('lb-am-ts').textContent = fmtTime(amLog.ts);
-  }
-  if (pmLog) {
-    const cfg = DAY_CONFIG[getToday()];
-    document.getElementById('lb-pm-title').textContent = cfg.pmTitle;
-    document.getElementById('lb-pm-ts').textContent = fmtTime(pmLog.ts);
-  }
-  } catch(e) { console.warn('checkBanners error:', e); }
-}
-
-function undoFromBanner(sess) {
-  const logKey = getTodayKey() + '_' + sess;
-  delete S[logKey];
-  save();
-  setSession(sess);
-}
-
-function undoLog() {
-  const logKey = getTodayKey() + '_' + session;
-  delete S[logKey];
+function undoCurrentSession() {
+  delete S[getTodayKey() + '_' + session];
   save();
   checkedSteps = {};
   document.getElementById('success-view').classList.remove('show');
   document.getElementById('s-usage-card').style.display = 'none';
-  setSession(session); // re-render fresh
-  checkBanners();
+  setSession(session);
 }
 
 // ── WEEKLY VIEW ───────────────────────────────────────────────────────────────
 function renderWeek() {
   const today = getToday();
-  const pmTypes = { 0:'mask', 1:'base', 2:'retinoid', 3:'base', 4:'retinoid', 5:'base', 6:'base' };
-  const amTypes = { 0:'base', 1:'bha',  2:'base',     3:'bha',  4:'base',     5:'bha',  6:'base' };
-  const typeLabel = { bha:'BHA AM', retinoid:'Retinoid PM', mask:'Mask PM', base:'Base' };
-  const pillClass = { bha:'pill-bha', retinoid:'pill-retinoid', mask:'pill-mask', base:'pill-base' };
-
+  const pmMap = { 0:'mask', 1:'base', 2:'retinoid', 3:'base', 4:'retinoid', 5:'base', 6:'base' };
+  const amMap = { 0:'base', 1:'bha',  2:'base',     3:'bha',  4:'base',     5:'bha',  6:'base' };
+  const tLabel = { bha:'BHA AM', retinoid:'Retinoid PM', mask:'Mask PM', base:'Base' };
+  const tPill  = { bha:'pill-bha', retinoid:'pill-retinoid', mask:'pill-mask', base:'pill-base' };
   let html = '';
   for (let i = 1; i <= 7; i++) {
     const dow = i % 7;
     const cfg = DAY_CONFIG[dow];
     const daysAgo = (today - dow + 7) % 7;
-    const dateKey = getDateKey(daysAgo);
-    const amLog = S[dateKey + '_am'];
-    const pmLog = S[dateKey + '_pm'];
+    const dk = getDateKey(daysAgo);
+    const amLog = S[dk + '_am'];
+    const pmLog = S[dk + '_pm'];
     const isToday = dow === today;
-    const amT = amTypes[dow];
-    const pmT = pmTypes[dow];
     html += `<div class="week-day-card${isToday ? ' today-card' : ''}">
       <div class="wdc-header">
         <span class="wdc-day${isToday ? ' today-label' : ''}">${cfg.label}${isToday ? ' · today' : ''}</span>
         <span class="wdc-logged">${amLog && pmLog ? 'Both logged' : amLog ? 'AM logged' : pmLog ? 'PM logged' : ''}</span>
       </div>
       <div class="wdc-pills">
-        <span class="wdc-pill ${pillClass[amT]}">${typeLabel[amT]}</span>
-        <span class="wdc-pill ${pillClass[pmT]}">${typeLabel[pmT]}</span>
+        <span class="wdc-pill ${tPill[amMap[dow]]}">${tLabel[amMap[dow]]}</span>
+        <span class="wdc-pill ${tPill[pmMap[dow]]}">${tLabel[pmMap[dow]]}</span>
         ${amLog ? '<span class="wdc-pill pill-done">AM ✓</span>' : ''}
         ${pmLog ? '<span class="wdc-pill pill-done">PM ✓</span>' : ''}
       </div>
@@ -897,45 +848,32 @@ function renderWeek() {
 }
 
 // ── SURVEY ────────────────────────────────────────────────────────────────────
-const CONCERNS = ['Dryness','Oiliness','Breakout(s)','Dullness','Texture / roughness','Redness / irritation','Dark spots','Fine lines','Puffiness / bags','Nothing — skin felt good'];
-let surveyRating = 3, surveyComp = null, surveyChips = new Set();
-
 function renderSurvey() {
-  const weekKey = getWeekKey();
-  const done = S['survey_' + weekKey];
+  const wk = getWeekKey();
+  const done = S['survey_' + wk];
   const dot = document.getElementById('survey-dot');
-
   if (done) {
     dot.classList.remove('show');
     document.getElementById('survey-content').innerHTML = `
       <div class="survey-done">
         <div class="survey-done-title">Check-in complete.</div>
-        <div class="survey-done-sub">You've checked in for this week.<br><br>
-        Rating: ${done.rating}/5 · ${done.concerns.length ? done.concerns.join(', ') : 'No concerns noted'}</div>
+        <div class="survey-done-sub">Rating: ${done.rating}/5<br>${done.concerns.length ? done.concerns.join(', ') : 'No concerns noted'}${done.note ? '<br><br>"' + done.note + '"' : ''}</div>
       </div>`;
     return;
   }
-
   if (getToday() === 0) dot.classList.add('show');
-
   document.getElementById('survey-content').innerHTML = `
     <div class="survey-card">
       <div class="survey-q">How did your skin look and feel this week?</div>
       <div class="slider-wrap">
         <input type="range" min="1" max="5" value="${surveyRating}" id="survey-slider"
           oninput="surveyRating=+this.value;document.getElementById('rating-val').textContent=['','Rough week','Not great','Okay','Pretty good','Loved it'][+this.value]">
-        <div class="slider-labels">
-          <span>Rough week</span>
-          <span id="rating-val">${['','Rough week','Not great','Okay','Pretty good','Loved it'][surveyRating]}</span>
-          <span>Loved it</span>
-        </div>
+        <div class="slider-labels"><span>Rough week</span><span id="rating-val">${['','Rough week','Not great','Okay','Pretty good','Loved it'][surveyRating]}</span><span>Loved it</span></div>
       </div>
     </div>
     <div class="survey-card">
       <div class="survey-q">What was bothering you this week?</div>
-      <div class="chip-grid">
-        ${CONCERNS.map(c => `<button class="chip${surveyChips.has(c)?' sel':''}" onclick="toggleChip(this,'${c}')">${c}</button>`).join('')}
-      </div>
+      <div class="chip-grid">${CONCERNS.map(c => `<button class="chip${surveyChips.has(c)?' sel':''}" onclick="toggleChip(this,'${c}')">${c}</button>`).join('')}</div>
     </div>
     <div class="survey-card">
       <div class="survey-q">How well did you stick to your routine?</div>
@@ -968,16 +906,14 @@ el.classList.add(‘sel’);
 function submitSurvey() {
 if (!surveyComp) { alert(‘Please select how well you stuck to your routine.’); return; }
 S[‘survey_’ + getWeekKey()] = {
-weekKey: getWeekKey(), rating: surveyRating,
-concerns: Array.from(surveyChips), compliance: surveyComp,
-note: document.getElementById(‘survey-note’)?.value || ‘’, ts: Date.now()
+rating: surveyRating, concerns: Array.from(surveyChips),
+compliance: surveyComp, note: document.getElementById(‘survey-note’)?.value || ‘’, ts: Date.now()
 };
-save();
-surveyChips = new Set(); surveyComp = null; surveyRating = 3;
+save(); surveyChips = new Set(); surveyComp = null; surveyRating = 3;
 renderSurvey();
 }
 
-// ── STATIC TABS ───────────────────────────────────────────────────────────────
+// ── GUIDE ─────────────────────────────────────────────────────────────────────
 function showStatic(tab, el) {
 document.querySelectorAll(’.static-content’).forEach(c => c.classList.remove(‘active’));
 document.querySelectorAll(’.static-tab’).forEach(t => t.classList.remove(‘active’));
@@ -988,27 +924,26 @@ if (el) el.classList.add(‘active’);
 // ── VIEW SWITCHING ────────────────────────────────────────────────────────────
 function showView(v) {
 [‘today’,‘week’,‘survey’,‘static’].forEach(id => {
-const el = document.getElementById(id + ‘-view’);
-if (el) el.style.display = (v === id) ? ‘block’ : ‘none’;
+document.getElementById(id + ‘-view’).style.display = (v === id) ? ‘block’ : ‘none’;
 const fb = document.getElementById(‘foot-’ + id);
 if (fb) fb.className = ‘foot-btn’ + (v === id ? ’ active’ : ‘’);
 });
 if (v === ‘week’)   renderWeek();
 if (v === ‘survey’) renderSurvey();
-if (v === ‘today’)  { renderHeader(); renderRoutine(); }
+if (v === ‘today’)  { renderHeader(); updateOtherSessionBanner(); renderRoutine(); }
 }
 
 // ── ONBOARDING ────────────────────────────────────────────────────────────────
 function renderOnboard() {
 const grid = document.getElementById(‘onboard-days’);
 const today = new Date().getDay();
-const pmTypeMap = { 0:‘Mask PM’, 1:‘Base PM’, 2:‘Retinoid PM’, 3:‘Base PM’, 4:‘Retinoid PM’, 5:‘Base PM’, 6:‘Base PM’ };
-const amTypeMap = { 0:‘Base AM’, 1:‘BHA AM’,  2:‘Base AM’,     3:‘BHA AM’,  4:‘Base AM’,     5:‘BHA AM’,  6:‘Base AM’ };
+const pmLbl = { 0:‘Mask PM’, 1:‘Base PM’, 2:‘Retinoid PM’, 3:‘Base PM’, 4:‘Retinoid PM’, 5:‘Base PM’, 6:‘Base PM’ };
+const amLbl = { 0:‘Base AM’, 1:‘BHA AM’,  2:‘Base AM’,     3:‘BHA AM’,  4:‘Base AM’,     5:‘BHA AM’,  6:‘Base AM’ };
 grid.innerHTML = ‘’;
 DAYS.forEach((d, i) => {
 const btn = document.createElement(‘button’);
 btn.className = ‘onboard-opt’ + (i === today ? ’ selected’ : ‘’);
-btn.innerHTML = `${d}<small>${amTypeMap[i]} · ${pmTypeMap[i]}</small>`;
+btn.innerHTML = `${d}<small>${amLbl[i]} · ${pmLbl[i]}</small>`;
 btn.onclick = () => {
 document.querySelectorAll(’.onboard-opt’).forEach(b => b.classList.remove(‘selected’));
 btn.classList.add(‘selected’);
@@ -1027,13 +962,8 @@ setSession(‘am’);
 load();
 renderOnboard();
 if (S.setup) document.getElementById(‘onboard’).classList.add(‘hidden’);
-// All views hidden except today
-[‘week’,‘survey’,‘static’].forEach(id => {
-const el = document.getElementById(id + ‘-view’);
-if (el) el.style.display = ‘none’;
-});
+[‘week’,‘survey’,‘static’].forEach(id => document.getElementById(id + ‘-view’).style.display = ‘none’);
 setSession(‘am’);
-// Sunday survey nudge
 if (getToday() === 0 && !S[‘survey_’ + getWeekKey()]) {
 document.getElementById(‘survey-dot’).classList.add(‘show’);
 }
