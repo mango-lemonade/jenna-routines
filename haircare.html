@@ -23,7 +23,6 @@
 html, body { height: 100%; background: #F0EDE8; font-family: 'Source Sans 3', sans-serif; color: var(--text-dark); -webkit-font-smoothing: antialiased; }
 .app { max-width: 430px; min-height: 100dvh; margin: 0 auto; background: var(--cream); display: flex; flex-direction: column; }
 
-/* HEADER */
 .header { padding: 3rem 1.5rem 1.25rem; background: var(--cream); border-bottom: 0.5px solid var(--border); position: sticky; top: 0; z-index: 10; }
 .eyebrow { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.3rem; font-weight: 400; }
 .week-title { font-family: 'Source Serif 4', serif; font-size: 25px; font-weight: 300; font-style: italic; color: var(--text-dark); line-height: 1.2; }
@@ -33,10 +32,8 @@ html, body { height: 100%; background: #F0EDE8; font-family: 'Source Sans 3', sa
 .pip.done { background: var(--border-dark); }
 .pip.active { background: var(--clay); }
 
-/* BODY */
 .body { padding: 1.25rem 1.5rem; flex: 1; display: flex; flex-direction: column; gap: 0.85rem; padding-bottom: 6rem; }
 
-/* DAY SELECTOR */
 .day-question { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1rem 1.25rem; }
 .day-q-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; font-weight: 400; }
 .day-opts { display: flex; gap: 8px; }
@@ -44,10 +41,7 @@ html, body { height: 100%; background: #F0EDE8; font-family: 'Source Sans 3', sa
 .day-opt:active { border-color: var(--border-dark); }
 .day-opt.selected { border-color: var(--clay); background: var(--clay-light); color: var(--clay); font-weight: 500; }
 
-/* SECTION LABEL */
 .section-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); font-weight: 400; }
-
-/* ASSIGNMENT CARD */
 .assignment-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.1rem 1.25rem; }
 .assign-title { font-family: 'Source Serif 4', serif; font-size: 18px; font-weight: 400; font-style: italic; color: var(--text-dark); margin-bottom: 1rem; line-height: 1.3; }
 .steps { display: flex; flex-direction: column; gap: 11px; }
@@ -57,7 +51,6 @@ html, body { height: 100%; background: #F0EDE8; font-family: 'Source Sans 3', sa
 .step-prod { font-size: 13.5px; font-weight: 500; color: var(--text-dark); display: block; margin-bottom: 2px; line-height: 1.3; }
 .step-note { font-size: 12px; color: var(--text-muted); font-weight: 300; display: block; line-height: 1.35; }
 
-/* TOGGLE ROW */
 .toggle-row { display: flex; align-items: center; justify-content: space-between; background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 0.9rem 1.25rem; gap: 12px; }
 .toggle-info strong { display: block; font-size: 13.5px; font-weight: 500; color: var(--text-dark); margin-bottom: 2px; line-height: 1.2; }
 .toggle-info span { font-size: 11.5px; color: var(--text-muted); font-weight: 300; line-height: 1.3; display: block; }
@@ -69,25 +62,20 @@ html, body { height: 100%; background: #F0EDE8; font-family: 'Source Sans 3', sa
 .tog input:checked + .tog-track::after { transform: translateX(18px); }
 .steam-note { font-size: 12px; color: var(--clay); line-height: 1.45; padding: 0 0.25rem; display: none; font-weight: 300; }
 
-/* BLOWDRY */
 .blowdry-row { display: flex; align-items: center; justify-content: space-between; background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 0.9rem 1.25rem; gap: 12px; }
 .blowdry-opts { display: flex; gap: 7px; }
 .bd-opt { padding: 0.45rem 0.9rem; border: 0.5px solid var(--border); border-radius: 20px; font-family: 'Source Sans 3', sans-serif; font-size: 12px; color: var(--text-mid); cursor: pointer; background: var(--cream); transition: all 0.18s; font-weight: 400; -webkit-appearance: none; }
 .bd-opt.sel { border-color: var(--clay); background: var(--clay-light); color: var(--clay); font-weight: 500; }
 
-/* ACTIONS */
 .actions { display: flex; flex-direction: column; gap: 8px; padding-top: 1.5rem; }
 .btn-primary { width: 100%; padding: 0.95rem; background: var(--clay); color: #FDF8F5; border: none; border-radius: 12px; font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; letter-spacing: 0.02em; transition: opacity 0.2s; -webkit-appearance: none; }
 .btn-primary:active { opacity: 0.85; }
 .btn-secondary { width: 100%; padding: 0.95rem; background: var(--clay-light); color: var(--clay); border: 1px solid var(--clay-border); border-radius: 12px; font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 400; cursor: pointer; transition: background 0.2s; -webkit-appearance: none; }
 .btn-secondary:active { background: var(--clay-hover); }
-
-/* BLUE variants for rest day */
 .btn-primary-blue { width: 100%; padding: 0.95rem; background: var(--blue); color: #fff; border: none; border-radius: 12px; font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; letter-spacing: 0.02em; -webkit-appearance: none; }
 .btn-primary-blue:active { opacity: 0.85; }
 .btn-secondary-blue { width: 100%; padding: 0.95rem; background: var(--blue-light); color: var(--blue-dark); border: 1px solid var(--blue-border); border-radius: 12px; font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 400; cursor: pointer; -webkit-appearance: none; }
 
-/* DEV PANEL */
 .dev-panel { display: none; flex-direction: column; gap: 7px; }
 .dev-panel.open { display: flex; }
 .dev-opt { display: flex; align-items: center; gap: 10px; padding: 0.75rem 1rem; border: 0.5px solid var(--border); border-radius: 10px; background: var(--white); font-family: 'Source Sans 3', sans-serif; font-size: 13px; color: var(--text-mid); cursor: pointer; transition: all 0.18s; text-align: left; width: 100%; font-weight: 400; -webkit-appearance: none; }
@@ -98,23 +86,18 @@ html, body { height: 100%; background: #F0EDE8; font-family: 'Source Sans 3', sa
 .write-in:focus { border-color: var(--clay); }
 .write-in::placeholder { color: var(--border-dark); }
 
-/* REST DAY */
 .rest-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.1rem 1.25rem; }
 .rest-title { font-family: 'Source Serif 4', serif; font-size: 18px; font-weight: 300; font-style: italic; color: var(--text-dark); margin-bottom: 0.5rem; }
 .rest-sub { font-size: 13px; color: var(--text-mid); line-height: 1.5; margin-bottom: 0.85rem; font-weight: 300; }
 .rest-activity { display: flex; align-items: center; gap: 10px; padding: 0.65rem 0; border-bottom: 0.5px solid var(--border); cursor: pointer; user-select: none; }
 .rest-activity:last-child { border-bottom: none; padding-bottom: 0; }
-.rest-activity:first-of-type { margin-top: 0.25rem; }
 .ra-check { width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid var(--blue); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.2s; background: transparent; }
 .ra-check.checked { background: var(--blue); border-color: var(--blue); }
 .ra-check svg { display: none; }
 .ra-check.checked svg { display: block; }
 .ra-label { font-size: 13px; font-weight: 400; color: var(--text-mid); }
 .ra-label.checked { color: var(--blue-dark); font-weight: 500; }
-
-/* TOGGLE-ROW BLUE */
 .toggle-row-blue { display: flex; align-items: center; justify-content: space-between; background: var(--white); border: 0.5px solid var(--blue-border); border-radius: 14px; padding: 0.9rem 1.25rem; gap: 12px; }
-.tog-blue .tog-track { background: var(--border); }
 .tog-blue input:checked + .tog-track { background: var(--blue); }
 
 /* SUCCESS */
@@ -123,12 +106,21 @@ html, body { height: 100%; background: #F0EDE8; font-family: 'Source Sans 3', sa
 .success-ring { width: 52px; height: 52px; border-radius: 50%; background: var(--clay-light); border: 0.5px solid var(--clay-border); display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; }
 .success-ring-blue { width: 52px; height: 52px; border-radius: 50%; background: var(--blue-light); border: 0.5px solid var(--blue-border); display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; }
 .success-title { font-family: 'Source Serif 4', serif; font-size: 26px; font-weight: 300; font-style: italic; color: var(--text-dark); margin-bottom: 0.4rem; }
-.success-sub { font-size: 13px; color: var(--text-mid); line-height: 1.6; max-width: 270px; margin-bottom: 1.5rem; font-weight: 300; }
+.success-sub { font-size: 13px; color: var(--text-mid); line-height: 1.6; max-width: 270px; font-weight: 300; }
+.success-ts { font-size: 11px; color: var(--text-ghost); font-weight: 300; margin: 0.35rem 0 0.75rem; }
+.undo-btn { font-size: 11.5px; color: var(--text-muted); background: none; border: none; cursor: pointer; font-family: 'Source Sans 3', sans-serif; font-weight: 300; text-decoration: underline; padding: 0.2rem 0 1rem; -webkit-appearance: none; }
 .next-card { width: 100%; background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1rem 1.25rem; text-align: left; }
 .next-eyebrow { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; font-weight: 400; }
 .next-title { font-family: 'Source Serif 4', serif; font-size: 15px; font-weight: 400; font-style: italic; color: var(--text-dark); margin-bottom: 0.25rem; }
 .next-sub { font-size: 12px; color: var(--text-muted); line-height: 1.4; font-weight: 300; }
 .recalib { font-size: 11.5px; color: var(--clay); margin-top: 0.5rem; display: none; font-weight: 300; }
+
+/* ALREADY LOGGED BANNER */
+.logged-banner { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.1rem 1.25rem; }
+.lb-eyebrow { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem; font-weight: 400; }
+.lb-title { font-family: 'Source Serif 4', serif; font-size: 18px; font-weight: 400; font-style: italic; color: var(--text-dark); margin-bottom: 0.2rem; }
+.lb-ts { font-size: 12px; color: var(--text-muted); font-weight: 300; margin-bottom: 0.75rem; }
+.lb-undo { font-size: 12px; color: var(--clay); background: none; border: none; cursor: pointer; font-family: 'Source Sans 3', sans-serif; font-weight: 400; text-decoration: underline; padding: 0; -webkit-appearance: none; }
 
 /* SURVEY */
 .survey-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.1rem 1.25rem; margin-bottom: 0.75rem; }
@@ -145,15 +137,15 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px;
 .comp-opt.sel { border-color: var(--clay); background: var(--clay-light); color: var(--clay); font-weight: 500; }
 .survey-done { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.5rem 1.25rem; text-align: center; }
 .survey-done-title { font-family: 'Source Serif 4', serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(--text-dark); margin-bottom: 0.4rem; }
-.survey-done-sub { font-size: 12.5px; color: var(--text-muted); font-weight: 300; line-height: 1.5; }
+.survey-done-sub { font-size: 12.5px; color: var(--text-muted); font-weight: 300; line-height: 1.6; }
 
 /* ONBOARDING */
 .onboard { position: fixed; inset: 0; background: var(--cream); z-index: 100; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; max-width: 430px; margin: 0 auto; }
 .onboard.hidden { display: none; }
-.onboard-title { font-family: 'Source Serif 4', serif; font-size: 24px; font-weight: 300; font-style: italic; color: var(--text-dark); margin-bottom: 0.4rem; text-align: center; }
+.onboard-title { font-family: 'Source Serif 4', serif; font-size: 26px; font-weight: 300; font-style: italic; color: var(--text-dark); margin-bottom: 0.3rem; text-align: center; }
 .onboard-sub { font-size: 13px; color: var(--text-mid); font-weight: 300; margin-bottom: 2rem; text-align: center; line-height: 1.5; }
-.onboard-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); font-weight: 400; margin-bottom: 0.6rem; }
-.onboard-grid { display: flex; gap: 8px; width: 100%; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.onboard-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); font-weight: 400; margin-bottom: 0.6rem; align-self: flex-start; width: 100%; }
+.onboard-grid { display: flex; gap: 8px; width: 100%; margin-bottom: 1.25rem; flex-wrap: wrap; }
 .onboard-opt { flex: 1; min-width: 80px; padding: 0.65rem 0.5rem; border: 0.5px solid var(--border); border-radius: 10px; background: var(--white); font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 400; color: var(--text-mid); cursor: pointer; text-align: center; -webkit-appearance: none; transition: all 0.2s; }
 .onboard-opt.selected { border-color: var(--clay); background: var(--clay-light); color: var(--clay); font-weight: 500; }
 
@@ -169,8 +161,8 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px;
 
 <!-- ONBOARDING -->
 <div class="onboard" id="onboard">
-  <div class="onboard-title">Where are you?</div>
-  <div class="onboard-sub">Set your position in the cycle to get started.</div>
+  <div class="onboard-title">What day is it again?</div>
+  <div class="onboard-sub">Your ends are grateful. Carry on.</div>
   <div class="onboard-label">Which week</div>
   <div class="onboard-grid" id="ob-weeks"></div>
   <div class="onboard-label">Which wash</div>
@@ -189,8 +181,19 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px;
 
   <div class="body">
 
-    <!-- TODAY VIEW -->
     <div id="today-view">
+
+      <!-- ALREADY LOGGED STATE -->
+      <div id="already-logged" style="display:none;">
+        <div class="logged-banner" id="wash-logged-banner">
+          <div class="lb-eyebrow">Wash day logged</div>
+          <div class="lb-title" id="lb-wash-title"></div>
+          <div class="lb-ts" id="lb-wash-ts"></div>
+          <button class="lb-undo" onclick="undoWash()">undo & resubmit</button>
+        </div>
+      </div>
+
+      <!-- DAY SELECTOR -->
       <div class="day-question" id="day-q">
         <div class="day-q-label">Today is</div>
         <div class="day-opts">
@@ -239,40 +242,24 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px;
         <div class="rest-card">
           <div class="rest-title">Rest day</div>
           <div class="rest-sub">Next wash day in 2–3 days. What did you do today?</div>
-          <div class="rest-activity" onclick="toggleRA('rosemary')" id="ra-rosemary">
-            <div class="ra-check" id="rc-rosemary">
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5L4 7.5L8.5 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
+          <div class="rest-activity" onclick="toggleRA('rosemary')">
+            <div class="ra-check" id="rc-rosemary"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5L4 7.5L8.5 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <span class="ra-label" id="rl-rosemary">Rosemary oil scalp massage</span>
           </div>
-          <div class="rest-activity" onclick="toggleRA('dryshampoo')" id="ra-dryshampoo">
-            <div class="ra-check" id="rc-dryshampoo">
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5L4 7.5L8.5 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
+          <div class="rest-activity" onclick="toggleRA('dryshampoo')">
+            <div class="ra-check" id="rc-dryshampoo"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5L4 7.5L8.5 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <span class="ra-label" id="rl-dryshampoo">Dry shampoo at roots</span>
           </div>
-          <div class="rest-activity" onclick="toggleRA('endsoil')" id="ra-endsoil">
-            <div class="ra-check" id="rc-endsoil">
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5L4 7.5L8.5 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
+          <div class="rest-activity" onclick="toggleRA('endsoil')">
+            <div class="ra-check" id="rc-endsoil"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5L4 7.5L8.5 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <span class="ra-label" id="rl-endsoil">1–2 drops oil on ends</span>
           </div>
         </div>
-
         <div class="toggle-row-blue">
-          <div class="toggle-info">
-            <strong>Steam room today?</strong>
-            <span>No wash — oil ends + water rinse only</span>
-          </div>
-          <label class="tog tog-blue">
-            <input type="checkbox" id="steam-tog-rest" onchange="handleSteamRest(this)">
-            <div class="tog-track"></div>
-          </label>
+          <div class="toggle-info"><strong>Steam room today?</strong><span>No wash — oil ends + water rinse only</span></div>
+          <label class="tog tog-blue"><input type="checkbox" id="steam-tog-rest" onchange="handleSteamRest(this)"><div class="tog-track"></div></label>
         </div>
-        <div class="steam-note" id="steam-note-rest" style="display:none;color:var(--blue);">
-          Non-wash steam: apply Cécred oil to ends only before going in. Rinse with water only after — no cycle impact.
-        </div>
-
+        <div class="steam-note" id="steam-note-rest" style="display:none;color:var(--blue);">Non-wash steam: apply Cécred oil to ends only before going in. Rinse with water only after — no cycle impact.</div>
         <div class="actions" style="padding-top:1.5rem;">
           <button class="btn-primary-blue" onclick="markRestDone()">Done</button>
           <button class="btn-secondary-blue" onclick="toggleRestDev()">Something different</button>
@@ -292,6 +279,8 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px;
         </div>
         <div class="success-title" id="s-title">Logged.</div>
         <div class="success-sub" id="s-sub">Your routine is on track.</div>
+        <div class="success-ts" id="s-ts"></div>
+        <button class="undo-btn" onclick="undoWash()">undo & resubmit</button>
         <div class="next-card">
           <div class="next-eyebrow">Next wash</div>
           <div class="next-title" id="s-next-title"></div>
@@ -307,12 +296,15 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px;
         </div>
         <div class="success-title">Noted.</div>
         <div class="success-sub" id="rs-sub">Rest day logged.</div>
+        <div class="success-ts" id="rs-ts"></div>
+        <button class="undo-btn" style="color:var(--blue-dark);" onclick="undoRest()">undo & resubmit</button>
         <div class="next-card">
           <div class="next-eyebrow">Next wash</div>
           <div class="next-title" id="rs-next-title"></div>
           <div class="next-sub" id="rs-next-sub"></div>
         </div>
       </div>
+
     </div><!-- end today-view -->
 
     <!-- SURVEY VIEW -->
@@ -320,7 +312,7 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px;
       <div id="survey-content"></div>
     </div>
 
-  </div><!-- end body -->
+  </div>
 
   <div class="footer">
     <button class="foot-btn active" id="foot-today"  onclick="showView('today')">Today</button>
@@ -382,23 +374,28 @@ const WEEKS=[
   ]}
 ];
 
-const KEY='haircare_v2';
+const KEY='haircare_v3';
 let S={weekIdx:1,washIdx:0,setup:false};
-let blowDry=true, devSel=null;
+let blowDry=true,devSel=null;
 let restActivities={rosemary:false,dryshampoo:false,endsoil:false};
-let surveyRating=3, surveyComp=null, surveyChips=new Set();
-let obWeek=1, obWash=0;
-
+let surveyRating=3,surveyComp=null,surveyChips=new Set();
+let obWeek=1,obWash=0;
 const HAIR_CONCERNS=['Dryness / brittle ends','Breakage','Frizz','Oily roots','Lack of definition','Tangles / knots','Scalp irritation','Hair felt great'];
 
-function load(){try{const d=localStorage.getItem(KEY);if(d){const p=JSON.parse(d);S={...S,...p};}}catch(e){}}
+function load(){try{const d=localStorage.getItem(KEY);if(d)S={...S,...JSON.parse(d)};}catch(e){}}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
 
-function getTodayKey(){const d=new Date();return d.toISOString().slice(0,10);}
-function getWeekKey(){
-  const d=new Date();const day=d.getDay();
-  const diff=d.getDate()-day+(day===0?-6:1);
-  return new Date(d.setDate(diff)).toISOString().slice(0,10);
+function getTodayKey(){return new Date().toISOString().slice(0,10);}
+function getWeekKey(){const d=new Date();const day=d.getDay();const diff=d.getDate()-day+(day===0?-6:1);return new Date(new Date(d).setDate(diff)).toISOString().slice(0,10);}
+
+function fmtTime(ts){
+  if(!ts)return'';
+  const d=new Date(ts);
+  const h=d.getHours(),m=d.getMinutes();
+  const ampm=h>=12?'pm':'am';
+  const hh=h%12||12;
+  const mm=m.toString().padStart(2,'0');
+  return'Logged today at '+hh+':'+mm+' '+ampm;
 }
 
 function render(){
@@ -410,6 +407,44 @@ function render(){
   document.getElementById('assign-title').textContent=wash.title;
   document.getElementById('steam-note').textContent=wash.steam;
   renderSteps();
+  checkTodayLog();
+}
+
+function checkTodayLog(){
+  const wlog=S['wash_'+getTodayKey()];
+  const rlog=S['rest_'+getTodayKey()];
+  const alEl=document.getElementById('already-logged');
+  const banner=document.getElementById('wash-logged-banner');
+
+  if(wlog){
+    // Show wash logged banner, hide form
+    alEl.style.display='block';
+    banner.style.display='block';
+    document.getElementById('lb-wash-title').textContent=wlog.washTitle||'Wash logged';
+    document.getElementById('lb-wash-ts').textContent=fmtTime(wlog.ts);
+    document.getElementById('day-q').style.display='none';
+    document.getElementById('wash-view').style.display='none';
+    document.getElementById('rest-view').style.display='none';
+    document.getElementById('success-view').classList.remove('show');
+    document.getElementById('rest-success-view').classList.remove('show');
+  } else if(rlog){
+    // Show rest logged in success state
+    alEl.style.display='none';
+    document.getElementById('day-q').style.display='none';
+    document.getElementById('wash-view').style.display='none';
+    document.getElementById('rest-view').style.display='none';
+    document.getElementById('success-view').classList.remove('show');
+    const rsv=document.getElementById('rest-success-view');
+    rsv.classList.add('show');
+    document.getElementById('rs-sub').textContent=rlog.summary||'Rest day logged.';
+    document.getElementById('rs-ts').textContent=fmtTime(rlog.ts);
+    const nwi=S.washIdx===0?1:0;
+    const nwk=S.washIdx===0?S.weekIdx:(S.weekIdx+1)%4;
+    document.getElementById('rs-next-title').textContent=WEEKS[nwk].washes[nwi].title;
+    document.getElementById('rs-next-sub').textContent='Week '+(nwk+1)+', Wash '+(nwi+1);
+  } else {
+    alEl.style.display='none';
+  }
 }
 
 function renderSteps(){
@@ -422,13 +457,16 @@ function renderSteps(){
 }
 
 function setDay(d){
+  // Clear today's log if switching
+  const wlog=S['wash_'+getTodayKey()];
+  const rlog=S['rest_'+getTodayKey()];
+  if(wlog||rlog)return; // already logged today, don't allow switching
   document.getElementById('opt-wash').className='day-opt'+(d==='wash'?' selected':'');
   document.getElementById('opt-rest').className='day-opt'+(d==='rest'?' selected':'');
   document.getElementById('wash-view').style.display=d==='wash'?'block':'none';
   document.getElementById('rest-view').style.display=d==='rest'?'block':'none';
   document.getElementById('success-view').classList.remove('show');
   document.getElementById('rest-success-view').classList.remove('show');
-  if(d==='wash'){document.getElementById('day-q').style.display='block';}
 }
 
 function setBlow(v){
@@ -450,17 +488,13 @@ function selDev(el,k){
 
 function toggleRA(id){
   restActivities[id]=!restActivities[id];
-  const chk=document.getElementById('rc-'+id);
-  const lbl=document.getElementById('rl-'+id);
-  chk.classList.toggle('checked',restActivities[id]);
-  lbl.classList.toggle('checked',restActivities[id]);
+  document.getElementById('rc-'+id).classList.toggle('checked',restActivities[id]);
+  document.getElementById('rl-'+id).classList.toggle('checked',restActivities[id]);
 }
 
 function nextWashInfo(dev){
   let wi=S.washIdx,wk=S.weekIdx;
-  if(dev==='skipped'||dev==='travel'){
-    return{title:WEEKS[wk].washes[wi].title,sub:'Week '+(wk+1)+', Wash '+(wi+1)+' — resuming from here next time.',recalib:'Routine recalibrated around the gap.'};
-  }
+  if(dev==='skipped'||dev==='travel')return{title:WEEKS[wk].washes[wi].title,sub:'Week '+(wk+1)+', Wash '+(wi+1)+' — resuming from here next time.',recalib:'Routine recalibrated around the gap.'};
   let nwi=wi+1,nwk=wk;
   if(nwi>=2){nwi=0;nwk=(wk+1)%4;}
   return{title:WEEKS[nwk].washes[nwi].title,sub:'Week '+(nwk+1)+', Wash '+(nwi+1),recalib:''};
@@ -471,47 +505,72 @@ function advance(){
   save();
 }
 
-function showWashSuccess(title,sub,nextObj){
+function showWashSuccess(title,sub,nextObj,ts){
   document.getElementById('s-title').textContent=title;
   document.getElementById('s-sub').textContent=sub;
+  document.getElementById('s-ts').textContent=fmtTime(ts);
   document.getElementById('s-next-title').textContent=nextObj.title;
   document.getElementById('s-next-sub').textContent=nextObj.sub;
   const rc=document.getElementById('s-recalib');
   rc.textContent=nextObj.recalib;rc.style.display=nextObj.recalib?'block':'none';
   document.getElementById('wash-view').style.display='none';
   document.getElementById('day-q').style.display='none';
+  document.getElementById('already-logged').style.display='none';
   document.getElementById('success-view').classList.add('show');
 }
 
 function markDone(){
-  // Track product usage
   const wash=WEEKS[S.weekIdx].washes[S.washIdx];
-  wash.steps.forEach(step=>{
-    const pkey='prod_'+step.p.replace(/[^a-z0-9]/gi,'_');
-    S[pkey]=(S[pkey]||0)+1;
-  });
-  const n=nextWashInfo(null);advance();
-  save();
-  showWashSuccess('Logged.','Your routine is on track. See you next wash day.',n);
+  wash.steps.forEach(step=>{const pk='prod_'+step.p.replace(/[^a-z0-9]/gi,'_');S[pk]=(S[pk]||0)+1;});
+  const ts=Date.now();
+  S['wash_'+getTodayKey()]={washTitle:wash.title,ts,devSel:null};
+  const n=nextWashInfo(null);advance();save();
+  showWashSuccess('Logged.','Your routine is on track. See you next wash day.',n,ts);
 }
 
 function submitDev(){
   const wi=document.getElementById('write-in').value.trim();
   const msgs={skipped:'Skipped days happen. Pick up from the same point next time.',diff:'Noted. Continuing from this position in the cycle.',nopoo:'Recorded as a light rinse — not counting as a full wash.',travel:"Adjusted for travel. Resuming from the same wash when you're home.",'steam-nw':'Steam without wash noted — no cycle impact.','new-product':'New product noted — logged for tracking.'};
   const sub=msgs[devSel]||(wi?'Noted: "'+wi.substring(0,70)+(wi.length>70?'…':'')+'"':'Logged.');
-  if(devSel==='new-product'&&wi){S['newproduct_'+Date.now()]=wi;save();}
+  if(devSel==='new-product'&&wi){S['newproduct_'+Date.now()]=wi;}
+  const ts=Date.now();
+  const wash=WEEKS[S.weekIdx].washes[S.washIdx];
+  S['wash_'+getTodayKey()]={washTitle:wash.title,ts,devSel};
   const n=nextWashInfo(devSel);
   if(devSel!=='skipped'&&devSel!=='travel')advance();
   save();
-  showWashSuccess('Recalibrated.',sub,n);
+  showWashSuccess('Recalibrated.',sub,n,ts);
+}
+
+function undoWash(){
+  delete S['wash_'+getTodayKey()];
+  save();
+  devSel=null;
+  document.getElementById('success-view').classList.remove('show');
+  document.getElementById('already-logged').style.display='none';
+  document.getElementById('day-q').style.display='block';
+  document.getElementById('wash-view').style.display='block';
+  document.getElementById('opt-wash').className='day-opt selected';
+  document.getElementById('opt-rest').className='day-opt';
+  document.getElementById('dev-panel').classList.remove('open');
+  document.getElementById('write-in').value='';
+  document.querySelectorAll('#dev-panel .dev-opt').forEach(o=>o.classList.remove('sel'));
+  // rewind cycle
+  if(S.washIdx===1){S.washIdx=0;}else{S.washIdx=1;S.weekIdx=((S.weekIdx-1)+4)%4;}
+  save();render();
 }
 
 function markRestDone(){
-  const done=Object.values(restActivities).filter(Boolean).length;
-  const activities=Object.keys(restActivities).filter(k=>restActivities[k]);
+  const done=Object.keys(restActivities).filter(k=>restActivities[k]);
+  const labelMap={rosemary:'rosemary oil',dryshampoo:'dry shampoo',endsoil:'ends oil'};
+  const summary=done.length>0?'Logged: '+done.map(k=>labelMap[k]).join(', ')+'.':'Rest day — nothing today, that\'s fine.';
+  const ts=Date.now();
+  S['rest_'+getTodayKey()]={summary,ts,activities:done};
+  save();
   const nwi=S.washIdx===0?1:0;
   const nwk=S.washIdx===0?S.weekIdx:(S.weekIdx+1)%4;
-  document.getElementById('rs-sub').textContent=done>0?'Logged: '+activities.join(', ').replace('rosemary','rosemary oil').replace('dryshampoo','dry shampoo').replace('endsoil','ends oil')+'.':'Rest day logged — nothing today, that\'s fine.';
+  document.getElementById('rs-sub').textContent=summary;
+  document.getElementById('rs-ts').textContent=fmtTime(ts);
   document.getElementById('rs-next-title').textContent=WEEKS[nwk].washes[nwi].title;
   document.getElementById('rs-next-sub').textContent='Week '+(nwk+1)+', Wash '+(nwi+1);
   document.getElementById('rest-view').style.display='none';
@@ -526,31 +585,26 @@ function submitRestDev(){
   markRestDone();
 }
 
-function resetDay(){
-  devSel=null;blowDry=true;
+function undoRest(){
+  delete S['rest_'+getTodayKey()];
+  save();
+  devSel=null;
   restActivities={rosemary:false,dryshampoo:false,endsoil:false};
   ['rosemary','dryshampoo','endsoil'].forEach(id=>{
     document.getElementById('rc-'+id).classList.remove('checked');
     document.getElementById('rl-'+id).classList.remove('checked');
   });
-  document.getElementById('bd-blow').className='bd-opt sel';
-  document.getElementById('bd-air').className='bd-opt';
-  document.getElementById('steam-tog').checked=false;
-  document.getElementById('steam-note').style.display='none';
-  document.getElementById('steam-tog-rest').checked=false;
-  document.getElementById('steam-note-rest').style.display='none';
-  document.getElementById('dev-panel').classList.remove('open');
-  document.getElementById('rest-dev-panel').classList.remove('open');
-  document.getElementById('write-in').value='';
-  document.getElementById('rest-write-in').value='';
-  document.querySelectorAll('.dev-opt').forEach(o=>o.classList.remove('sel'));
-  document.getElementById('success-view').classList.remove('show');
   document.getElementById('rest-success-view').classList.remove('show');
   document.getElementById('day-q').style.display='block';
-  setDay('wash');render();
+  document.getElementById('rest-view').style.display='block';
+  document.getElementById('opt-wash').className='day-opt';
+  document.getElementById('opt-rest').className='day-opt selected';
+  document.getElementById('rest-dev-panel').classList.remove('open');
+  document.getElementById('rest-write-in').value='';
+  document.querySelectorAll('#rest-dev-panel .dev-opt').forEach(o=>o.classList.remove('sel'));
 }
 
-function resetAll(){S={weekIdx:0,washIdx:0,setup:true};save();resetDay();}
+function resetAll(){S={weekIdx:0,washIdx:0,setup:true};save();location.reload();}
 
 // ── SURVEY ────────────────────────────────────────────────────────────────────
 function renderSurvey(){
@@ -559,7 +613,7 @@ function renderSurvey(){
   const dot=document.getElementById('survey-dot');
   if(done){
     dot.classList.remove('show');
-    document.getElementById('survey-content').innerHTML='<div class="survey-done"><div class="survey-done-title">Check-in complete.</div><div class="survey-done-sub">Rating: '+done.rating+'/5<br>'+( done.concerns.length?done.concerns.join(', '):'No concerns noted')+'<br><br>Compliance: '+({yes:'Mostly yes',mix:'Hit and miss',no:'Barely'}[done.compliance]||'—')+(done.note?'<br><br>"'+done.note+'"':'')+'</div></div>';
+    document.getElementById('survey-content').innerHTML='<div class="survey-done"><div class="survey-done-title">Check-in complete.</div><div class="survey-done-sub">Rating: '+done.rating+'/5<br>'+(done.concerns.length?done.concerns.join(', '):'No concerns noted')+'<br><br>Compliance: '+({yes:'Mostly yes',mix:'Hit and miss',no:'Barely'}[done.compliance]||'—')+(done.note?'<br><br>"'+done.note+'"':'')+'</div></div>';
     return;
   }
   document.getElementById('survey-content').innerHTML=`
@@ -568,11 +622,7 @@ function renderSurvey(){
       <div class="slider-wrap">
         <input type="range" min="1" max="5" value="${surveyRating}" id="survey-slider"
           oninput="surveyRating=+this.value;document.getElementById('rating-val').textContent=['','Rough week','Not great','Okay','Pretty good','Loved it'][+this.value]">
-        <div class="slider-labels">
-          <span>Rough week</span>
-          <span id="rating-val">${['','Rough week','Not great','Okay','Pretty good','Loved it'][surveyRating]}</span>
-          <span>Loved it</span>
-        </div>
+        <div class="slider-labels"><span>Rough week</span><span id="rating-val">${['','Rough week','Not great','Okay','Pretty good','Loved it'][surveyRating]}</span><span>Loved it</span></div>
       </div>
     </div>
     <div class="survey-card">
@@ -584,7 +634,7 @@ function renderSurvey(){
       <div class="comp-opts">
         <button class="comp-opt${surveyComp==='yes'?' sel':''}" onclick="setComp(this,'yes')">Mostly yes</button>
         <button class="comp-opt${surveyComp==='mix'?' sel':''}" onclick="setComp(this,'mix')">Hit and miss</button>
-        <button class="comp-opt${surveyComp==='no'?' sel':''}"  onclick="setComp(this,'no')">Barely</button>
+        <button class="comp-opt${surveyComp==='no'?' sel':''}" onclick="setComp(this,'no')">Barely</button>
       </div>
     </div>
     <div class="survey-card">
@@ -594,21 +644,12 @@ function renderSurvey(){
     <button class="btn-primary" onclick="submitSurvey()" style="width:100%">Submit check-in</button>`;
 }
 
-function toggleChip(el,c){
-  if(surveyChips.has(c)){surveyChips.delete(c);el.classList.remove('sel');}
-  else{surveyChips.add(c);el.classList.add('sel');}
-}
-function setComp(el,v){
-  surveyComp=v;
-  document.querySelectorAll('.comp-opt').forEach(b=>b.classList.remove('sel'));
-  el.classList.add('sel');
-}
+function toggleChip(el,c){if(surveyChips.has(c)){surveyChips.delete(c);el.classList.remove('sel');}else{surveyChips.add(c);el.classList.add('sel');}}
+function setComp(el,v){surveyComp=v;document.querySelectorAll('.comp-opt').forEach(b=>b.classList.remove('sel'));el.classList.add('sel');}
 function submitSurvey(){
   if(!surveyComp){alert('Please select how well you stuck to your routine.');return;}
   S['survey_'+getWeekKey()]={weekKey:getWeekKey(),rating:surveyRating,concerns:Array.from(surveyChips),compliance:surveyComp,note:document.getElementById('survey-note')?.value||'',ts:Date.now()};
-  save();
-  surveyChips=new Set();surveyComp=null;surveyRating=3;
-  renderSurvey();
+  save();surveyChips=new Set();surveyComp=null;surveyRating=3;renderSurvey();
 }
 
 // ── VIEW SWITCHING ─────────────────────────────────────────────────────────────
@@ -621,8 +662,8 @@ function showView(v){
   });
   document.getElementById('foot-pos').className='foot-btn';
   document.getElementById('foot-reset').className='foot-btn';
-  if(v==='today'){render();}
-  if(v==='survey'){renderSurvey();}
+  if(v==='today')render();
+  if(v==='survey')renderSurvey();
 }
 
 // ── ONBOARDING ────────────────────────────────────────────────────────────────
@@ -650,7 +691,7 @@ function buildOnboard(){
 function confirmOnboard(){
   S.weekIdx=obWeek;S.washIdx=obWash;S.setup=true;save();
   document.getElementById('onboard').classList.add('hidden');
-  resetDay();
+  render();
 }
 
 function showOnboard(){
@@ -664,9 +705,8 @@ load();
 buildOnboard();
 if(S.setup)document.getElementById('onboard').classList.add('hidden');
 document.getElementById('survey-view').style.display='none';
-// Sunday survey nudge
-const day=new Date().getDay();
-if(day===0&&!S['survey_'+getWeekKey()]){document.getElementById('survey-dot').classList.add('show');}
+const dow=new Date().getDay();
+if(dow===0&&!S['survey_'+getWeekKey()])document.getElementById('survey-dot').classList.add('show');
 render();
 </script>
 </body>
