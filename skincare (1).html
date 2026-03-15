@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="my Skin">
+<link rel="apple-touch-icon" href="data:image/jpeg;base64,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">
+<title>my Skin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --cream: #FAF8F5; --white: #FFFFFF; --border: #E8E2D9; --border-mid: #D5CFC7;
+  --border-dark: #C9BFB3; --text-dark: #2C2820; --text-mid: #7A6E63;
+  --text-muted: #A89E90; --text-ghost: #D5CFC7;
+  --clay: #C4654A; --clay-light: #FDF1EC; --clay-border: #EAC4B5; --clay-hover: #F9E8E1;
+  --plum: #A4428F; --plum-light: #F9EDF7; --plum-border: #DDB5D8;
+  --blue: #94B0DA; --blue-light: #EEF3FA; --blue-border: #C4D5ED;
+  --olive: #605918; --olive-light: #F5F2E8; --olive-border: #C8BF8A;
+  --pale: #DDE17E; --pale-light: #FAFCE8; --pale-border: #CBCF5A;
+  --mahogany: #4A090A; --mahogany-light: #F5EAEA; --mahogany-border: #C49090;
+}
+html, body { height: 100%; background: #F0EDE8; font-family: 'Source Sans 3', sans-serif; color: var(--text-dark); -webkit-font-smoothing: antialiased; }
+.app { max-width: 430px; min-height: 100dvh; margin: 0 auto; background: var(--cream); display: flex; flex-direction: column; }
+
+/* HEADER */
+.header { padding: 3rem 1.5rem 1.25rem; background: var(--cream); border-bottom: 0.5px solid var(--border); position: sticky; top: 0; z-index: 10; }
+.eyebrow { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.3rem; font-weight: 400; }
+.page-title { font-family: 'Source Serif 4', serif; font-size: 25px; font-weight: 300; font-style: italic; color: var(--text-dark); line-height: 1.2; }
+.page-title em { font-style: normal; color: var(--text-muted); font-size: 19px; font-family: 'Source Sans 3', sans-serif; font-weight: 300; }
+.day-dots { display: flex; gap: 5px; margin-top: 0.9rem; }
+.day-dot { height: 3px; flex: 1; border-radius: 2px; background: var(--border); }
+.day-dot.bha      { background: var(--blue); }
+.day-dot.retinoid { background: var(--plum); }
+.day-dot.mask     { background: var(--olive); }
+.day-dot.base     { background: var(--border-dark); }
+.day-dot.past     { opacity: 0.4; }
+.day-dot.future   { opacity: 0.22; }
+
+/* BODY */
+.body { padding: 1.25rem 1.5rem; flex: 1; display: flex; flex-direction: column; gap: 0.85rem; padding-bottom: 6rem; }
+
+/* SESSION TOGGLE */
+.session-toggle { display: flex; gap: 8px; }
+.sess-btn { flex: 1; padding: 0.6rem; border: 0.5px solid var(--border); border-radius: 10px; background: var(--cream); font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 400; color: var(--text-mid); cursor: pointer; text-align: center; -webkit-appearance: none; transition: all 0.2s; }
+.sess-btn.active { border-color: var(--clay); background: var(--clay-light); color: var(--clay); font-weight: 500; }
+
+/* SKIN STATE */
+.skin-state-wrap { padding-top: 0.4rem; }
+.skin-state-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); font-weight: 400; }
+.skin-states { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 0.5rem; padding-bottom: 0.5rem; }
+.state-btn { padding: 0.45rem 0.85rem; border: 0.5px solid var(--border); border-radius: 20px; font-family: 'Source Sans 3', sans-serif; font-size: 12px; color: var(--text-mid); cursor: pointer; background: var(--cream); transition: all 0.18s; font-weight: 400; -webkit-appearance: none; }
+.state-btn.sel.normal   { border-color: var(--clay); background: var(--clay-light); color: var(--clay); font-weight: 500; }
+.state-btn.sel.dry      { border-color: var(--blue); background: var(--blue-light); color: #2a5280; font-weight: 500; }
+.state-btn.sel.breakout { border-color: var(--mahogany); background: var(--mahogany-light); color: var(--mahogany); font-weight: 500; }
+.state-btn.sel.lazy     { border-color: var(--border-dark); background: var(--white); color: var(--text-mid); font-weight: 500; }
+
+/* PATCH ALERT */
+.patch-alert { background: var(--mahogany-light); border: 0.5px solid var(--mahogany-border); border-radius: 12px; padding: 0.75rem 1rem; font-size: 12.5px; color: var(--mahogany); line-height: 1.45; }
+.patch-alert strong { font-weight: 500; }
+
+/* ROUTINE CARD */
+.routine-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.1rem 1.25rem; }
+
+/* Prominent badge */
+.routine-badge { display: flex; align-items: center; gap: 8px; padding: 0.55rem 0.9rem; border-radius: 10px; margin-bottom: 1rem; font-size: 12px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; border: 0.5px solid; }
+.badge-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.badge-bha      { background: var(--blue-light);  color: #2a5280;      border-color: var(--blue-border); }
+.badge-bha      .badge-dot { background: var(--blue); }
+.badge-retinoid { background: var(--plum-light);  color: var(--plum);  border-color: var(--plum-border); }
+.badge-retinoid .badge-dot { background: var(--plum); }
+.badge-mask     { background: var(--olive-light); color: var(--olive); border-color: var(--olive-border); }
+.badge-mask     .badge-dot { background: var(--olive); }
+.badge-base     { background: var(--cream); color: var(--text-muted); border-color: var(--border); }
+.badge-base     .badge-dot { background: var(--border-dark); }
+
+/* STEPS */
+.steps { display: flex; flex-direction: column; gap: 9px; }
+.step { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; user-select: none; transition: opacity 0.2s; }
+.step.unchecked { opacity: 0.32; }
+.step-n {
+  width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; font-weight: 600; margin-top: 1px;
+}
+.sn-base     { background: var(--cream); color: var(--text-muted); border: 0.5px solid var(--border-mid); }
+.sn-bha      { background: var(--blue);  color: #fff; }
+.sn-retinoid { background: var(--plum);  color: #fff; }
+.sn-mask     { background: var(--olive); color: #fff; }
+.sn-spf      { background: var(--cream); color: var(--text-muted); border: 0.5px solid var(--border-mid); }
+.sn-bonus    { background: var(--clay-light); color: var(--clay); border: 0.5px solid var(--clay-border); }
+
+.step-right { display: flex; align-items: flex-start; justify-content: space-between; flex: 1; gap: 6px; }
+.step-body { flex: 1; }
+.step-prod { font-size: 13.5px; font-weight: 500; color: var(--text-dark); display: block; margin-bottom: 2px; line-height: 1.3; }
+.step-note { font-size: 12px; color: var(--text-muted); font-weight: 300; display: block; line-height: 1.35; }
+.swap-btn { background: none; border: 0.5px solid var(--border); border-radius: 6px; padding: 3px 7px; font-size: 10px; color: var(--text-muted); cursor: pointer; font-family: 'Source Sans 3', sans-serif; white-space: nowrap; flex-shrink: 0; margin-top: 2px; -webkit-appearance: none; transition: all 0.15s; }
+.swap-btn:active { background: var(--cream); }
+.swap-expanded { margin-top: 6px; padding: 0.5rem 0.75rem; background: var(--cream); border-radius: 8px; border: 0.5px solid var(--border); font-size: 11.5px; color: var(--text-mid); line-height: 1.45; font-weight: 300; display: none; }
+.swap-expanded.open { display: block; }
+
+/* SHEET MASK TOGGLE */
+.toggle-row { display: flex; align-items: center; justify-content: space-between; background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 0.9rem 1.25rem; gap: 12px; }
+.toggle-info strong { display: block; font-size: 13.5px; font-weight: 500; color: var(--text-dark); margin-bottom: 2px; }
+.toggle-info span { font-size: 11.5px; color: var(--text-muted); font-weight: 300; display: block; line-height: 1.3; }
+.tog { position: relative; width: 42px; height: 24px; flex-shrink: 0; }
+.tog input { opacity: 0; width: 0; height: 0; }
+.tog-track { position: absolute; inset: 0; border-radius: 12px; background: var(--border); cursor: pointer; transition: background 0.25s; }
+.tog-track::after { content: ''; position: absolute; width: 16px; height: 16px; border-radius: 50%; background: #fff; top: 4px; left: 4px; transition: transform 0.25s; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.tog input:checked + .tog-track { background: var(--clay); }
+.tog input:checked + .tog-track::after { transform: translateX(18px); }
+
+/* ACTIONS */
+.actions { display: flex; flex-direction: column; gap: 8px; }
+.btn-primary { width: 100%; padding: 0.95rem; background: var(--clay); color: #FDF8F5; border: none; border-radius: 12px; font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; letter-spacing: 0.02em; transition: opacity 0.2s; -webkit-appearance: none; }
+.btn-primary:active { opacity: 0.85; }
+.btn-primary:disabled { opacity: 0.45; cursor: default; }
+.btn-secondary { width: 100%; padding: 0.95rem; background: var(--clay-light); color: var(--clay); border: 1px solid var(--clay-border); border-radius: 12px; font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 400; cursor: pointer; transition: background 0.2s; -webkit-appearance: none; }
+.btn-secondary:active { background: var(--clay-hover); }
+
+/* SOMETHING DIFFERENT */
+.dev-panel { display: none; flex-direction: column; gap: 7px; }
+.dev-panel.open { display: flex; }
+.dev-opt { display: flex; align-items: center; gap: 10px; padding: 0.75rem 1rem; border: 0.5px solid var(--border); border-radius: 10px; background: var(--white); font-family: 'Source Sans 3', sans-serif; font-size: 13px; color: var(--text-mid); cursor: pointer; text-align: left; width: 100%; font-weight: 400; -webkit-appearance: none; transition: all 0.18s; }
+.dev-opt.sel { border-color: var(--clay); color: var(--text-dark); }
+.dev-dot { width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid var(--border-mid); flex-shrink: 0; }
+.dev-opt.sel .dev-dot { background: var(--clay); border-color: var(--clay); }
+.write-in { width: 100%; padding: 0.75rem 1rem; border: 0.5px solid var(--border); border-radius: 10px; font-family: 'Source Sans 3', sans-serif; font-size: 13px; color: var(--text-dark); background: var(--white); resize: none; height: 72px; outline: none; transition: border-color 0.2s; font-weight: 300; -webkit-appearance: none; }
+.write-in:focus { border-color: var(--clay); }
+.write-in::placeholder { color: var(--border-dark); }
+
+/* SUCCESS */
+.success-view { display: none; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; text-align: center; min-height: 380px; }
+.success-view.show { display: flex; }
+.success-ring { width: 52px; height: 52px; border-radius: 50%; background: var(--clay-light); border: 0.5px solid var(--clay-border); display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; }
+.success-title { font-family: 'Source Serif 4', serif; font-size: 26px; font-weight: 300; font-style: italic; color: var(--text-dark); margin-bottom: 0.35rem; }
+.success-sub { font-size: 13px; color: var(--text-mid); line-height: 1.6; max-width: 270px; font-weight: 300; }
+.undo-btn { font-size: 11.5px; color: var(--text-muted); background: none; border: none; cursor: pointer; font-family: 'Source Sans 3', sans-serif; font-weight: 300; margin: 0.4rem 0 1rem; text-decoration: underline; padding: 0; -webkit-appearance: none; }
+.stat-card { width: 100%; background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1rem 1.25rem; text-align: left; margin-bottom: 0.5rem; }
+.stat-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.4rem; font-weight: 400; }
+.stat-val { font-family: 'Source Serif 4', serif; font-size: 22px; font-weight: 300; font-style: italic; color: var(--text-dark); }
+
+/* WEEKLY VIEW */
+.week-day-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1rem 1.25rem; margin-bottom: 0.6rem; }
+.week-day-card.today-card { border-color: var(--clay); }
+.wdc-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem; }
+.wdc-day { font-size: 13px; font-weight: 500; color: var(--text-dark); }
+.wdc-day.today-label { color: var(--clay); }
+.wdc-logged { font-size: 11px; color: var(--text-muted); font-weight: 300; }
+.wdc-pills { display: flex; gap: 5px; flex-wrap: wrap; }
+.wdc-pill { font-size: 10px; padding: 2px 8px; border-radius: 10px; font-weight: 500; border: 0.5px solid; }
+.pill-bha      { background: var(--blue-light);  color: #2a5280;      border-color: var(--blue-border); }
+.pill-retinoid { background: var(--plum-light);  color: var(--plum);  border-color: var(--plum-border); }
+.pill-mask     { background: var(--olive-light); color: var(--olive); border-color: var(--olive-border); }
+.pill-base     { background: var(--cream); color: var(--text-muted); border-color: var(--border); }
+.pill-done     { background: #EEF7F0; color: #2E7D40; border-color: #A8D8B0; }
+
+/* SURVEY */
+.survey-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.1rem 1.25rem; margin-bottom: 0.75rem; }
+.survey-q { font-size: 13.5px; font-weight: 500; color: var(--text-dark); margin-bottom: 0.85rem; line-height: 1.4; }
+.slider-wrap { padding: 0 0.25rem; }
+.slider-labels { display: flex; justify-content: space-between; font-size: 10.5px; color: var(--text-muted); margin-top: 0.4rem; font-weight: 300; }
+input[type=range] { width: 100%; -webkit-appearance: none; height: 3px; border-radius: 2px; background: var(--border); outline: none; }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--clay); cursor: pointer; border: 2px solid var(--white); box-shadow: 0 1px 4px rgba(196,101,74,0.3); }
+.chip-grid { display: flex; flex-wrap: wrap; gap: 7px; }
+.chip { padding: 0.4rem 0.8rem; border: 0.5px solid var(--border); border-radius: 20px; font-size: 12px; color: var(--text-mid); background: var(--cream); cursor: pointer; -webkit-appearance: none; font-family: 'Source Sans 3', sans-serif; font-weight: 400; transition: all 0.18s; }
+.chip.sel { border-color: var(--clay); background: var(--clay-light); color: var(--clay); font-weight: 500; }
+.comp-opts { display: flex; gap: 8px; }
+.comp-opt { flex: 1; padding: 0.6rem; border: 0.5px solid var(--border); border-radius: 10px; background: var(--cream); font-family: 'Source Sans 3', sans-serif; font-size: 12.5px; font-weight: 400; color: var(--text-mid); cursor: pointer; text-align: center; -webkit-appearance: none; transition: all 0.2s; }
+.comp-opt.sel { border-color: var(--clay); background: var(--clay-light); color: var(--clay); font-weight: 500; }
+.survey-done { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.5rem 1.25rem; text-align: center; }
+.survey-done-title { font-family: 'Source Serif 4', serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(--text-dark); margin-bottom: 0.4rem; }
+.survey-done-sub { font-size: 12.5px; color: var(--text-muted); font-weight: 300; line-height: 1.5; }
+
+/* STATIC / GUIDE */
+.static-tabs { display: flex; border-bottom: 0.5px solid var(--border); margin-bottom: 1rem; }
+.static-tab { flex: 1; padding: 0.6rem; font-size: 12px; color: var(--text-muted); background: none; border: none; cursor: pointer; font-family: 'Source Sans 3', sans-serif; border-bottom: 2px solid transparent; margin-bottom: -0.5px; transition: all 0.2s; font-weight: 400; }
+.static-tab.active { color: var(--clay); border-bottom-color: var(--clay); font-weight: 500; }
+.static-content { display: none; }
+.static-content.active { display: block; }
+.rule-card { border-radius: 10px; padding: 0.7rem 0.9rem; font-size: 12px; line-height: 1.5; margin-bottom: 6px; border: 0.5px solid; }
+.rule-warn   { background: #FDF5EA; color: #7A5010; border-color: #E8C97A; }
+.rule-info   { background: var(--blue-light); color: #2d5a8a; border-color: var(--blue-border); }
+.rule-action { background: var(--clay-light); color: var(--clay); border-color: var(--clay-border); }
+.sub-group { margin-bottom: 1.25rem; }
+.sub-group-title { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; font-weight: 400; }
+.sub-item { background: var(--white); border: 0.5px solid var(--border); border-radius: 10px; padding: 0.7rem 0.9rem; margin-bottom: 5px; }
+.sub-prod { font-size: 13px; font-weight: 500; color: var(--text-dark); margin-bottom: 2px; }
+.sub-alt  { font-size: 12px; color: var(--text-muted); font-weight: 300; line-height: 1.4; }
+
+/* ONBOARDING */
+.onboard { position: fixed; inset: 0; background: var(--cream); z-index: 100; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; max-width: 430px; margin: 0 auto; }
+.onboard.hidden { display: none; }
+.onboard-title { font-family: 'Source Serif 4', serif; font-size: 24px; font-weight: 300; font-style: italic; color: var(--text-dark); margin-bottom: 0.4rem; text-align: center; }
+.onboard-sub { font-size: 13px; color: var(--text-mid); font-weight: 300; margin-bottom: 2rem; text-align: center; line-height: 1.5; }
+.onboard-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); font-weight: 400; margin-bottom: 0.6rem; align-self: flex-start; }
+.onboard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 100%; margin-bottom: 1.5rem; }
+.onboard-opt { padding: 0.65rem 0.5rem; border: 0.5px solid var(--border); border-radius: 10px; background: var(--white); font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 400; color: var(--text-mid); cursor: pointer; text-align: center; -webkit-appearance: none; transition: all 0.2s; }
+.onboard-opt small { display: block; font-size: 10px; color: var(--text-muted); font-weight: 300; margin-top: 2px; }
+.onboard-opt.selected { border-color: var(--clay); background: var(--clay-light); color: var(--clay); font-weight: 500; }
+.onboard-opt.selected small { color: var(--clay); }
+
+/* FOOTER */
+.footer { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 430px; padding: 0.75rem 1.5rem calc(0.75rem + env(safe-area-inset-bottom)); border-top: 0.5px solid var(--border); display: flex; justify-content: center; gap: 1.75rem; background: var(--cream); }
+.foot-btn { font-family: 'Source Sans 3', sans-serif; font-size: 10.5px; color: var(--text-ghost); background: none; border: none; cursor: pointer; padding: 0.2rem 0; font-weight: 300; line-height: 1.35; text-align: center; -webkit-appearance: none; position: relative; }
+.foot-btn.active { color: var(--clay); font-weight: 400; }
+.foot-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--clay); position: absolute; top: -1px; right: -3px; display: none; }
+.foot-dot.show { display: block; }
+</style>
+</head>
+<body>
+
+<!-- ONBOARDING -->
+<div class="onboard" id="onboard">
+  <div class="onboard-title">Where are you?</div>
+  <div class="onboard-sub">Set today to get started.</div>
+  <div class="onboard-label">Today is</div>
+  <div class="onboard-grid" id="onboard-days"></div>
+  <button class="btn-primary" style="width:100%" onclick="confirmOnboard()">Start here</button>
+</div>
+
+<div class="app">
+  <div class="header">
+    <div class="eyebrow">Skin care</div>
+    <div class="page-title" id="page-title">Monday <em>· BHA morning</em></div>
+    <div class="day-dots" id="day-dots"></div>
+  </div>
+
+  <div class="body">
+
+    <!-- TODAY VIEW -->
+    <div id="today-view">
+
+      <div class="session-toggle">
+        <button class="sess-btn active" id="btn-am" onclick="setSession('am')">AM routine</button>
+        <button class="sess-btn" id="btn-pm" onclick="setSession('pm')">PM routine</button>
+      </div>
+
+      <div class="skin-state-wrap">
+        <div class="skin-state-label">How does your skin feel?</div>
+        <div class="skin-states">
+          <button class="state-btn sel normal" id="ss-normal"   onclick="setState('normal')">Normal</button>
+          <button class="state-btn"            id="ss-dry"      onclick="setState('dry')">Dry / irritated</button>
+          <button class="state-btn"            id="ss-breakout" onclick="setState('breakout')">Breaking out</button>
+          <button class="state-btn"            id="ss-lazy"     onclick="setState('lazy')">Lazy night</button>
+        </div>
+      </div>
+
+      <div class="patch-alert" id="patch-alert" style="display:none">
+        <strong>Breaking out —</strong> apply a pimple patch directly on the spot before any other steps. Skip retinoid tonight. If this happens more than once a month, flag for your June derm visit.
+      </div>
+
+      <!-- Routine steps render here -->
+      <div id="routine-area"></div>
+
+      <!-- Sheet mask toggle — between steps and Done, PM only -->
+      <div class="toggle-row" id="sheet-mask-row" style="display:none">
+        <div class="toggle-info">
+          <strong>Sheet mask tonight?</strong>
+          <span>Adds a step after toner — 15 min, any sheet mask</span>
+        </div>
+        <label class="tog">
+          <input type="checkbox" id="sheet-tog" onchange="renderRoutine()">
+          <div class="tog-track"></div>
+        </label>
+      </div>
+
+      <!-- Actions -->
+      <div class="actions" id="action-area" style="display:none">
+        <button class="btn-primary" id="done-btn" onclick="markDone()">Done</button>
+        <button class="btn-secondary" onclick="toggleDev()">Something different</button>
+        <div class="dev-panel" id="dev-panel">
+          <button class="dev-opt" onclick="selDev(this,'skipped')"><span class="dev-dot"></span>Skipped entirely</button>
+          <button class="dev-opt" onclick="selDev(this,'diff')"><span class="dev-dot"></span>Used different products</button>
+          <button class="dev-opt" onclick="selDev(this,'travel')"><span class="dev-dot"></span>Traveling / limited products</button>
+          <textarea class="write-in" id="write-in" placeholder="Anything else to note..."></textarea>
+          <button class="btn-primary" onclick="submitDev()">Save</button>
+        </div>
+      </div>
+
+      <!-- Success state -->
+      <div class="success-view" id="success-view">
+        <div class="success-ring">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <path d="M4 11.5L9 16.5L18 6" stroke="#C4654A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="success-title" id="s-title">Logged.</div>
+        <div class="success-sub" id="s-sub"></div>
+        <button class="undo-btn" onclick="undoLog()">undo</button>
+        <div class="stat-card">
+          <div class="stat-label">Streak</div>
+          <div class="stat-val" id="s-streak"></div>
+        </div>
+        <div class="stat-card" id="s-usage-card" style="display:none">
+          <div class="stat-label" id="s-usage-label">Active uses this week</div>
+          <div class="stat-val" id="s-usage-val"></div>
+        </div>
+      </div>
+
+    </div><!-- end today-view -->
+
+    <!-- WEEKLY VIEW -->
+    <div id="week-view" style="display:none">
+      <div id="week-content"></div>
+    </div>
+
+    <!-- SURVEY VIEW -->
+    <div id="survey-view" style="display:none">
+      <div id="survey-content"></div>
+    </div>
+
+    <!-- GUIDE VIEW -->
+    <div id="static-view" style="display:none">
+      <div class="static-tabs">
+        <button class="static-tab active" onclick="showStatic('rules',this)">Rules</button>
+        <button class="static-tab" onclick="showStatic('subs',this)">Substitutions</button>
+      </div>
+      <div id="rules-content" class="static-content active">
+        <div class="rule-card rule-warn"><strong>BHA + retinoid — never same night.</strong> BHA mornings Mon/Wed/Fri, retinoid nights Tue/Thu/Sun. If you use tret on a given night, skip BHA the next morning if skin is irritated.</div>
+        <div class="rule-card rule-warn"><strong>Tatcha Deep Cleanse — Sunday mask night only.</strong> Not on retinoid nights, not on BHA mornings. Too much exfoliation stacked.</div>
+        <div class="rule-card rule-warn"><strong>Vitamin C23% — on hold until routine is stable 6+ weeks.</strong> When you integrate: AM only, 3x/week max, not on BHA mornings.</div>
+        <div class="rule-card rule-info"><strong>Niacinamide plays well with everything.</strong> No conflicts with BHA, retinoid, or any other step. Fine AM or PM.</div>
+        <div class="rule-card rule-info"><strong>Snail 96 mucin is your retinoid buffer.</strong> Applying before moisturizer on retinoid nights reduces irritation without blocking the active.</div>
+        <div class="rule-card rule-info"><strong>SPF is non-negotiable after BHA mornings.</strong> BHA increases photosensitivity — Skin Aqua every single day.</div>
+        <div class="rule-card rule-action"><strong>Derm visit in June.</strong> Get 0.025–0.05% tretinoin. Correct frequency (3–4x/week) will outperform 0.1% once a week across every goal.</div>
+        <div class="rule-card rule-action"><strong>Wash makeup brushes weekly.</strong> The jaw/cheek breakout pattern correlates directly.</div>
+      </div>
+      <div id="subs-content" class="static-content">
+        <div class="sub-group">
+          <div class="sub-group-title">Cleanser</div>
+          <div class="sub-item"><div class="sub-prod">Vanicream Gentle Cleanser</div><div class="sub-alt">Sub: CeraVe Gentle Facial Cleanser — identical function, use either</div></div>
+          <div class="sub-item"><div class="sub-prod">Belif Aqua Bomb Cleansing Balm</div><div class="sub-alt">Sub: any oil cleanser or micellar water. Sephora wipe in a pinch — avoid as a habit</div></div>
+          <div class="sub-item"><div class="sub-prod">Tatcha The Deep Cleanse</div><div class="sub-alt">Sunday mask night only — skip entirely on any other night</div></div>
+        </div>
+        <div class="sub-group">
+          <div class="sub-group-title">Toner / Essence</div>
+          <div class="sub-item"><div class="sub-prod">Hada Labo Alpha Toner</div><div class="sub-alt">Sub: Physiogel Essence — lighter, more calming. Use Physiogel on dry/irritated nights</div></div>
+          <div class="sub-item"><div class="sub-prod">Physiogel Daily Moisture Essence</div><div class="sub-alt">Sub: Hada Labo Alpha — more hydrating</div></div>
+          <div class="sub-item"><div class="sub-prod">Caudalie Vinoperfect Essence</div><div class="sub-alt">No direct sub — skip rather than replace if traveling light</div></div>
+        </div>
+        <div class="sub-group">
+          <div class="sub-group-title">Retinoid</div>
+          <div class="sub-item"><div class="sub-prod">Mad Hippie Vitamin A Serum (HPR)</div><div class="sub-alt">When empty → The Ordinary Granactive Retinoid 2% Emulsion (~$14)</div></div>
+          <div class="sub-item"><div class="sub-prod">Retin-A 0.1% (tret)</div><div class="sub-alt">Max 1x/week in place of a regular retinoid night. After derm: replace with prescribed lower %</div></div>
+        </div>
+        <div class="sub-group">
+          <div class="sub-group-title">Moisturizer</div>
+          <div class="sub-item"><div class="sub-prod">COSRX Snail 92 Cream</div><div class="sub-alt">Default moisturizer. Sub: CeraVe Moisturizing Cream for a lighter feel in summer</div></div>
+          <div class="sub-item"><div class="sub-prod">COSRX Ceramide Moisturizer</div><div class="sub-alt">Heavier — use on retinoid nights, dry state days, barrier support. Sub: Hada Labo Firming until it runs out</div></div>
+        </div>
+        <div class="sub-group">
+          <div class="sub-group-title">Actives</div>
+          <div class="sub-item"><div class="sub-prod">Paula's Choice BHA 2%</div><div class="sub-alt">No sub — skip the step entirely rather than replace when traveling</div></div>
+          <div class="sub-item"><div class="sub-prod">The Ordinary Niacinamide 10% + Zinc</div><div class="sub-alt">Sub: COSRX Niacinamide or any niacinamide 5–10%</div></div>
+        </div>
+        <div class="sub-group">
+          <div class="sub-group-title">Travel minimums</div>
+          <div class="sub-item"><div class="sub-prod">Bare minimum kit</div><div class="sub-alt">Vanicream + Snail 92 + Skin Aqua. Everything else is optional when space is limited</div></div>
+          <div class="sub-item"><div class="sub-prod">Active travel kit (longer trip)</div><div class="sub-alt">Add BHA + Niacinamide + Hada Labo Alpha. Keep retinoid if you have checked luggage</div></div>
+        </div>
+      </div>
+    </div><!-- end static-view -->
+
+  </div><!-- end body -->
+
+  <div class="footer">
+    <button class="foot-btn active" id="foot-today"  onclick="showView('today')">Today</button>
+    <button class="foot-btn"        id="foot-week"   onclick="showView('week')">Week</button>
+    <button class="foot-btn"        id="foot-survey" onclick="showView('survey')">Check<br>In<div class="foot-dot" id="survey-dot"></div></button>
+    <button class="foot-btn"        id="foot-static" onclick="showView('static')">Guide</button>
+  </div>
+</div>
+
+<script>
+const KEY = 'skincare_v2';
+const DAYS = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+const DAY_CONFIG = {
+  0: { label:'Sunday',    amType:'regular', pmType:'mask',     amBadge:'base', pmBadge:'mask',     amTitle:'Regular morning',   pmTitle:'Mask + retinoid night' },
+  1: { label:'Monday',    amType:'bha',     pmType:'base',     amBadge:'bha',  pmBadge:'base',     amTitle:'BHA morning',       pmTitle:'Base night' },
+  2: { label:'Tuesday',   amType:'regular', pmType:'retinoid', amBadge:'base', pmBadge:'retinoid', amTitle:'Regular morning',   pmTitle:'Retinoid night' },
+  3: { label:'Wednesday', amType:'bha',     pmType:'base',     amBadge:'bha',  pmBadge:'base',     amTitle:'BHA morning',       pmTitle:'Base night' },
+  4: { label:'Thursday',  amType:'regular', pmType:'retinoid', amBadge:'base', pmBadge:'retinoid', amTitle:'Regular morning',   pmTitle:'Retinoid night' },
+  5: { label:'Friday',    amType:'bha',     pmType:'base',     amBadge:'bha',  pmBadge:'base',     amTitle:'BHA morning',       pmTitle:'Light base night' },
+  6: { label:'Saturday',  amType:'regular', pmType:'light',    amBadge:'base', pmBadge:'base',     amTitle:'Regular morning',   pmTitle:'Light night' }
+};
+
+const SUBS = {
+  'Vanicream Gentle Cleanser':           'Sub: CeraVe Gentle Facial Cleanser — identical function',
+  'Belif Aqua Bomb Cleansing Balm':      'Sub: any oil cleanser or micellar water. Sephora wipe in a pinch',
+  'Tatcha The Deep Cleanse':             'Sunday mask night only — skip on any other night',
+  'Caudalie Vinoperfect Essence':        'No direct sub — skip rather than replace if traveling',
+  'The Ordinary Niacinamide 10% + Zinc': 'Sub: any niacinamide 5–10%. COSRX Niacinamide also works',
+  "Paula's Choice BHA 2%":              'No sub — skip the step entirely rather than replace',
+  'COSRX Snail 96 Mucin Essence':        'Sub: any hydrating essence as a buffer layer',
+  'Mad Hippie Vitamin A Serum':          'When empty → The Ordinary Granactive Retinoid 2% Emulsion (~$14)',
+  'COSRX Snail 92 Cream':               'Sub: CeraVe Moisturizing Cream. Use Ceramide on dry/retinoid nights',
+  'COSRX Ceramide Moisturizer':          'Sub: Hada Labo Firming Cream until it runs out',
+  'Hada Labo Alpha Toner':              'Sub: Physiogel Essence — lighter, more calming',
+  'Physiogel Daily Moisture Essence':    'Sub: Hada Labo Alpha Toner — more hydrating',
+  'Skin Aqua SPF 50+':                  'No sub — non-negotiable. Reapply if outdoors midday',
+  'COSRX Snail Peptide Eye Cream':       'Apply Volumfiline under-eye first if using, then eye cream on top',
+  'Innisfree Jeju Volcanic Clay Mask':   'Sub: Aztec Secret Healing Clay + apple cider vinegar',
+  'Sheet mask':                          'Any hydrating sheet mask — keep it simple'
+};
+
+const CIRCLE = { base:'sn-base', bha:'sn-bha', retinoid:'sn-retinoid', mask:'sn-mask', spf:'sn-spf', bonus:'sn-bonus' };
+
+function getSteps(type, state, sheetMask) {
+  const lazy = state === 'lazy';
+  const dry = state === 'dry';
+  const breakout = state === 'breakout';
+
+  if (type === 'bha') {
+    if (lazy) return lazyAM();
+    const steps = [
+      { prod:'Vanicream Gentle Cleanser',            note:'Rinse thoroughly',                          type:'base' },
+      { prod:'Caudalie Vinoperfect Essence',          note:"Pat in, don't rub — brightening base",     type:'base' },
+      { prod:'The Ordinary Niacinamide 10% + Zinc',  note:'Daily — let absorb a moment',              type:'base' },
+    ];
+    if (dry) {
+      steps.push({ prod:'COSRX Snail 96 Mucin Essence', note:'Skipping BHA today — skin needs gentler morning', type:'base' });
+    } else {
+      steps.push({ prod:"Paula's Choice BHA 2%", note:'Wait 2–3 min before next step', type:'bha' });
+    }
+    steps.push({ prod: dry ? 'COSRX Ceramide Moisturizer' : 'COSRX Snail 92 Cream', note: dry ? 'Extra barrier today' : 'Default moisturizer', type:'base' });
+    steps.push({ prod:'Skin Aqua SPF 50+', note:'Non-negotiable — especially after BHA', type:'spf' });
+    return steps;
+  }
+
+  if (type === 'regular') {
+    if (lazy) return lazyAM();
+    return [
+      { prod:'Vanicream Gentle Cleanser',            note:'Rinse thoroughly',                          type:'base' },
+      { prod:'Caudalie Vinoperfect Essence',          note:"Pat in, don't rub",                        type:'base' },
+      { prod:'The Ordinary Niacinamide 10% + Zinc',  note:'Daily',                                    type:'base' },
+      { prod:'COSRX Snail 96 Mucin Essence',         note: dry ? 'Extra hydration layer today' : 'Optional — use if skin feels tight', type:'base' },
+      { prod: dry ? 'COSRX Ceramide Moisturizer' : 'COSRX Snail 92 Cream', note: dry ? 'Heavier barrier today' : 'Default moisturizer', type:'base' },
+      { prod:'Skin Aqua SPF 50+',                    note:'Every morning',                            type:'spf' },
+    ];
+  }
+
+  if (type === 'retinoid') {
+    if (lazy || breakout) return lazyPM();
+    const steps = [
+      { prod:'Belif Aqua Bomb Cleansing Balm', note:'First cleanse — massage in, then rinse', type:'base' },
+      { prod:'Vanicream Gentle Cleanser',       note:'Second cleanse',                         type:'base' },
+      { prod: dry ? 'Physiogel Daily Moisture Essence' : 'Hada Labo Alpha Toner', note: dry ? 'Going gentler tonight' : 'Pat in gently', type:'base' },
+    ];
+    if (sheetMask) steps.push({ prod:'Sheet mask', note:'15 min — any hydrating sheet mask. Pat in remaining essence', type:'bonus' });
+    steps.push({ prod:'COSRX Snail 96 Mucin Essence', note:'Retinoid buffer — apply before moisturizer', type:'base' });
+    if (!dry) steps.push({ prod:'Mad Hippie Vitamin A Serum', note:"Tonight's retinoid — apply after mucin", type:'retinoid' });
+    steps.push({ prod:'COSRX Ceramide Moisturizer', note: dry ? 'Heavier barrier — skipping retinoid tonight' : 'Go a little heavier than usual', type:'base' });
+    steps.push({ prod:'COSRX Snail Peptide Eye Cream', note:'Final step always', type:'base' });
+    return steps;
+  }
+
+  if (type === 'base') {
+    if (lazy) return lazyPM();
+    const steps = [
+      { prod:'Belif Aqua Bomb Cleansing Balm',   note:'First cleanse',          type:'base' },
+      { prod:'Vanicream Gentle Cleanser',          note:'Second cleanse',         type:'base' },
+      { prod:'Physiogel Daily Moisture Essence',   note:'Gentle hydration layer', type:'base' },
+    ];
+    if (sheetMask) steps.push({ prod:'Sheet mask', note:'15 min — pat in remaining essence', type:'bonus' });
+    steps.push({ prod:'COSRX Snail 96 Mucin Essence', note:'Every night', type:'base' });
+    steps.push({ prod: dry ? 'COSRX Ceramide Moisturizer' : 'COSRX Snail 92 Cream', note: dry ? 'Extra barrier tonight' : 'Default moisturizer', type:'base' });
+    steps.push({ prod:'COSRX Snail Peptide Eye Cream', note:'Final step always', type:'base' });
+    return steps;
+  }
+
+  if (type === 'mask') {
+    if (lazy || breakout) return lazyPM();
+    const steps = [
+      { prod:'Belif Aqua Bomb Cleansing Balm',     note:'First cleanse',                          type:'base' },
+      { prod:'Tatcha The Deep Cleanse',              note:'Replaces Vanicream tonight only',        type:'base' },
+      { prod:'Innisfree Jeju Volcanic Clay Mask',   note:'Nose + T-zone, 10 min. Rinse thoroughly', type:'mask' },
+      { prod:'Hada Labo Alpha Toner',               note:'After mask — restore hydration',          type:'base' },
+    ];
+    if (sheetMask) steps.push({ prod:'Sheet mask', note:'15 min — treat yourself', type:'bonus' });
+    steps.push({ prod:'COSRX Snail 96 Mucin Essence',  note:'Retinoid buffer',                             type:'base' });
+    steps.push({ prod:'Mad Hippie Vitamin A Serum',    note:"Sunday's retinoid — mask + retinoid compatible", type:'retinoid' });
+    steps.push({ prod:'COSRX Ceramide Moisturizer',    note:'Go heavier after retinoid',                    type:'base' });
+    steps.push({ prod:'COSRX Snail Peptide Eye Cream', note:'Final step always',                            type:'base' });
+    return steps;
+  }
+
+  if (type === 'light') {
+    // Saturday — no actives
+    const steps = [
+      { prod:'Belif Aqua Bomb Cleansing Balm', note:'First cleanse', type:'base' },
+      { prod:'Vanicream Gentle Cleanser',       note:'Second cleanse', type:'base' },
+      { prod:'Physiogel Daily Moisture Essence', note:'Gentle tonight', type:'base' },
+    ];
+    if (sheetMask) steps.push({ prod:'Sheet mask', note:'15 min', type:'bonus' });
+    steps.push({ prod:'COSRX Snail 96 Mucin Essence', note:'Every night', type:'base' });
+    steps.push({ prod:'COSRX Snail 92 Cream', note:'Default moisturizer', type:'base' });
+    steps.push({ prod:'COSRX Snail Peptide Eye Cream', note:'Final step always', type:'base' });
+    return steps;
+  }
+
+  return lazyPM();
+}
+
+function lazyPM() {
+  return [
+    { prod:'Belif Aqua Bomb Cleansing Balm',   note:'First cleanse',  type:'base' },
+    { prod:'Vanicream Gentle Cleanser',          note:'Second cleanse', type:'base' },
+    { prod:'Physiogel Daily Moisture Essence',   note:'Hydration',      type:'base' },
+    { prod:'COSRX Snail 92 Cream',              note:'Moisturizer',    type:'base' },
+    { prod:'COSRX Snail Peptide Eye Cream',     note:'Final step',     type:'base' },
+  ];
+}
+
+function lazyAM() {
+  return [
+    { prod:'Vanicream Gentle Cleanser', note:'Quick cleanse', type:'base' },
+    { prod:'COSRX Snail 92 Cream',     note:'Moisturizer',   type:'base' },
+    { prod:'Skin Aqua SPF 50+',        note:'Always',        type:'spf'  },
+  ];
+}
+
+// ── APP STATE ─────────────────────────────────────────────────────────────────
+let S = { setup: false };
+let session = 'am';
+let skinState = 'normal';
+let devSel = null;
+let checkedSteps = {};
+
+function load() { try { const d = localStorage.getItem(KEY); if (d) S = { ...S, ...JSON.parse(d) }; } catch(e) {} }
+function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e) {} }
+
+function getToday() {
+  const now = new Date();
+  if (now.getHours() < 3) now.setDate(now.getDate() - 1);
+  return now.getDay();
+}
+function getDateKey(daysAgo) {
+  const d = new Date();
+  if (d.getHours() < 3) d.setDate(d.getDate() - 1);
+  d.setDate(d.getDate() - daysAgo);
+  return d.toISOString().slice(0, 10);
+}
+function getTodayKey() { return getDateKey(0); }
+function getWeekKey() {
+  const now = new Date();
+  if (now.getHours() < 3) now.setDate(now.getDate() - 1);
+  const day = now.getDay();
+  const diff = now.getDate() - day + (day === 0 ? -6 : 1);
+  const mon = new Date(now.setDate(diff));
+  return mon.toISOString().slice(0, 10);
+}
+
+// ── HEADER ────────────────────────────────────────────────────────────────────
+function renderHeader() {
+  const today = getToday();
+  const cfg = DAY_CONFIG[today];
+  const title = session === 'am' ? cfg.amTitle : cfg.pmTitle;
+  document.getElementById('page-title').innerHTML = cfg.label + ' <em>· ' + title + '</em>';
+
+  const pmTypeMap = { 0:'mask', 1:'base', 2:'retinoid', 3:'base', 4:'retinoid', 5:'base', 6:'base' };
+  const amTypeMap = { 0:'base', 1:'bha',  2:'base',     3:'bha',  4:'base',     5:'bha',  6:'base' };
+  const dotsEl = document.getElementById('day-dots');
+  dotsEl.innerHTML = '';
+  for (let i = 0; i < 7; i++) {
+    const d = document.createElement('div');
+    const t = session === 'am' ? amTypeMap[i] : pmTypeMap[i];
+    d.className = 'day-dot ' + t + (i === today ? '' : i < today ? ' past' : ' future');
+    dotsEl.appendChild(d);
+  }
+}
+
+// ── RENDER ROUTINE ────────────────────────────────────────────────────────────
+function renderRoutine() {
+  const today = getToday();
+  const cfg = DAY_CONFIG[today];
+  const type   = session === 'am' ? cfg.amType   : cfg.pmType;
+  const badge  = session === 'am' ? cfg.amBadge  : cfg.pmBadge;
+  const title  = session === 'am' ? cfg.amTitle  : cfg.pmTitle;
+  const sheetMask = session === 'pm' && document.getElementById('sheet-tog').checked;
+
+  // Sheet mask toggle — PM non-lazy only
+  const smr = document.getElementById('sheet-mask-row');
+  smr.style.display = (session === 'pm' && skinState !== 'lazy') ? 'flex' : 'none';
+
+  // Patch alert
+  document.getElementById('patch-alert').style.display = skinState === 'breakout' ? 'block' : 'none';
+
+  // Already logged?
+  const logKey = getTodayKey() + '_' + session;
+  if (S[logKey]) { showSuccess(S[logKey]); return; }
+
+  const steps = getSteps(type, skinState, sheetMask);
+
+  // Init all checked
+  checkedSteps = {};
+  steps.forEach((_, i) => checkedSteps[i] = true);
+
+  const badgeClass = { bha:'badge-bha', retinoid:'badge-retinoid', mask:'badge-mask', base:'badge-base' }[badge] || 'badge-base';
+
+  const stepsHtml = steps.map((s, i) => {
+    const sub = SUBS[s.prod] || '';
+    return `<div class="step" id="step-${i}" onclick="toggleStep(${i})">
+      <div class="step-n ${CIRCLE[s.type] || 'sn-base'}">${i+1}</div>
+      <div class="step-right">
+        <div class="step-body">
+          <span class="step-prod">${s.prod}</span>
+          <span class="step-note">${s.note}</span>
+          ${sub ? `<div class="swap-expanded" id="swap-${i}">${sub}</div>` : ''}
+        </div>
+        ${sub ? `<button class="swap-btn" onclick="toggleSwap(event,${i})">swap</button>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('routine-area').innerHTML = `
+    <div class="routine-card">
+      <div class="routine-badge ${badgeClass}"><span class="badge-dot"></span>${title}</div>
+      <div class="steps">${stepsHtml}</div>
+    </div>`;
+
+  document.getElementById('action-area').style.display = 'flex';
+  document.getElementById('success-view').classList.remove('show');
+  updateDoneBtn();
+}
+
+function toggleStep(i) {
+  checkedSteps[i] = !checkedSteps[i];
+  const el = document.getElementById('step-' + i);
+  if (el) el.classList.toggle('unchecked', !checkedSteps[i]);
+  updateDoneBtn();
+}
+
+function toggleSwap(e, i) {
+  e.stopPropagation();
+  const el = document.getElementById('swap-' + i);
+  if (el) el.classList.toggle('open');
+}
+
+function updateDoneBtn() {
+  const btn = document.getElementById('done-btn');
+  if (!btn) return;
+  const total = Object.keys(checkedSteps).length;
+  const done  = Object.values(checkedSteps).filter(Boolean).length;
+  btn.textContent = (done === total) ? 'Done' : `Done (${done}/${total})`;
+}
+
+function showSuccess(log) {
+  document.getElementById('routine-area').innerHTML = '';
+  document.getElementById('action-area').style.display = 'none';
+  document.getElementById('sheet-mask-row').style.display = 'none';
+  document.getElementById('success-view').classList.add('show');
+  document.getElementById('s-title').textContent = log.devSel === 'skipped' ? 'Skipped.' : 'Logged.';
+  const msgs = { skipped:'Skipped tonight — gaps happen.', diff:'Logged with different products.', travel:'Travel night logged.' };
+  const partial = (log.stepsCompleted != null && log.stepsTotal != null && log.stepsCompleted < log.stepsTotal)
+    ? ` (${log.stepsCompleted} of ${log.stepsTotal} steps)` : '';
+  document.getElementById('s-sub').textContent = (msgs[log.devSel] || 'Your routine is on track.') + partial;
+  document.getElementById('s-streak').textContent = streakText();
+  const ac = activeUses();
+  const usageCard = document.getElementById('s-usage-card');
+  if (ac.bha > 0 || ac.ret > 0) {
+    usageCard.style.display = 'block';
+    document.getElementById('s-usage-val').textContent =
+      [ac.bha > 0 ? `BHA ×${ac.bha}` : '', ac.ret > 0 ? `Retinoid ×${ac.ret}` : ''].filter(Boolean).join('  ·  ');
+  } else {
+    usageCard.style.display = 'none';
+  }
+}
+
+function streakText() {
+  let n = 0;
+  for (let i = 0; i < 60; i++) {
+    const k = getDateKey(i);
+    if (S[k+'_am'] || S[k+'_pm']) n++;
+    else if (i > 0) break;
+  }
+  return n === 0 ? 'Starting today' : n === 1 ? '1 day logged' : `${n} days logged`;
+}
+
+function activeUses() {
+  let bha = 0, ret = 0;
+  for (let i = 0; i < 7; i++) {
+    const am = S[getDateKey(i) + '_am'];
+    const pm = S[getDateKey(i) + '_pm'];
+    if (am?.hadBha) bha++;
+    if (pm?.hadRetinoid) ret++;
+  }
+  return { bha, ret };
+}
+
+// ── INTERACTIONS ──────────────────────────────────────────────────────────────
+function setSession(s) {
+  session = s;
+  document.getElementById('btn-am').className = 'sess-btn' + (s === 'am' ? ' active' : '');
+  document.getElementById('btn-pm').className = 'sess-btn' + (s === 'pm' ? ' active' : '');
+  // Reset skin state
+  skinState = 'normal';
+  ['normal','dry','breakout','lazy'].forEach(id => {
+    const el = document.getElementById('ss-' + id);
+    if (el) {
+      el.className = 'state-btn' + (id === 'normal' ? ' sel normal' : '');
+      el.style.display = (id === 'lazy' && s === 'am') ? 'none' : '';
+    }
+  });
+  document.getElementById('sheet-tog').checked = false;
+  devSel = null;
+  document.getElementById('dev-panel').classList.remove('open');
+  document.getElementById('success-view').classList.remove('show');
+  renderHeader();
+  renderRoutine();
+}
+
+function setState(state) {
+  skinState = state;
+  ['normal','dry','breakout','lazy'].forEach(id => {
+    const el = document.getElementById('ss-' + id);
+    if (el) el.className = 'state-btn' + (id === state ? ' sel ' + id : '');
+  });
+  renderRoutine();
+}
+
+function toggleDev() { document.getElementById('dev-panel').classList.toggle('open'); }
+
+function selDev(el, k) {
+  document.querySelectorAll('.dev-opt').forEach(o => o.classList.remove('sel'));
+  el.classList.add('sel'); devSel = k;
+}
+
+function markDone() {
+  const today = getToday();
+  const cfg   = DAY_CONFIG[today];
+  const type  = session === 'am' ? cfg.amType : cfg.pmType;
+  const total = Object.keys(checkedSteps).length;
+  const done  = Object.values(checkedSteps).filter(Boolean).length;
+  const logKey = getTodayKey() + '_' + session;
+  S[logKey] = {
+    date: getTodayKey(), session, type, state: skinState,
+    hadBha:      type === 'bha'      && skinState !== 'lazy' && skinState !== 'dry',
+    hadRetinoid: (type === 'retinoid' || type === 'mask') && skinState !== 'lazy' && skinState !== 'breakout' && skinState !== 'dry',
+    hadMask:     type === 'mask'     && skinState !== 'lazy' && skinState !== 'breakout',
+    sheetMask: document.getElementById('sheet-tog').checked,
+    stepsCompleted: done, stepsTotal: total,
+    devSel: null, ts: Date.now()
+  };
+  save();
+  showSuccess(S[logKey]);
+}
+
+function submitDev() {
+  const wi = document.getElementById('write-in').value.trim();
+  const logKey = getTodayKey() + '_' + session;
+  S[logKey] = {
+    date: getTodayKey(), session, type: 'dev', state: skinState,
+    hadBha: false, hadRetinoid: false, hadMask: false,
+    devSel: devSel || 'other', note: wi, ts: Date.now()
+  };
+  save();
+  showSuccess(S[logKey]);
+}
+
+function undoLog() {
+  const logKey = getTodayKey() + '_' + session;
+  delete S[logKey];
+  save();
+  checkedSteps = {};
+  document.getElementById('success-view').classList.remove('show');
+  document.getElementById('s-usage-card').style.display = 'none';
+  setSession(session); // re-render fresh
+}
+
+// ── WEEKLY VIEW ───────────────────────────────────────────────────────────────
+function renderWeek() {
+  const today = getToday();
+  const pmTypes = { 0:'mask', 1:'base', 2:'retinoid', 3:'base', 4:'retinoid', 5:'base', 6:'base' };
+  const amTypes = { 0:'base', 1:'bha',  2:'base',     3:'bha',  4:'base',     5:'bha',  6:'base' };
+  const typeLabel = { bha:'BHA AM', retinoid:'Retinoid PM', mask:'Mask PM', base:'Base' };
+  const pillClass = { bha:'pill-bha', retinoid:'pill-retinoid', mask:'pill-mask', base:'pill-base' };
+
+  let html = '';
+  for (let i = 1; i <= 7; i++) {
+    const dow = i % 7;
+    const cfg = DAY_CONFIG[dow];
+    const daysAgo = (today - dow + 7) % 7;
+    const dateKey = getDateKey(daysAgo);
+    const amLog = S[dateKey + '_am'];
+    const pmLog = S[dateKey + '_pm'];
+    const isToday = dow === today;
+    const amT = amTypes[dow];
+    const pmT = pmTypes[dow];
+    html += `<div class="week-day-card${isToday ? ' today-card' : ''}">
+      <div class="wdc-header">
+        <span class="wdc-day${isToday ? ' today-label' : ''}">${cfg.label}${isToday ? ' · today' : ''}</span>
+        <span class="wdc-logged">${amLog && pmLog ? 'Both logged' : amLog ? 'AM logged' : pmLog ? 'PM logged' : ''}</span>
+      </div>
+      <div class="wdc-pills">
+        <span class="wdc-pill ${pillClass[amT]}">${typeLabel[amT]}</span>
+        <span class="wdc-pill ${pillClass[pmT]}">${typeLabel[pmT]}</span>
+        ${amLog ? '<span class="wdc-pill pill-done">AM ✓</span>' : ''}
+        ${pmLog ? '<span class="wdc-pill pill-done">PM ✓</span>' : ''}
+      </div>
+    </div>`;
+  }
+  document.getElementById('week-content').innerHTML = html;
+}
+
+// ── SURVEY ────────────────────────────────────────────────────────────────────
+const CONCERNS = ['Dryness','Oiliness','Breakout(s)','Dullness','Texture / roughness','Redness / irritation','Dark spots','Fine lines','Puffiness / bags','Nothing — skin felt good'];
+let surveyRating = 3, surveyComp = null, surveyChips = new Set();
+
+function renderSurvey() {
+  const weekKey = getWeekKey();
+  const done = S['survey_' + weekKey];
+  const dot = document.getElementById('survey-dot');
+
+  if (done) {
+    dot.classList.remove('show');
+    document.getElementById('survey-content').innerHTML = `
+      <div class="survey-done">
+        <div class="survey-done-title">Check-in complete.</div>
+        <div class="survey-done-sub">You've checked in for this week.<br><br>
+        Rating: ${done.rating}/5 · ${done.concerns.length ? done.concerns.join(', ') : 'No concerns noted'}</div>
+      </div>`;
+    return;
+  }
+
+  if (getToday() === 0) dot.classList.add('show');
+
+  document.getElementById('survey-content').innerHTML = `
+    <div class="survey-card">
+      <div class="survey-q">How did your skin look and feel this week?</div>
+      <div class="slider-wrap">
+        <input type="range" min="1" max="5" value="${surveyRating}" id="survey-slider"
+          oninput="surveyRating=+this.value;document.getElementById('rating-val').textContent=['','Rough week','Not great','Okay','Pretty good','Loved it'][+this.value]">
+        <div class="slider-labels">
+          <span>Rough week</span>
+          <span id="rating-val">${['','Rough week','Not great','Okay','Pretty good','Loved it'][surveyRating]}</span>
+          <span>Loved it</span>
+        </div>
+      </div>
+    </div>
+    <div class="survey-card">
+      <div class="survey-q">What was bothering you this week?</div>
+      <div class="chip-grid">
+        ${CONCERNS.map(c => `<button class="chip${surveyChips.has(c)?' sel':''}" onclick="toggleChip(this,'${c}')">${c}</button>`).join('')}
+      </div>
+    </div>
+    <div class="survey-card">
+      <div class="survey-q">How well did you stick to your routine?</div>
+      <div class="comp-opts">
+        <button class="comp-opt${surveyComp==='yes'?' sel':''}" onclick="setComp(this,'yes')">Mostly yes</button>
+        <button class="comp-opt${surveyComp==='mix'?' sel':''}" onclick="setComp(this,'mix')">Hit and miss</button>
+        <button class="comp-opt${surveyComp==='no'?' sel':''}"  onclick="setComp(this,'no')">Barely</button>
+      </div>
+    </div>
+    <div class="survey-card">
+      <div class="survey-q">Anything worth noting? <span style="font-size:11px;color:var(--text-muted);font-weight:300">(optional)</span></div>
+      <textarea class="write-in" id="survey-note" placeholder="New supplement, facial, stressful week, travel..." style="height:60px"></textarea>
+    </div>
+    <button class="btn-primary" onclick="submitSurvey()" style="width:100%">Submit check-in</button>`;
+}
+
+function toggleChip(el, c) {
+  if (surveyChips.has(c)) { surveyChips.delete(c); el.classList.remove('sel'); }
+  else { surveyChips.add(c); el.classList.add('sel'); }
+}
+function setComp(el, v) {
+  surveyComp = v;
+  document.querySelectorAll('.comp-opt').forEach(b => b.classList.remove('sel'));
+  el.classList.add('sel');
+}
+function submitSurvey() {
+  if (!surveyComp) { alert('Please select how well you stuck to your routine.'); return; }
+  S['survey_' + getWeekKey()] = {
+    weekKey: getWeekKey(), rating: surveyRating,
+    concerns: Array.from(surveyChips), compliance: surveyComp,
+    note: document.getElementById('survey-note')?.value || '', ts: Date.now()
+  };
+  save();
+  surveyChips = new Set(); surveyComp = null; surveyRating = 3;
+  renderSurvey();
+}
+
+// ── STATIC TABS ───────────────────────────────────────────────────────────────
+function showStatic(tab, el) {
+  document.querySelectorAll('.static-content').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.static-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(tab + '-content').classList.add('active');
+  if (el) el.classList.add('active');
+}
+
+// ── VIEW SWITCHING ────────────────────────────────────────────────────────────
+function showView(v) {
+  ['today','week','survey','static'].forEach(id => {
+    const el = document.getElementById(id + '-view');
+    if (el) el.style.display = (v === id) ? 'block' : 'none';
+    const fb = document.getElementById('foot-' + id);
+    if (fb) fb.className = 'foot-btn' + (v === id ? ' active' : '');
+  });
+  if (v === 'week')   renderWeek();
+  if (v === 'survey') renderSurvey();
+  if (v === 'today')  { renderHeader(); renderRoutine(); }
+}
+
+// ── ONBOARDING ────────────────────────────────────────────────────────────────
+function renderOnboard() {
+  const grid = document.getElementById('onboard-days');
+  const today = new Date().getDay();
+  const pmTypeMap = { 0:'Mask PM', 1:'Base PM', 2:'Retinoid PM', 3:'Base PM', 4:'Retinoid PM', 5:'Base PM', 6:'Base PM' };
+  const amTypeMap = { 0:'Base AM', 1:'BHA AM',  2:'Base AM',     3:'BHA AM',  4:'Base AM',     5:'BHA AM',  6:'Base AM' };
+  grid.innerHTML = '';
+  DAYS.forEach((d, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'onboard-opt' + (i === today ? ' selected' : '');
+    btn.innerHTML = `${d}<small>${amTypeMap[i]} · ${pmTypeMap[i]}</small>`;
+    btn.onclick = () => {
+      document.querySelectorAll('.onboard-opt').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+    };
+    grid.appendChild(btn);
+  });
+}
+
+function confirmOnboard() {
+  S.setup = true; save();
+  document.getElementById('onboard').classList.add('hidden');
+  setSession('am');
+}
+
+// ── INIT ──────────────────────────────────────────────────────────────────────
+load();
+renderOnboard();
+if (S.setup) document.getElementById('onboard').classList.add('hidden');
+// All views hidden except today
+['week','survey','static'].forEach(id => {
+  const el = document.getElementById(id + '-view');
+  if (el) el.style.display = 'none';
+});
+setSession('am');
+// Sunday survey nudge
+if (getToday() === 0 && !S['survey_' + getWeekKey()]) {
+  document.getElementById('survey-dot').classList.add('show');
+}
+</script>
+</body>
+</html>
