@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -62,503 +61,501 @@
     --sand: #F2F4F0;
   }
 
-- { margin: 0; padding: 0; box-sizing: border-box; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; color-scheme: light only; }
   @media (prefers-color-scheme: dark) { html, body { background: #FBFBFB !important; color: #1A1A1A !important; } }
 
-body {
-background: #FBFBFB;
-color: #1A1A1A;
-font-family: ‘Isabella Sans’, sans-serif;
-font-weight: 300;
-font-size: 16px;
-line-height: 1.75;
--webkit-font-smoothing: antialiased;
-}
+  body {
+    background: #FBFBFB;
+    color: #1A1A1A;
+    font-family: 'Isabella Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
 
-/* ── TYPOGRAPHY SYSTEM ── */
+  /* ── TYPOGRAPHY SYSTEM ── */
 
-/* Eyebrow: ALL CAPS, wide tracking, small, teal */
-.eyebrow {
-font-family: ‘Isabella Sans’, sans-serif;
-font-weight: 500;
-font-size: 10px;
-letter-spacing: 0.28em;
-text-transform: uppercase;
-color: var(–teal);
-}
+  /* Eyebrow: ALL CAPS, wide tracking, small, teal */
+  .eyebrow {
+    font-family: 'Isabella Sans', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--teal);
+  }
 
-/* Display: Italiana, large, light */
-.display {
-font-family: ‘Isabella Sans’, serif;
-font-weight: 400;
-line-height: 1.05;
-letter-spacing: 0.01em;
-}
+  /* Display: Italiana, large, light */
+  .display {
+    font-family: 'Isabella Sans', serif;
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: 0.01em;
+  }
 
-/* Section title */
-.section-title {
-font-family: ‘Isabella Sans’, serif;
-font-weight: 400;
-font-size: clamp(24px, 4vw, 40px);
-line-height: 1.1;
-color: var(–text);
-margin-bottom: 22px;
-letter-spacing: 0.01em;
-}
+  /* Section title */
+  .section-title {
+    font-family: 'Isabella Sans', serif;
+    font-weight: 400;
+    font-size: clamp(24px, 4vw, 40px);
+    line-height: 1.1;
+    color: var(--text);
+    margin-bottom: 22px;
+    letter-spacing: 0.01em;
+  }
 
-/* Section intro */
-.section-intro {
-font-size: clamp(14px, 2vw, 16px);
-color: var(–text-muted);
-line-height: 1.85;
-max-width: 620px;
-font-weight: 300;
-}
+  /* Section intro */
+  .section-intro {
+    font-size: clamp(14px, 2vw, 16px);
+    color: var(--text-muted);
+    line-height: 1.85;
+    max-width: 620px;
+    font-weight: 300;
+  }
 
-/* ── LAYOUT ── */
-.page-wrap { max-width: 720px; margin: 0 auto; padding: 0 28px; }
-.section { padding: 68px 0 56px; border-bottom: 1px solid var(–rule); background: #FBFBFB; }
-.section:last-of-type { border-bottom: none; }
+  /* ── LAYOUT ── */
+  .page-wrap { max-width: 720px; margin: 0 auto; padding: 0 28px; }
+  .section { padding: 68px 0 56px; border-bottom: 1px solid var(--rule); background: #FBFBFB; }
+  .section:last-of-type { border-bottom: none; }
 
-/* ── HERO ── */
-.hero {
-background: #0C260F;
-color: #FBFBFB;
-text-align: center;
-padding: 88px 28px 76px;
-position: relative;
-overflow: hidden;
-}
-.hero::before {
-content: ‘’;
-position: absolute;
-inset: 0;
-background:
-radial-gradient(ellipse at 70% 30%, rgba(42,125,111,0.22) 0%, transparent 55%),
-radial-gradient(ellipse at 15% 85%, rgba(72,91,74,0.35) 0%, transparent 50%);
-pointer-events: none;
-}
-.hero > * { position: relative; }
+  /* ── HERO ── */
+  .hero {
+    background: #0C260F;
+    color: #FBFBFB;
+    text-align: center;
+    padding: 88px 28px 76px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 70% 30%, rgba(42,125,111,0.22) 0%, transparent 55%),
+      radial-gradient(ellipse at 15% 85%, rgba(72,91,74,0.35) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero > * { position: relative; }
 
-.hero .eyebrow {
-color: var(–teal-light);
-margin-bottom: 22px;
-display: block;
-}
+  .hero .eyebrow {
+    color: var(--teal-light);
+    margin-bottom: 22px;
+    display: block;
+  }
 
-.hero-name {
-font-family: ‘Isabella Sans’, serif;
-font-size: clamp(42px, 9vw, 96px);
-font-weight: 400;
-line-height: 1.0;
-color: var(–cream);
-letter-spacing: 0.02em;
-margin-bottom: 14px;
-}
+  .hero-name {
+    font-family: 'Isabella Sans', serif;
+    font-size: clamp(42px, 9vw, 96px);
+    font-weight: 400;
+    line-height: 1.0;
+    color: var(--cream);
+    letter-spacing: 0.02em;
+    margin-bottom: 14px;
+  }
 
-.hero-name em {
-font-style: italic;
-color: var(–teal-light);
-}
+  .hero-name em {
+    font-style: italic;
+    color: var(--teal-light);
+  }
 
-.hero-location {
-font-family: ‘Isabella Sans’, sans-serif;
-font-style: italic;
-font-size: clamp(13px, 2vw, 18px);
-color: rgba(251,251,251,0.5);
-margin-bottom: 44px;
-font-weight: 300;
-letter-spacing: 0.06em;
-}
+  .hero-location {
+    font-family: 'Isabella Sans', sans-serif;
+    font-style: italic;
+    font-size: clamp(13px, 2vw, 18px);
+    color: rgba(251,251,251,0.5);
+    margin-bottom: 44px;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+  }
 
-.hero-meta {
-display: flex;
-justify-content: center;
-gap: 52px;
-flex-wrap: wrap;
-}
-.hero-meta-item .label {
-display: block;
-font-size: 9px;
-letter-spacing: 0.24em;
-text-transform: uppercase;
-color: rgba(251,251,251,0.38);
-font-weight: 500;
-margin-bottom: 6px;
-}
-.hero-meta-item .value {
-font-family: ‘Isabella Sans’, serif;
-font-size: 20px;
-color: var(–cream);
-letter-spacing: 0.03em;
-}
+  .hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 52px;
+    flex-wrap: wrap;
+  }
+  .hero-meta-item .label {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: rgba(251,251,251,0.38);
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .hero-meta-item .value {
+    font-family: 'Isabella Sans', serif;
+    font-size: 20px;
+    color: var(--cream);
+    letter-spacing: 0.03em;
+  }
 
-/* ── NAV ── */
-.page-nav {
-background: var(–cream);
-border-bottom: 1px solid var(–rule);
-position: sticky;
-top: 0;
-z-index: 100;
-padding: 0 28px;
-}
-.page-nav ul {
-list-style: none;
-display: flex;
-justify-content: center;
-max-width: 800px;
-margin: 0 auto;
-overflow-x: auto;
-scrollbar-width: none;
-}
-.page-nav ul::-webkit-scrollbar { display: none; }
-.page-nav a {
-display: block;
-padding: 12px 10px;
-font-size: 9px;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-color: var(–text-muted);
-text-decoration: none;
-white-space: nowrap;
-transition: color 0.2s;
-font-weight: 500;
-}
-.page-nav a:hover { color: var(–teal); }
+  /* ── NAV ── */
+  .page-nav {
+    background: var(--cream);
+    border-bottom: 1px solid var(--rule);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0 28px;
+  }
+  .page-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .page-nav ul::-webkit-scrollbar { display: none; }
+  .page-nav a {
+    display: block;
+    padding: 12px 10px;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s;
+    font-weight: 500;
+  }
+  .page-nav a:hover { color: var(--teal); }
 
-/* ── TLDR CARD ── */
-/* Dark bg but with high-contrast text for mobile readability */
-.tldr-card {
-background: #0C260F;
-border-radius: 3px;
-padding: clamp(28px, 5vw, 48px) clamp(22px, 6vw, 52px);
-margin: 52px 0;
-}
-.tldr-card .eyebrow { color: var(–teal-light); margin-bottom: 12px; display: block; }
-.tldr-card .section-title { color: var(–cream); margin-bottom: 32px; }
+  /* ── TLDR CARD ── */
+  /* Dark bg but with high-contrast text for mobile readability */
+  .tldr-card {
+    background: #0C260F;
+    border-radius: 3px;
+    padding: clamp(28px, 5vw, 48px) clamp(22px, 6vw, 52px);
+    margin: 52px 0;
+  }
+  .tldr-card .eyebrow { color: var(--teal-light); margin-bottom: 12px; display: block; }
+  .tldr-card .section-title { color: var(--cream); margin-bottom: 32px; }
 
-.tldr-list { list-style: none; display: grid; gap: 18px; }
-.tldr-list li {
-display: grid;
-grid-template-columns: 14px 1fr;
-gap: 14px;
-font-size: clamp(13px, 2vw, 15px);
-line-height: 1.65;
-/* Full white for readability on dark bg */
-color: rgba(251,251,251,0.88);
-font-weight: 300;
-}
-.tldr-list li::before {
-content: ‘→’;
-color: var(–teal-light);
-font-size: 12px;
-margin-top: 3px;
-}
-.tldr-list strong {
-color: #ffffff;
-font-weight: 500;
-}
+  .tldr-list { list-style: none; display: grid; gap: 18px; }
+  .tldr-list li {
+    display: grid;
+    grid-template-columns: 14px 1fr;
+    gap: 14px;
+    font-size: clamp(13px, 2vw, 15px);
+    line-height: 1.65;
+    /* Full white for readability on dark bg */
+    color: rgba(251,251,251,0.88);
+    font-weight: 300;
+  }
+  .tldr-list li::before {
+    content: '→';
+    color: var(--teal-light);
+    font-size: 12px;
+    margin-top: 3px;
+  }
+  .tldr-list strong {
+    color: #ffffff;
+    font-weight: 500;
+  }
 
-/* ── WEEKEND SCHEDULE ── */
-.day-block { margin-bottom: 52px; }
-.day-block:last-child { margin-bottom: 0; }
+  /* ── WEEKEND SCHEDULE ── */
+  .day-block { margin-bottom: 52px; }
+  .day-block:last-child { margin-bottom: 0; }
 
-.day-header {
-display: flex;
-align-items: baseline;
-gap: 14px;
-margin-bottom: 24px;
-padding-bottom: 14px;
-border-bottom: 1px solid var(–rule);
-flex-wrap: wrap;
-}
-.day-name {
-font-family: ‘Isabella Sans’, serif;
-font-size: clamp(20px, 4vw, 27px);
-font-weight: 400;
-color: var(–text);
-letter-spacing: 0.02em;
-}
-.day-tag {
-font-size: 9px;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-color: var(–teal);
-font-weight: 500;
-background: var(–teal-pale);
-padding: 3px 10px;
-border-radius: 20px;
-}
+  .day-header {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--rule);
+    flex-wrap: wrap;
+  }
+  .day-name {
+    font-family: 'Isabella Sans', serif;
+    font-size: clamp(20px, 4vw, 27px);
+    font-weight: 400;
+    color: var(--text);
+    letter-spacing: 0.02em;
+  }
+  .day-tag {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--teal);
+    font-weight: 500;
+    background: var(--teal-pale);
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
 
-.event-list { list-style: none; display: grid; gap: 20px; }
-.event-item {
-display: grid;
-grid-template-columns: 90px 1fr;
-gap: 16px;
-font-size: clamp(13px, 2vw, 15px);
-line-height: 1.65;
-}
-.event-time {
-font-size: 10px;
-letter-spacing: 0.14em;
-color: var(–text-muted);
-text-transform: uppercase;
-padding-top: 3px;
-font-weight: 500;
-}
-.event-desc strong {
-font-weight: 500;
-display: block;
-margin-bottom: 3px;
-color: var(–text);
-font-size: 15px;
-}
-.event-desc p { color: var(–text); font-weight: 300; }
-.event-note {
-font-size: 13px;
-color: var(–text-muted);
-font-style: italic;
-margin-top: 5px;
-display: block;
-font-weight: 300;
-}
+  .event-list { list-style: none; display: grid; gap: 20px; }
+  .event-item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 16px;
+    font-size: clamp(13px, 2vw, 15px);
+    line-height: 1.65;
+  }
+  .event-time {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    padding-top: 3px;
+    font-weight: 500;
+  }
+  .event-desc strong {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 3px;
+    color: var(--text);
+    font-size: 15px;
+  }
+  .event-desc p { color: var(--text); font-weight: 300; }
+  .event-note {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 5px;
+    display: block;
+    font-weight: 300;
+  }
 
-/* ── CALLOUTS ── */
-.callout {
-border-radius: 3px;
-padding: 18px 22px;
-margin: 24px 0;
-font-size: 14.5px;
-line-height: 1.72;
-font-weight: 300;
-}
-.callout strong { font-weight: 500; }
+  /* ── CALLOUTS ── */
+  .callout {
+    border-radius: 3px;
+    padding: 18px 22px;
+    margin: 24px 0;
+    font-size: 14.5px;
+    line-height: 1.72;
+    font-weight: 300;
+  }
+  .callout strong { font-weight: 500; }
 
-/* Teal-bordered warm callout — light bg, readable on mobile */
-.callout-warm {
-background: var(–teal-pale);
-border-left: 3px solid var(–teal);
-color: var(–text);
-}
-.callout-warm strong { color: var(–green-dark); }
+  /* Teal-bordered warm callout — light bg, readable on mobile */
+  .callout-warm {
+    background: var(--teal-pale);
+    border-left: 3px solid var(--teal);
+    color: var(--text);
+  }
+  .callout-warm strong { color: var(--green-dark); }
 
-/* Dark callout — high contrast text */
-.callout-dark {
-background: #485B4A;
-color: #ffffff;
-padding: 16px 22px;
-}
-.callout-dark strong {
-color: var(–teal-light);
-font-weight: 500;
-}
+  /* Dark callout — high contrast text */
+  .callout-dark {
+    background: #485B4A;
+    color: #ffffff;
+    padding: 16px 22px;
+  }
+  .callout-dark strong {
+    color: var(--teal-light);
+    font-weight: 500;
+  }
 
-/* ── LODGING ── */
-.subsection-title {
-font-family: ‘Isabella Sans’, serif;
-font-size: clamp(18px, 3vw, 23px);
-font-weight: 400;
-margin: 44px 0 14px;
-color: var(–text);
-letter-spacing: 0.02em;
-}
+  /* ── LODGING ── */
+  .subsection-title {
+    font-family: 'Isabella Sans', serif;
+    font-size: clamp(18px, 3vw, 23px);
+    font-weight: 400;
+    margin: 44px 0 14px;
+    color: var(--text);
+    letter-spacing: 0.02em;
+  }
 
-.lodging-grid { display: grid; gap: 10px; margin: 14px 0; }
+  .lodging-grid { display: grid; gap: 10px; margin: 14px 0; }
 
-.lodging-card {
-background: var(–sand);
-border-radius: 3px;
-padding: 20px 24px;
-}
-.lodging-card.featured {
-background: white;
-border: 1.5px solid var(–teal);
-padding: 28px 30px;
-}
-.lodging-card-header {
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
-gap: 12px;
-margin-bottom: 5px;
-flex-wrap: wrap;
-}
-.lodging-name {
-font-family: ‘Isabella Sans’, serif;
-font-size: clamp(17px, 3vw, 21px);
-font-weight: 400;
-color: var(–text);
-letter-spacing: 0.02em;
-}
-.lodging-card.featured .lodging-name { font-size: clamp(20px, 4vw, 26px); }
+  .lodging-card {
+    background: var(--sand);
+    border-radius: 3px;
+    padding: 20px 24px;
+  }
+  .lodging-card.featured {
+    background: white;
+    border: 1.5px solid var(--teal);
+    padding: 28px 30px;
+  }
+  .lodging-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+  }
+  .lodging-name {
+    font-family: 'Isabella Sans', serif;
+    font-size: clamp(17px, 3vw, 21px);
+    font-weight: 400;
+    color: var(--text);
+    letter-spacing: 0.02em;
+  }
+  .lodging-card.featured .lodging-name { font-size: clamp(20px, 4vw, 26px); }
 
-.lodging-badge {
-font-size: 9px;
-letter-spacing: 0.18em;
-text-transform: uppercase;
-background: var(–teal);
-color: #0C260F;
-padding: 3px 11px;
-border-radius: 20px;
-font-weight: 500;
-white-space: nowrap;
-margin-top: 4px;
-}
-.lodging-price {
-font-size: 12.5px;
-color: var(–teal);
-font-weight: 500;
-margin-bottom: 7px;
-display: block;
-letter-spacing: 0.03em;
-}
-.lodging-desc {
-font-size: clamp(12px, 1.8vw, 13.5px);
-color: var(–text-muted);
-line-height: 1.7;
-font-weight: 300;
-}
+  .lodging-badge {
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    background: var(--teal);
+    color: #0C260F;
+    padding: 3px 11px;
+    border-radius: 20px;
+    font-weight: 500;
+    white-space: nowrap;
+    margin-top: 4px;
+  }
+  .lodging-price {
+    font-size: 12.5px;
+    color: var(--teal);
+    font-weight: 500;
+    margin-bottom: 7px;
+    display: block;
+    letter-spacing: 0.03em;
+  }
+  .lodging-desc {
+    font-size: clamp(12px, 1.8vw, 13.5px);
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-weight: 300;
+  }
 
-.room-types { margin-top: 20px; border-top: 1px solid var(–rule); }
-.room-type {
-display: flex;
-justify-content: space-between;
-align-items: baseline;
-padding: 10px 0;
-border-bottom: 1px solid var(–rule);
-gap: 16px;
-font-size: 13.5px;
-}
-.room-type:last-child { border-bottom: none; }
-.room-type-name { color: var(–text); font-weight: 400; }
-.room-type-desc { color: var(–text-muted); font-size: 12.5px; text-align: right; font-weight: 300; }
+  .room-types { margin-top: 20px; border-top: 1px solid var(--rule); }
+  .room-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rule);
+    gap: 16px;
+    font-size: 13.5px;
+  }
+  .room-type:last-child { border-bottom: none; }
+  .room-type-name { color: var(--text); font-weight: 400; }
+  .room-type-desc { color: var(--text-muted); font-size: 12.5px; text-align: right; font-weight: 300; }
 
-.book-btn-wrap { margin-top: 24px; }
+  .book-btn-wrap { margin-top: 24px; }
 
-/* ── BUTTONS ── */
-.btn {
-display: inline-block;
-padding: 13px 28px;
-font-family: ‘Isabella Sans’, sans-serif;
-font-size: 10px;
-letter-spacing: 0.22em;
-text-transform: uppercase;
-font-weight: 500;
-border-radius: 2px;
-text-decoration: none;
-cursor: pointer;
-border: none;
-transition: all 0.2s;
-}
-.btn-primary { background: var(–teal); color: #0C260F; }
-.btn-primary:hover { background: var(–teal-light); }
-.btn-secondary {
-background: transparent;
-color: var(–text);
-border: 1px solid var(–rule);
-margin-left: 12px;
-}
-.btn-secondary:hover { border-color: var(–text-muted); }
+  /* ── BUTTONS ── */
+  .btn {
+    display: inline-block;
+    padding: 13px 28px;
+    font-family: 'Isabella Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 2px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+  }
+  .btn-primary { background: var(--teal); color: #0C260F; }
+  .btn-primary:hover { background: var(--teal-light); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--rule);
+    margin-left: 12px;
+  }
+  .btn-secondary:hover { border-color: var(--text-muted); }
 
-/* ── CTA SECTION ── */
-.cta-section {
-background: #0C260F;
-padding: 84px 28px;
-text-align: center;
-}
-.cta-section h2 {
-font-family: ‘Isabella Sans’, serif;
-font-size: clamp(22px, 4vw, 38px);
-font-weight: 400;
-line-height: 1.15;
-/* White on dark — explicit, not variable, for mobile safety */
-color: #FBFBFB;
-margin-bottom: 16px;
-max-width: 520px;
-margin-left: auto;
-margin-right: auto;
-letter-spacing: 0.02em;
-}
-.cta-section p {
-font-size: 15px;
-/* Explicitly light on dark */
-color: rgba(251,251,251,0.65);
-max-width: 480px;
-margin: 0 auto 36px;
-line-height: 1.8;
-font-weight: 300;
-}
+  /* ── CTA SECTION ── */
+  .cta-section {
+    background: #0C260F;
+    padding: 84px 28px;
+    text-align: center;
+  }
+  .cta-section h2 {
+    font-family: 'Isabella Sans', serif;
+    font-size: clamp(22px, 4vw, 38px);
+    font-weight: 400;
+    line-height: 1.15;
+    /* White on dark — explicit, not variable, for mobile safety */
+    color: #FBFBFB;
+    margin-bottom: 16px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0.02em;
+  }
+  .cta-section p {
+    font-size: 15px;
+    /* Explicitly light on dark */
+    color: rgba(251,251,251,0.65);
+    max-width: 480px;
+    margin: 0 auto 36px;
+    line-height: 1.8;
+    font-weight: 300;
+  }
 
-/* ── FOOTER ── */
-footer {
-background: #0C260F;
-border-top: 1px solid rgba(251,251,251,0.08);
-color: rgba(251,251,251,0.38);
-text-align: center;
-padding: 28px 24px;
-font-size: 11px;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-font-weight: 400;
-}
-footer strong { color: rgba(251,251,251,0.7); font-weight: 400; }
+  /* ── FOOTER ── */
+  footer {
+    background: #0C260F;
+    border-top: 1px solid rgba(251,251,251,0.08);
+    color: rgba(251,251,251,0.38);
+    text-align: center;
+    padding: 28px 24px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  footer strong { color: rgba(251,251,251,0.7); font-weight: 400; }
 
-/* ── AGGRESSIVE MOBILE OVERRIDES ── */
-@media screen and (max-width: 768px) {
-body { font-size: 14px !important; }
-.section-title { font-size: 22px !important; }
-.hero-name { font-size: 38px !important; }
-.hero-location { font-size: 13px !important; }
-.hero-meta-item .value { font-size: 15px !important; }
-.hero-meta-item .label { font-size: 8px !important; }
-.tldr-card .section-title { font-size: 22px !important; }
-.tldr-list li { font-size: 13px !important; }
-.day-name { font-size: 19px !important; }
-.subsection-title { font-size: 17px !important; }
-.lodging-name { font-size: 16px !important; }
-.lodging-card.featured .lodging-name { font-size: 19px !important; }
-.lodging-desc { font-size: 12px !important; }
-.section-intro { font-size: 13px !important; line-height: 1.75 !important; }
-.event-item { font-size: 13px !important; }
-.event-desc strong { font-size: 13px !important; }
-.callout { font-size: 13px !important; }
-.tldr-card { padding: 24px 20px !important; }
-.hero { padding: 48px 20px 44px !important; }
-.hero-meta { gap: 20px !important; }
-.page-wrap { padding: 0 16px !important; }
-.section { padding: 44px 0 36px !important; }
-}
+  /* ── AGGRESSIVE MOBILE OVERRIDES ── */
+  @media screen and (max-width: 768px) {
+    body { font-size: 14px !important; }
+    .section-title { font-size: 22px !important; }
+    .hero-name { font-size: 38px !important; }
+    .hero-location { font-size: 13px !important; }
+    .hero-meta-item .value { font-size: 15px !important; }
+    .hero-meta-item .label { font-size: 8px !important; }
+    .tldr-card .section-title { font-size: 22px !important; }
+    .tldr-list li { font-size: 13px !important; }
+    .day-name { font-size: 19px !important; }
+    .subsection-title { font-size: 17px !important; }
+    .lodging-name { font-size: 16px !important; }
+    .lodging-card.featured .lodging-name { font-size: 19px !important; }
+    .lodging-desc { font-size: 12px !important; }
+    .section-intro { font-size: 13px !important; line-height: 1.75 !important; }
+    .event-item { font-size: 13px !important; }
+    .event-desc strong { font-size: 13px !important; }
+    .callout { font-size: 13px !important; }
+    .tldr-card { padding: 24px 20px !important; }
+    .hero { padding: 48px 20px 44px !important; }
+    .hero-meta { gap: 20px !important; }
+    .page-wrap { padding: 0 16px !important; }
+    .section { padding: 44px 0 36px !important; }
+  }
 
-/* ── ANIMATIONS ── */
-@keyframes fadeUp {
-from { opacity: 0; transform: translateY(14px); }
-to { opacity: 1; transform: translateY(0); }
-}
-.hero > * { animation: fadeUp 0.65s ease both; }
-.hero .eyebrow { animation-delay: 0.08s; }
-.hero-name { animation-delay: 0.22s; }
-.hero-location { animation-delay: 0.36s; }
-.hero-meta { animation-delay: 0.5s; }
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero > * { animation: fadeUp 0.65s ease both; }
+  .hero .eyebrow { animation-delay: 0.08s; }
+  .hero-name { animation-delay: 0.22s; }
+  .hero-location { animation-delay: 0.36s; }
+  .hero-meta { animation-delay: 0.5s; }
 
-/* ── RESPONSIVE ── */
-@media (max-width: 600px) {
-.tldr-card { padding: 30px 22px; }
-.event-item { grid-template-columns: 1fr; gap: 3px; }
-.event-time { padding-top: 0; }
-.hero-meta { gap: 28px; }
-.page-nav ul { justify-content: flex-start; }
-.btn-secondary { margin-left: 0; margin-top: 10px; display: inline-block; }
-.hero { padding: 64px 20px 56px; }
-.page-wrap { padding: 0 20px; }
-}
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .tldr-card { padding: 30px 22px; }
+    .event-item { grid-template-columns: 1fr; gap: 3px; }
+    .event-time { padding-top: 0; }
+    .hero-meta { gap: 28px; }
+    .page-nav ul { justify-content: flex-start; }
+    .btn-secondary { margin-left: 0; margin-top: 10px; display: inline-block; }
+    .hero { padding: 64px 20px 56px; }
+    .page-wrap { padding: 0 20px; }
+  }
 </style>
-
 </head>
 <body>
 
 <!-- HERO -->
-
 <header class="hero">
   <span class="eyebrow">Please Join Us</span>
   <h1 class="hero-name">Spencer <em>&</em> Jenna</h1>
@@ -580,7 +577,6 @@ to { opacity: 1; transform: translateY(0); }
 </header>
 
 <!-- STICKY NAV -->
-
 <nav class="page-nav">
   <ul>
     <li><a href="#overview">Overview</a></li>
@@ -594,7 +590,6 @@ to { opacity: 1; transform: translateY(0); }
 <main>
 
   <!-- INTRO -->
-
   <div class="page-wrap">
     <div class="section" id="intro">
       <p class="section-intro" style="font-size: 17.5px; line-height: 1.9; margin-bottom: 18px;">
@@ -607,7 +602,6 @@ to { opacity: 1; transform: translateY(0); }
   </div>
 
   <!-- OVERVIEW -->
-
   <div class="page-wrap">
     <div id="overview" class="tldr-card">
       <span class="eyebrow">The short version</span>
@@ -624,273 +618,261 @@ to { opacity: 1; transform: translateY(0); }
   </div>
 
   <!-- WEEKEND -->
-
   <div class="page-wrap">
     <div class="section" id="weekend">
       <span class="eyebrow" style="display:block; margin-bottom: 10px;">May 28 – May 31, 2027</span>
       <h2 class="section-title ">The Weekend</h2>
       <p class="section-intro" style="margin-bottom: 48px;">Plan to arrive Friday and stay through Monday morning. The wedding is Saturday, but we have a full long weekend planned — join whatever works for you.</p>
 
-```
-  <!-- Friday -->
-  <div class="day-block">
-    <div class="day-header">
-      <span class="day-name">Friday, May 28</span>
-      <span class="day-tag">Arrival</span>
-    </div>
-    <ul class="event-list">
-      <li class="event-item">
-        <span class="event-time">Evening</span>
-        <div class="event-desc">
-          <strong>Travel & Settle In</strong>
-          <p>Enjoy the drive up or down the coast — Carmel and Monterey are great stops along the way. Get in, settle in, and grab dinner on your own in Big Sur or en route.</p>
+      <!-- Friday -->
+      <div class="day-block">
+        <div class="day-header">
+          <span class="day-name">Friday, May 28</span>
+          <span class="day-tag">Arrival</span>
         </div>
-      </li>
-      <li class="event-item">
-        <span class="event-time">5:00 – 8:00 pm</span>
-        <div class="event-desc">
-          <strong>Family Welcome Dinner</strong>
-          <p>Big Sur Lodge Patio. Hosted by our loving parents, Mark, Ann, Marc, and Felicia.</p>
-          <span class="event-note">Family only.</span>
-        </div>
-      </li>
-    </ul>
-  </div>
+        <ul class="event-list">
+          <li class="event-item">
+            <span class="event-time">Evening</span>
+            <div class="event-desc">
+              <strong>Travel & Settle In</strong>
+              <p>Enjoy the drive up or down the coast — Carmel and Monterey are great stops along the way. Get in, settle in, and grab dinner on your own in Big Sur or en route.</p>
+            </div>
+          </li>
+          <li class="event-item">
+            <span class="event-time">5:00 – 8:00 pm</span>
+            <div class="event-desc">
+              <strong>Family Welcome Dinner</strong>
+              <p>Big Sur Lodge Redwood Patio. Hosted by our loving parents, Mark, Ann, Marc, and Felicia.</p>
+              <span class="event-note">Family only.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-  <!-- Saturday -->
-  <div class="day-block ">
-    <div class="day-header">
-      <span class="day-name">Saturday, May 29</span>
-      <span class="day-tag">Wedding Day</span>
-    </div>
-    <ul class="event-list">
-      <li class="event-item">
-        <span class="event-time">Morning</span>
-        <div class="event-desc">
-          <strong>Free Time</strong>
-          <p>Get ready, take a walk, explore. Big Sur will do the rest.</p>
+      <!-- Saturday -->
+      <div class="day-block ">
+        <div class="day-header">
+          <span class="day-name">Saturday, May 29</span>
+          <span class="day-tag">Wedding Day</span>
         </div>
-      </li>
-      <li class="event-item">
-        <span class="event-time">3:00 pm</span>
-        <div class="event-desc">
-          <strong>Ceremony & Celebration</strong>
-          <p>The wedding — ceremony, dinner, dancing, and beyond — runs 3:00 pm to 10:00 pm+.</p>
-          <span class="event-note">Shuttles to and from the venue are provided. Do not drive to the venue.</span>
+        <ul class="event-list">
+          <li class="event-item">
+            <span class="event-time">Morning</span>
+            <div class="event-desc">
+              <strong>Free Time</strong>
+              <p>Get ready, take a walk, explore. Big Sur will do the rest.</p>
+            </div>
+          </li>
+          <li class="event-item">
+            <span class="event-time">3:00 pm</span>
+            <div class="event-desc">
+              <strong>Ceremony & Celebration</strong>
+              <p>The wedding — ceremony, dinner, dancing, and beyond — runs 3:00 pm to 10:00 pm+.</p>
+              <span class="event-note">Shuttles to and from the venue are provided. Do not drive to the venue.</span>
+            </div>
+          </li>
+        </ul>
+        <div class="callout callout-dark" style="margin-top: 20px;">
+          <strong>All on us Saturday:</strong> shuttles, dinner, and drinks. Come ready to celebrate.
         </div>
-      </li>
-    </ul>
-    <div class="callout callout-dark" style="margin-top: 20px;">
-      <strong>All on us Saturday:</strong> shuttles, dinner, and drinks. Come ready to celebrate.
-    </div>
-  </div>
+      </div>
 
-  <!-- Sunday -->
-  <div class="day-block ">
-    <div class="day-header">
-      <span class="day-name">Sunday, May 30</span>
-      <span class="day-tag">The Day After</span>
+      <!-- Sunday -->
+      <div class="day-block ">
+        <div class="day-header">
+          <span class="day-name">Sunday, May 30</span>
+          <span class="day-tag">The Day After</span>
+        </div>
+        <ul class="event-list">
+          <li class="event-item">
+            <span class="event-time">Morning</span>
+            <div class="event-desc">
+              <strong>Coffee at the Village</strong>
+              <p>Coffee and snacks at the Village, Big Sur.</p>
+            </div>
+          </li>
+          <li class="event-item">
+            <span class="event-time">Afternoon</span>
+            <div class="event-desc">
+              <strong>River & Beach</strong>
+              <p>Floating in the river at Big Sur River Inn, hanging out on Pfeiffer Beach.</p>
+            </div>
+          </li>
+          <li class="event-item">
+            <span class="event-time">Evening</span>
+            <div class="event-desc">
+              <strong>Beach Sunset & Campfire</strong>
+              <p>Sunset on the beach, then a campfire back near Big Sur Lodge.</p>
+              <span class="event-note">Friends.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Monday -->
+      <div class="day-block ">
+        <div class="day-header">
+          <span class="day-name">Monday, June 2</span>
+          <span class="day-tag">Send-Off</span>
+        </div>
+        <ul class="event-list">
+          <li class="event-item">
+            <span class="event-time">9:00 am</span>
+            <div class="event-desc">
+              <strong>Memorial Hike for Brian</strong>
+              <p>A morning hike in Andrew Molera State Park in memory of Jenna's brother, Brian. Join us if you're able — it will mean a lot to us.</p>
+            </div>
+          </li>
+          <li class="event-item">
+            <span class="event-time">Afternoon</span>
+            <div class="event-desc">
+              <strong>Goodbye Coffee at Café Kevah</strong>
+              <p>Coffee and breakfast overlooking the coast at Café Kevah at Nepenthe — a spot Jenna's parents have been going to since the 80s. A perfect last view before everyone heads out.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
     </div>
-    <ul class="event-list">
-      <li class="event-item">
-        <span class="event-time">Morning</span>
-        <div class="event-desc">
-          <strong>Coffee at the Village</strong>
-          <p>Coffee and snacks at the Village, Big Sur.</p>
-        </div>
-      </li>
-      <li class="event-item">
-        <span class="event-time">Afternoon</span>
-        <div class="event-desc">
-          <strong>River & Beach</strong>
-          <p>Floating in the river at Big Sur River Inn, hanging out on Pfeiffer Beach.</p>
-        </div>
-      </li>
-      <li class="event-item">
-        <span class="event-time">Evening</span>
-        <div class="event-desc">
-          <strong>Beach Sunset & Campfire</strong>
-          <p>Sunset on the beach, then a campfire back near Big Sur Lodge.</p>
-          <span class="event-note">Friends.</span>
-        </div>
-      </li>
-    </ul>
-  </div>
-
-  <!-- Monday -->
-  <div class="day-block ">
-    <div class="day-header">
-      <span class="day-name">Monday, June 2</span>
-      <span class="day-tag">Send-Off</span>
-    </div>
-    <ul class="event-list">
-      <li class="event-item">
-        <span class="event-time">9:00 am</span>
-        <div class="event-desc">
-          <strong>Memorial Hike for Brian</strong>
-          <p>A morning hike in Andrew Molera State Park in memory of Jenna's brother, Brian. Join us if you're able — it will mean a lot to us.</p>
-        </div>
-      </li>
-      <li class="event-item">
-        <span class="event-time">Afternoon</span>
-        <div class="event-desc">
-          <strong>Goodbye Coffee at Café Kevah</strong>
-          <p>Coffee and breakfast overlooking the coast at Café Kevah at Nepenthe — a spot Jenna's parents have been going to since the 80s. A perfect last view before everyone heads out.</p>
-        </div>
-      </li>
-    </ul>
-  </div>
-
-</div>
-```
-
   </div>
 
   <!-- LODGING -->
-
   <div class="page-wrap">
     <div class="section" id="lodging">
       <span class="eyebrow" style="display:block; margin-bottom: 10px;">Where to stay</span>
       <h2 class="section-title ">Lodging</h2>
 
-```
-  <div class="callout callout-warm">
-    <strong>Book as soon as you know you're coming.</strong> Big Sur is one of the most in-demand destinations on the West Coast, and Memorial Day weekend fills up extremely fast. It is currently March 2026, and Big Sur is already mostly booked through summer 2026. The 12-month booking window for most properties opens soon — don't wait.
-  </div>
-
-  <h3 class="subsection-title">Our Room Block</h3>
-  <div class="lodging-grid">
-    <div class="lodging-card featured">
-      <div class="lodging-card-header">
-        <span class="lodging-name">Big Sur Lodge</span>
-        <span class="lodging-badge">Recommended</span>
+      <div class="callout callout-warm">
+        <strong>Book as soon as you know you're coming.</strong> Big Sur is one of the most in-demand destinations on the West Coast, and Memorial Day weekend fills up extremely fast. It is currently March 2026, and Big Sur is already mostly booked through summer 2026. The 12-month booking window for most properties opens soon — don't wait.
       </div>
-      <p class="lodging-desc" style="margin-top: 10px;">We have a room block at Big Sur Lodge — where we'll be staying along with our families, who have already booked. That leaves 14 rooms reserved for friends. You'll be steps from everything all weekend and on the primary shuttle route. Book through the link below. If you'd like a room type not currently in the block, let us know and we'll try to get it added. Splitting a room with another couple or friends can help bring down costs.</p>
-      <p class="lodging-desc" style="margin-top: 10px; font-style: italic;">3-night minimum stay (Friday–Monday).</p>
-      <div class="room-types">
-        <div class="room-type">
-          <span class="room-type-name">King Room</span>
-          <span class="room-type-desc">One bedroom, one king bed</span>
-        </div>
-        <div class="room-type">
-          <span class="room-type-name">2 Queens</span>
-          <span class="room-type-desc">One bedroom, two queen beds</span>
-        </div>
-        <div class="room-type">
-          <span class="room-type-name">Queen Suite</span>
-          <span class="room-type-desc">One bedroom + living room pull-out</span>
-        </div>
-        <div class="room-type">
-          <span class="room-type-name">2 Queen Suite</span>
-          <span class="room-type-desc">Two queen beds in separate rooms</span>
+
+      <h3 class="subsection-title">Our Room Block</h3>
+      <div class="lodging-grid">
+        <div class="lodging-card featured">
+          <div class="lodging-card-header">
+            <span class="lodging-name">Big Sur Lodge</span>
+            <span class="lodging-badge">Recommended</span>
+          </div>
+          <p class="lodging-desc" style="margin-top: 10px;">We have a room block at Big Sur Lodge — where we'll be staying along with our families, who have already booked. That leaves 14 rooms reserved for friends. You'll be steps from everything all weekend and on the primary shuttle route. Book through the link below. If you'd like a room type not currently in the block, let us know and we'll try to get it added. Splitting a room with another couple or friends can help bring down costs.</p>
+          <p class="lodging-desc" style="margin-top: 10px; font-style: italic;">3-night minimum stay (Friday–Monday). Check-in: 4:00 pm · Checkout: 11:00 am</p>
+          <div class="room-types">
+            <div class="room-type">
+              <span class="room-type-name">King Room · <em>~$329/night</em></span>
+              <span class="room-type-desc">One bedroom, one king bed</span>
+            </div>
+            <div class="room-type">
+              <span class="room-type-name">2 Queens · <em>~$329/night</em></span>
+              <span class="room-type-desc">One bedroom, two queen beds</span>
+            </div>
+            <div class="room-type">
+              <span class="room-type-name">Queen Suite · <em>~$339/night</em></span>
+              <span class="room-type-desc">One bedroom + living room pull-out</span>
+            </div>
+            <div class="room-type">
+              <span class="room-type-name">2 Queen Suite · <em>~$389/night</em></span>
+              <span class="room-type-desc">Two queen beds in separate rooms</span>
+            </div>
+          </div>
+          <p class="lodging-desc" style="margin-top: 16px; font-style: italic; font-size: 12.5px; color: var(--text-muted);">* Still deciding? We'd recommend booking now and canceling later if needed — charges don't hit until spring 2027. Rooms will be much harder to find closer to the date.</p>
+          <div class="book-btn-wrap">
+            <a href="https://secure.webrez.com/hotel/2125/?package_id=349381&date_from=20270528&date_to=20270531" target="_blank" class="btn btn-primary">Book Your Room →</a>
+          </div>
         </div>
       </div>
-      <div class="book-btn-wrap">
-        <a href="https://secure.webrez.com/hotel/2125/?package_id=349381&date_from=20270528&date_to=20270531" target="_blank" class="btn btn-primary">Book Your Room →</a>
+
+      <h3 class="subsection-title">Other Big Sur Options</h3>
+      <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 18px; line-height: 1.75; font-weight: 300;">If you'd prefer something outside the Lodge, all options below are within Big Sur proper. Just let us know where you're staying — shuttle logistics are more limited if you're not at Big Sur Lodge.</p>
+
+      <div class="lodging-grid">
+        <div class="lodging-card">
+          <div class="lodging-card-header"><span class="lodging-name">Deetjens</span></div>
+          <span class="lodging-price">~$250–$450 / night</span>
+          <p class="lodging-desc">Charming, rustic, and historic — a Big Sur classic. Note: many rooms are singles with shared bathrooms, better suited for groups comfortable with a communal vibe.</p>
+        </div>
+        <div class="lodging-card ">
+          <div class="lodging-card-header"><span class="lodging-name">Ventana Campground</span></div>
+          <span class="lodging-price">~$250 / night</span>
+          <p class="lodging-desc">Glamping tents with a shared bathhouse in a stunning redwood setting. This is where Spencer and Jenna have stayed together many times over the years — and where we were staying when Spencer proposed. The best budget option on this list, and deeply special to us. 2-night minimum.</p>
+        </div>
+        <div class="lodging-card ">
+          <div class="lodging-card-header"><span class="lodging-name">Fernwood Resort</span></div>
+          <span class="lodging-price">~$250+ / night</span>
+          <p class="lodging-desc">A casual, laid-back resort on the Big Sur River with a range of accommodations.</p>
+        </div>
+        <div class="lodging-card ">
+          <div class="lodging-card-header"><span class="lodging-name">Ripplewood Resort</span></div>
+          <span class="lodging-price">~$250+ / night</span>
+          <p class="lodging-desc">Classic Big Sur cabins right off Highway 1 — simple and well-situated.</p>
+        </div>
+        <div class="lodging-card ">
+          <div class="lodging-card-header"><span class="lodging-name">Big Sur River Inn</span></div>
+          <span class="lodging-price">~$500–$700 / night</span>
+          <p class="lodging-desc">Right on the river and a beloved Big Sur institution. Great location for Sunday afternoon.</p>
+        </div>
+        <div class="lodging-card">
+          <div class="lodging-card-header"><span class="lodging-name">Glen Oaks</span></div>
+          <span class="lodging-price">~$400–$1,000 / night</span>
+          <p class="lodging-desc">A beautiful boutique property — one of the nicer options in the area.</p>
+        </div>
+
+      </div>
+
+      <div class="callout callout-warm" style="margin-top: 36px;">
+        <strong>A note on Airbnb and Monterey.</strong> Big Sur is a small, protected community — there are no Airbnbs. We'd also gently steer you away from Monterey: it's not meaningfully cheaper, puts you over an hour from the venue on Saturday night, and driving back after an open-bar celebration on Highway 1 isn't an option. If the cost of staying in Big Sur feels insurmountable, please reach out — we'd rather help cover part of your accommodation than have you miss it.
       </div>
     </div>
-  </div>
-
-  <h3 class="subsection-title">Other Big Sur Options</h3>
-  <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 18px; line-height: 1.75; font-weight: 300;">If you'd prefer something outside the Lodge, all options below are within Big Sur proper. Just let us know where you're staying — shuttle logistics are more limited if you're not at Big Sur Lodge.</p>
-
-  <div class="lodging-grid">
-    <div class="lodging-card">
-      <div class="lodging-card-header"><span class="lodging-name">Deetjens</span></div>
-      <span class="lodging-price">$250–$450 / night</span>
-      <p class="lodging-desc">Charming, rustic, and historic — a Big Sur classic. Note: many rooms are singles with shared bathrooms, better suited for groups comfortable with a communal vibe.</p>
-    </div>
-    <div class="lodging-card ">
-      <div class="lodging-card-header"><span class="lodging-name">Ventana Campground</span></div>
-      <span class="lodging-price">~$250 / night</span>
-      <p class="lodging-desc">Glamping tents with a shared bathhouse in a stunning redwood setting. This is where Spencer and Jenna have stayed together many times over the years — and where we were staying when Spencer proposed. The best budget option on this list, and deeply special to us. 2-night minimum.</p>
-    </div>
-    <div class="lodging-card ">
-      <div class="lodging-card-header"><span class="lodging-name">Fernwood Resort</span></div>
-      <span class="lodging-price">$250+ / night</span>
-      <p class="lodging-desc">A casual, laid-back resort on the Big Sur River with a range of accommodations.</p>
-    </div>
-    <div class="lodging-card ">
-      <div class="lodging-card-header"><span class="lodging-name">Ripplewood Resort</span></div>
-      <span class="lodging-price">$250+ / night</span>
-      <p class="lodging-desc">Classic Big Sur cabins right off Highway 1 — simple and well-situated.</p>
-    </div>
-    <div class="lodging-card ">
-      <div class="lodging-card-header"><span class="lodging-name">Big Sur River Inn</span></div>
-      <span class="lodging-price">$500–$700 / night</span>
-      <p class="lodging-desc">Right on the river and a beloved Big Sur institution. Great location for Sunday afternoon.</p>
-    </div>
-    <div class="lodging-card">
-      <div class="lodging-card-header"><span class="lodging-name">Glen Oaks</span></div>
-      <span class="lodging-price">$400–$1,000 / night</span>
-      <p class="lodging-desc">A beautiful boutique property — one of the nicer options in the area.</p>
-    </div>
-
-  </div>
-
-  <div class="callout callout-warm" style="margin-top: 36px;">
-    <strong>A note on Airbnb and Monterey.</strong> Big Sur is a small, protected community — there are no Airbnbs. We'd also gently steer you away from Monterey: it's not meaningfully cheaper, puts you over an hour from the venue on Saturday night, and driving back after an open-bar celebration on Highway 1 isn't an option. If the cost of staying in Big Sur feels insurmountable, please reach out — we'd rather help cover part of your accommodation than have you miss it.
-  </div>
-</div>
-```
-
   </div>
 
   <!-- GETTING AROUND -->
-
   <div class="page-wrap">
     <div class="section" id="shuttles">
       <span class="eyebrow" style="display:block; margin-bottom: 10px;">Getting around</span>
       <h2 class="section-title ">Getting Around</h2>
 
-```
-  <h3 class="subsection-title">Wedding Day Shuttles</h3>
-  <p class="section-intro" style="margin-bottom: 24px;">There is no parking at the venue. Shuttles will be provided to and from the ceremony and reception — this is the plan, no exceptions, on a night with an open bar on Highway 1.</p>
-  <div class="callout callout-warm">
-    <strong>Staying outside Big Sur Lodge?</strong> You may need to make your way to the Lodge to catch the primary shuttle, or coordinate with us to arrange a single pickup at a specific time. Please let us know where you're staying so we can plan. Full shuttle schedules will come in a future update closer to the date.
-  </div>
+      <h3 class="subsection-title">Wedding Day Shuttles</h3>
+      <p class="section-intro" style="margin-bottom: 24px;">There is no parking at the venue. Shuttles will be provided to and from the ceremony and reception — this is the plan, no exceptions, on a night with an open bar on Highway 1.</p>
+      <div class="callout callout-warm">
+        <strong>Staying outside Big Sur Lodge?</strong> You may need to make your way to the Lodge to catch the primary shuttle, or coordinate with us to arrange a single pickup at a specific time. Please let us know where you're staying so we can plan. Full shuttle schedules will come in a future update closer to the date.
+      </div>
 
-  <h3 class="subsection-title">Getting Around Big Sur</h3>
-  <p class="section-intro" style="margin-bottom: 24px;">Outside of the wedding day shuttles, having a car in Big Sur is essentially required — there are no Ubers, no rideshares, and no public transit. If you're flying in from out of state, we'd recommend renting a car. If you're driving up from California, consider coordinating with others who might be coming from your direction.</p>
+      <h3 class="subsection-title">Getting Around Big Sur</h3>
+      <p class="section-intro" style="margin-bottom: 24px;">Outside of the wedding day shuttles, having a car in Big Sur is essentially required — there are no Ubers, no rideshares, and no public transit. If you're flying in from out of state, we'd recommend renting a car. If you're driving up from California, consider coordinating with others who might be coming from your direction.</p>
 
-  <h3 class="subsection-title">Airports & Getting Here</h3>
-  <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.75; font-weight: 300;">Big Sur sits on Highway 1 between Carmel and San Simeon — remote and beautiful. The drive in is genuinely one of the most scenic roads in the world, so getting here is already part of the experience. Closest airports and approximate drive times:</p>
+      <h3 class="subsection-title">Airports & Getting Here</h3>
+      <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.75; font-weight: 300;">Big Sur sits on Highway 1 between Carmel and San Simeon — remote and beautiful. The drive in is genuinely one of the most scenic roads in the world, so getting here is already part of the experience. Closest airports and approximate drive times:</p>
 
-  <div class="lodging-grid">
-    <div class="lodging-card ">
-      <div class="lodging-card-header"><span class="lodging-name">Monterey Regional (MRY)</span></div>
-      <span class="lodging-price">~45 minutes</span>
-      <p class="lodging-desc">The most convenient option — small airport with limited routes, but if you can get a flight here it's by far the easiest landing spot.</p>
+      <div class="lodging-grid">
+        <div class="lodging-card ">
+          <div class="lodging-card-header"><span class="lodging-name">Monterey Regional (MRY)</span></div>
+          <span class="lodging-price">~45 minutes</span>
+          <p class="lodging-desc">The most convenient option — small airport with limited routes, but if you can get a flight here it's by far the easiest landing spot.</p>
+        </div>
+        <div class="lodging-card ">
+          <div class="lodging-card-header"><span class="lodging-name">San Jose (SJC)</span></div>
+          <span class="lodging-price">~2.5 hours</span>
+          <p class="lodging-desc">Good budget and Southwest options, less congested than SFO, and a very easy drive down through the Santa Cruz mountains.</p>
+        </div>
+        <div class="lodging-card ">
+          <div class="lodging-card-header"><span class="lodging-name">San Francisco (SFO)</span></div>
+          <span class="lodging-price">~3 hours</span>
+          <p class="lodging-desc">The most flight options from anywhere in the country. Longer drive, but Highway 1 south from the Bay Area is beautiful and worth it.</p>
+        </div>
+        <div class="lodging-card ">
+          <div class="lodging-card-header"><span class="lodging-name">Los Angeles (LAX)</span></div>
+          <span class="lodging-price">~5–6 hours</span>
+          <p class="lodging-desc">Worth it if you're coming from SoCal — drive north up the 101 or catch Highway 1 at San Luis Obispo for a stunning coastal approach into Big Sur.</p>
+        </div>
+      </div>
+
     </div>
-    <div class="lodging-card ">
-      <div class="lodging-card-header"><span class="lodging-name">San Jose (SJC)</span></div>
-      <span class="lodging-price">~2.5 hours</span>
-      <p class="lodging-desc">Good budget and Southwest options, less congested than SFO, and a very easy drive down through the Santa Cruz mountains.</p>
-    </div>
-    <div class="lodging-card ">
-      <div class="lodging-card-header"><span class="lodging-name">San Francisco (SFO)</span></div>
-      <span class="lodging-price">~3 hours</span>
-      <p class="lodging-desc">The most flight options from anywhere in the country. Longer drive, but Highway 1 south from the Bay Area is beautiful and worth it.</p>
-    </div>
-    <div class="lodging-card ">
-      <div class="lodging-card-header"><span class="lodging-name">Los Angeles (LAX)</span></div>
-      <span class="lodging-price">~5–6 hours</span>
-      <p class="lodging-desc">Worth it if you're coming from SoCal — drive north up the 101 or catch Highway 1 at San Luis Obispo for a stunning coastal approach into Big Sur.</p>
-    </div>
-  </div>
-
-</div>
-```
-
   </div>
 
 </main>
 
 <!-- CONTACT / CTA -->
-
 <section class="cta-section" id="contact">
   <h2>Questions? Just ask.</h2>
-  <p>We know this is a lot to take in, and we know it's a real commitment — financially, logistically, and all the time spent around the weekend. We're so grateful you're making the trip. Big Sur's magic will make it all make sense once you're there, so getting to share it with you, for this, is something we'll carry for the rest of our lives.</p>
+  <p>We kept our list small because we really hope to share this weekend with just the people who mean the most to us. We hope you can make it. Big Sur's magic will make it all make sense once you're there. Sharing our wedding weekend with you is something we'll carry for the rest of our lives.</p>
   <a href="/cdn-cgi/l/email-protection#b1c2c1d4dfd2d4c3d0dfd5dbd4dfdfd08386f1d6dcd0d8dd9fd2dedc" class="btn btn-primary">Email Us</a>
   <a href="#overview" class="btn btn-secondary" style="color: rgba(251,251,251,0.7); border-color: rgba(251,251,251,0.2);">Back to Top</a>
 </section>
